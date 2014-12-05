@@ -1,0 +1,226 @@
+
+version 4.2.2:
+
+- updated to latest versio from wp
+
+-bug fix: In case HTML5 Video Js Loads later then Meta of Video will not fire the Auto Play Option
+-bug fix: Fixed YouTube Api, changed youtube api load to permanent Https
+-bug fix: Fixed HTML5 Video Preload. A Waiting process added for Video JS and Stream preloads
+=bug fix: Fixed Vimeo API Preloads
+
+
+version 4.2:
+
+- updated to latest version from wp
+
+- feature: Added Char, Word and Line Based Text animation to improve the Visual Experience on the Layer Animations
+- feature: Added 5 Different Loader Spinner with Live Preview Selector
+- feature: Added remove Thumbnail in Slide Editor
+- feature: Added white-space, maxwidth and maxheight options
+- feature: ID, Class, Title & Rel attribute for Links on images added
+- feature: Added files so that google does not index internal files
+
+- change: Improved Loading Speed. Slider loads over 1-2 sec quicker than before.
+- change: Improved Lazy Loading, to load Images and Layer images on demand. Intelligent Preloading of next slide Elements.
+- change: Auto Thumbnail Function, small copy of Slider Image, or Colorer BG used as Default.
+- change: instead of a fatal error, the none existence of ZipArchive will now give a more gently message
+
+- bug fix: Fixed some css glitches in slide settings.
+- bug fix: Fixed YouTube Api
+- bug fix: CSS editor bugfix where custom styles were set into other choosen layers
+- bug fix: Small adjustment for css editor that caused problems on some installations
+- bug fix: Fixed Overlapping layers if Mixed Align Mode used in Slide
+- bug fix: Fixed Pause/Resume function if Navigation elements has been hovered.
+- bug fix: Fixed revsldier and bootstrap functionality
+
+
+
+version 4.1.3 b9:
+
+- bug fix: improved remove mootools function, it works even if mootools added after slider
+- bug fix: fixed wpEmulator class, added protection agains another class includes.
+
+version 4.1.3 b8:
+
+- change: changes help links to unitecms.net website.
+
+version 4.1.3 b7:
+
+- change: remove do_shortcode function from wpemulator
+
+version 4.1.3 b6:
+
+- bug fix: fixed slider import / export from joomla and wordpress
+
+version 4.1.3 b5:
+
+-bug fix: delete dynamic captions file on update slider
+
+version 4.1.3 b4:
+
+- bug fix: fixed path to transparent images and to video js
+
+version 4.1.3 b3:
+
+- bug fix: change module name to revolution slider 3 also.
+
+version 4.1.3 b2:
+
+- change: renamed component name to com_uniterevolution 2
+
+version 4.1.3:
+
+- updated to latest version from wordpress
+
+version 2.2.8:
+
+- bug fix: fixed preview image output
+
+version 2.2.7:
+
+- bug fix: fixed preview ordering
+
+version 2.2.6:
+
+-bug fix: fixed https jquery include output
+
+version 2.2.5:
+
+- protections: remove border from iframe in video output
+
+version 2.2.4:
+
+-bug fix: solved flickering thumbs issue in safary
+
+version 2.2.3:
+
+-bug fix: fixed vimeo id php output
+
+version 2.2.2:
+
+- bug fix: fix preview slide with html input
+
+version 2.2.1:
+
+- bug fix: fixed some vulnarability with the image php output 
+
+version 2.2:
+
+- feature: added alt text for background image
+- change: added z-index:0 in settings.css for easy handling with the menus
+- bug fix: fixed some random rorate out js bug for layers.
+
+version 2.1.10:
+
+changed a little bit uninstall script
+
+version 2.1.9:
+
+- update jquery to 1.8.3 - it fixed the ie9 transitions
+
+version 2.1.8:
+
+- bug fix: fixed link to slide 
+
+version 2.1.7:
+
+- bug fix: fixed php image crop on joomla3 
+
+version 2.1.6:
+
+-feature: added better navigation position options 
+
+version 2.1.5:
+
+- bug fix: fixed some another php strict standards
+- bug fix: fixed safary browser performance issues - big memory allocation. 
+
+version 2.1.4:
+
+- bug fix: on some version of joomla the "new" button didn't worked
+- bug fix: done https output for all the components when ssl enabled. 
+
+version 2.1.3:
+
+- bug fix: fixed some php strict standarts bugs
+
+version 2.1.2:
+
+- bug fix: removed limit of number of slides to 20 from the slides list.
+
+version 2.1.1:
+
+- bug fix: fixed ie9 transitions. Updated to the final wp engine.
+
+version 2.1:
+
+- feature: added joomla3 support
+- bug fix: fixed fade transitions in IE
+
+version 2.0.4:
+
+- bug fix: fixed put js in body.
+- feature: added "revolution slider" id to jquery include
+
+version 2.0.3
+
+- bug fix: added alt text for img tag taken from the image filename
+- bug fix: fixed some language texts in the backend.
+
+version 2.0
+
+- added all updated from the wordpress version.
+
+version 1.5.3
+
+- fixed some bug in js when set boxslide effect to first slide.
+
+version 1.5.2
+
+- updated to the new plugin version.
+- fixed the onhover stop functionality
+- updated the navigation images
+
+version 1.5.1
+
+- bug fix: Fixed strict php type bugs
+- bug fix: Timer was not appearing at the bottom.
+- protection: remove the captions.css from the initial install, and copy it on the first run. That way the captions.css won't be deleted on update.
+
+version 1.5
+
+- feature: added slider setting: "arrows always on"
+- feature: added slider setting:  "timer bar position" 
+- feature: new animation library (transition.js) has been added
+- feature: new transitions added - premium 3D transitions and Custom Transitions.
+- feature: shuffle mode  shuffle:"on/off" to randomize the list elements at start
+- feature: API with function like next, prev, maxslide, pause,resume, show, event handling (event name : revolution.slide.changed  data.slideIndex = new slide index)
+- feature: added slide transition rotation to slide options.
+- feature: added "randomrotate" caption transition
+- feature: added slide link target - new or same window
+- feature: added 2 more responsive layers (5,6)
+- feature: Full Width video support for youtube and vimeo
+- feature: The layers are selected after add
+- feature: Added export / import slider functionality
+
+version 1.4.4
+
+- bug fix: All the image url's are saved now as relative path's
+- bug fix: Fixed bottom link to unitecms website, and some misspells
+
+version 1.4.3
+
+- done all preperations for submitting to JED
+
+version 1.4.2
+
+bug fix: moved the plugin to the media folder
+bug fix: moved the default slide image to media folder
+
+version 1.4.2
+
+- streight line with the wordpress version
+
+version 1.0  
+
+the first revolution slider release!

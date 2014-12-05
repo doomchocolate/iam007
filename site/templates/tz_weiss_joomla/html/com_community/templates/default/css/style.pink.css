@@ -1,0 +1,7 @@
+#community-wrap .cToolBar{background:url(../images/bar-bg-pink.png) bottom repeat-x #f6e6f9;}#community-wrap .cToolBar .cMenu-Text:hover>a,#community-wrap .cToolBar .cMenu-Text>a.active{background:#ee69d5;border-color:#cf28b0;}
+#community-wrap .cToolBar .cHas-Childs ul,#community-wrap .cToolBar .cHas-Childs ul li,#community-wrap .cToolBar .cHas-Childs ul li a{background:#ee69d5;border-color:#cf28b0;color:#f3dcef;}
+#community-wrap .cToolBar .cMenu-Icon a.active,#community-wrap .cToolBar .cMenu-Icon a:focus,#community-wrap .cToolBar .cMenu-Icon a:hover{background-color:#fff;}
+#community-wrap [class^="com-toolbar-"],#community-wrap [class*=" com-toolbar-"]{background-image:url(../images/sprites-toolbar-pink.png);}
+#community-wrap .app-box-header{color:#CF28B0;}
+#community-wrap .app-box-main .app-widget-header{background:#F6E6F9;border:1px solid #d6c0da;border-bottom-color:#bfa7c4;}#community-wrap .app-box-main .app-widget-header .app-box-title{color:#CF28B0;}
+#community-wrap [class^="com-app-"],#community-wrap [class*=" com-app-"]{background-image:url(../images/sprites-app-pink.png);width:16px;}

@@ -1,0 +1,91 @@
+.tztwd-container {
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	font-size: 12px;
+}
+
+.tztwd a {
+	background: none;
+	text-decoration: none;
+}
+
+.tztwd a:hover {
+	text-decoration: underline;
+}
+
+.tztwd-copyright {
+	border-top: 1px #ccc solid;
+	text-align: center;
+}
+
+.tztwd-copyright a {
+	color: #999;
+	font-size: 9px;
+	text-decoration: none;
+}
+
+.tztwd-header {
+	border-bottom: 1px #ccc solid;
+	padding: 5px;
+}
+
+.tztwd-header a {
+	background: none;
+	color: #333;
+}
+
+.tztwd-header a:hover {
+	text-decoration: none;
+}
+
+a .tztwd-display-name {
+	font-weight: bold;
+	color: #333;
+}
+
+a:hover .tztwd-display-name {
+	text-decoration: underline;
+}
+
+a .tztwd-screen-name {
+	color: #999;
+	text-decoration: none;
+}
+
+a:hover .tztwd-screen-name {
+	color: #666;
+}
+
+.tztwd-avatar {
+	border: 0px;
+	float: left;
+	margin-right: 5px;
+}
+
+.tztwd-tweets a {
+	color: #0084B4;
+	text-decoration: none;
+}
+
+.tztwd-tweet-container {
+	border-bottom: 1px #ccc solid;
+	padding: 8px;
+}
+
+.tztwd-last {
+	border: none;
+}
+
+.tztwd-tweet-data {
+	font-size: 10px;	text-align: center;
+}
+
+.tztwd-twitter-icon a {
+	background: url('../images/twitter-icon.png') no-repeat;
+	display: block;
+	float: right;
+	height: 20px;
+	width: 20px;
+	text-indent: -9999px;
+}

@@ -1,0 +1,210 @@
+
+/*---------------------------- JOOMLA ADDITIONS ----------------------------*/
+
+html{
+	overflow-y:visible !important;		/* avoid draggable bug */
+}
+
+
+.clear{
+	clear:both;
+}
+
+iframe{
+	border:none;
+	overflow:hidden;
+}
+
+.view_wrapper a, .view_wrapper a:hover{
+	text-decoration:none;
+}
+
+.radio_inner_wrapper label{
+	display:inline !important;		
+}
+
+.radio_inner_wrapper input{
+	margin-top:0px !important;
+	margin-bottom:4px !important;
+}
+
+
+ul{
+	list-style:none outside none;
+	padding:0px;
+	margin:0px;
+}
+
+ul li{
+	margin-bottom:6px;
+}
+
+.view_wrapper ul{
+	list-style:none outside none;
+	padding:0px;
+	margin:0px;
+}
+
+ul.sortlist{
+	border:0px;
+	padding:0px;
+	margin:0px;
+}
+
+
+.postbox .inside{
+	font-size: 13px;
+    line-height: 1.4em;	
+    color: #444444;
+    font-family:"Open Sans",sans-serif;
+    position:relative;
+}
+
+.postbox h3{
+	font-weight:600;
+}
+
+.settings_wrapper input[type="text"],
+.settings_wrapper select,
+.edit_slide_wrapper input[type="text"],
+.edit_slide_wrapper select{
+	font-family:sans-serif !important;
+	font-size:14px !important;
+	font-weight:400 !important;
+	color:#333333 !important;
+	line-height:15px !important;
+	text-align:start !important;
+	margin:1px !important;
+	padding:3px 5px !important;
+	border:1px solid #DFDFDF !important;
+	border-radius:3px !important;
+	outline-color:#333333 !important;
+	height:24px !important;
+}
+
+select option{
+	font-size:12px;
+}
+
+input:disabled{
+	background-color:#ECECEC;
+}
+
+.setting_unit{
+	padding-left:12px;
+}
+
+.revslider_main_wrapper{
+	font-size:12px;
+	font-family:sans-serif;
+	line-height:1.5em;
+}
+
+.revslider_main_wrapper .disabled{
+	font-weight:normal;
+}
+
+.revslider_main_wrapper span.description{
+    font-size: 12px;
+    font-style: italic;
+    color: #666666;
+    line-height:20px;
+    font-family:sans-serif;
+    font-weight:400;
+}
+
+.revslider_main_wrapper p{
+	margin-top:12px;
+	margin-bottom:12px;
+	margin-left:0px;
+	margin-rught:0px;
+}
+
+
+.form-table tr{
+	font-size:14px;
+	line-height:1;
+}
+
+.form-table th{
+	font-size:14px;
+	text-align:left;
+	color:#222222;
+	font-weight:600;
+	text-shadow:#FFFFFF 0px 1px 0px;
+	line-height:18px;	
+}
+
+.form-table td{
+	line-height:1.3;
+	font-size:14px;
+	font-weight:400;	
+	color:#444444;	
+}
+
+.postbox .inside{
+	margin-top:10px;
+	margin-bottom:10px;
+	padding-right:12px;
+	padding-left:10px;
+	outline-color:#333333;
+}
+
+.hidden{
+	display:none;
+}
+
+.wp-list-table{
+	font-family:sans-serif;
+	font-size:12px;
+	color:#333333;
+	line-height:18px;
+	background-color:#F9F9F9;
+	border:1px solid #DFDFDF;
+	border-radius:3px;
+	clear:both;
+	table-layout:fixed;	
+	border-collapse:collapse;
+}
+
+.wp-list-table th{
+	font-family:Georgia,"Times New Roman";
+	font-size:14px;	
+	font-weight:400;
+	color:#333333;
+	line-height:18px;
+	text-align:left;
+	border-top:1px solid #DFDFDF;
+	border-bottom:1px solid #DFDFDF;
+	padding-top:7px;
+	padding-right:7px;
+	padding-bottom:8px;
+	padding-left:7px;
+	border-collapse:collapse;
+}
+
+.wp-list-table td{
+	font-family:sans-serif;
+	font-size:12px;
+	font-weight:400;
+	color:#555555;
+	line-height:23px;
+	vertical-align:middle;
+	padding-top:4px;
+	padding-right:7px;
+	padding-bottom:2px;
+	padding-left:7px;
+	border-top:1px solid #FFFFFF;
+	border-bottom:1px solid #DFDFDF;
+	border-right-width:0px;
+	border-left-width:0px;
+	overflow-x:hidden;
+	overflow-y:hidden;
+	border-spacing:0px 0px;
+	overflow:hidden;
+	word-wrap:break-word;		
+}
+
+.sortbox_text{
+	max-width:183px !important;	
+}

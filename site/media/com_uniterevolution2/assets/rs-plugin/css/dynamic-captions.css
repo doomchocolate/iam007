@@ -1,0 +1,53 @@
+.tp-caption.white-heading {
+font-size:42px;
+line-height:50px;
+font-weight:300;
+color:rgb(255, 255, 255);
+text-decoration:none;
+background-color:transparent;
+text-shadow:none;
+border-width:0px;
+border-color:rgb(0, 0, 0);
+border-style:none;
+}
+
+.tp-caption.white-style {
+color:rgb(255, 255, 255);
+background-color:transparent;
+font-size:18px;
+line-height:30px;
+font-weight:300;
+text-decoration:none;
+text-shadow:none;
+border-width:0px;
+border-color:rgb(0, 0, 0);
+border-style:none;
+}
+
+.tp-caption.button-style {
+font-size:15px;
+line-height:20px;
+color:rgb(0, 0, 0);
+text-decoration:none;
+background-color:transparent;
+padding:0px;
+text-shadow:none;
+border-width:0px;
+border-color:transparent;
+border-style:none;
+}
+
+.tp-caption.black-heading {
+font-size:48px;
+line-height:50px;
+font-weight:300;
+color:rgb(255, 255, 255);
+text-decoration:none;
+background-color:rgb(0, 0, 0);
+padding:4px 8px;
+text-shadow:none;
+border-width:0px;
+border-color:rgb(0, 0, 0);
+border-style:none;
+}
+

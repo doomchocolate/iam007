@@ -1,0 +1,24 @@
+<div class="joms-postbox-status">
+  <div class="joms-postbox-fetched"></div>
+  <div class="joms-postbox-inputbox"></div>
+  <nav class="joms-postbox-tab selected">
+    <ul class="unstyled">
+      <li data-tab="mood"><i class="joms-icon-smiley"></i></li>
+      <li data-tab="location"><i class="joms-icon-map-marker"></i></li>
+      <li data-tab="privacy"><i></i></li>
+      <% if ( data.enablephoto ) { %>
+      <li data-tab="photo" data-bypass="1"><i class="joms-icon-picture"></i></li>
+      <% } %>
+      <% if ( data.enablevideo ) { %>
+      <li data-tab="video" data-bypass="1"><i class="joms-icon-videocam"></i></li>
+      <% } %>
+    </ul>
+    <div class="joms-postbox-action">
+      <button class="joms-postbox-cancel"><%= data.language.postbox.cancel_button %></button>
+      <button class="joms-postbox-save"><%= data.language.postbox.post_button %></button>
+    </div>
+    <div class="joms-postbox-loading" style="display:none;">
+      <img src="<%= data.juri.root %>components/com_community/assets/ajax-loader.gif">
+    <div>
+  </nav>
+</div>

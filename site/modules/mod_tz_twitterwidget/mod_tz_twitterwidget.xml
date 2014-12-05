@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="2.5"
+	client="site"
+	method="upgrade">
+	<name>Mod TZ Twitter Widget </name>
+	<author>Templaza</author>
+	<creationDate>June 2013</creationDate>
+	<copyright>Copyright (C) 2012 TemPlaza. All rights reserved.</copyright>
+	<license>GNU/GPL Version 2 or later - http://www.gnu.org/licenses/gpl-2.0.html</license>
+	<authorUrl>www.templaza.com</authorUrl>
+	<version>1.0</version>
+	<description> Mod Tz Twitter Widget</description>
+	<files>
+		<filename module="mod_tz_twitterwidget">mod_tz_twitterwidget.php</filename>
+		<folder>css</folder>
+		<folder>lib</folder>
+		<folder>images</folder>
+		<folder>tmpl</folder>
+		<filename>helper.php</filename>
+		<filename>mod_tz_twitterwidget.xml</filename>
+	</files>
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.mod_tz_twitterwidget.ini</language>
+        <language tag="en-GB">en-GB/en-GB.mod_tz_twitterwidget.sys.ini</language>
+
+    </languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field type="spacer" name="&lt;div style=&quot;padding: 5px; border-bottom: 1px solid; text-align:center; color: #FF875B; font-weight:bold;&quot;&gt;Authentication settings (compulsory)&lt;/div&gt;" />
+
+                <field name="consumer_key" type="text" default="" label="LABEL_KEY" description="LABEL_KEY_DES" />
+				<field name="consumer_secret" type="text" default="" label="LABEL_SECRET" description="LABEL_SECRET_DES" />
+				<field name="access_token" type="text" default="" label="LABEL_TOKEN" description="LABEL_TOKEN_DES" />
+				<field name="access_secret" type="text" default="" label="LABEL_TOKEN1" description="LABEL_TOKEN1_DES" />
+
+                <field type="spacer" name="&lt;div style=&quot; border-bottom: 1px solid;  padding: 5px; text-align:center; color: #FF875B; font-weight:bold;&quot;&gt;Widget settings&lt;/div&gt;" />
+				<field name="type" type="list" default="1" label="LABEL_TYPE" description="LABEL_TYPE_DES">
+					<option value="1">Timeline</option>
+					<option value="0">Search</option>
+				</field>
+				<field name="username" type="text" default="twitter" label="LABEL_USERNAME" description="LABEL_USERNAME_DES" />
+				<field name="query" type="text" default="" label="LABEL_QUERY" description="LABEL_QUERY_DES" />
+				<field name="title" type="text" default="" label="LABEL_SEARCH" description="LABEL_SEARCH_DES" />
+				<field name="link_title" type="list" default="1" label="LABEL_SEARCH_TITLE" description="LABEL_SEARCH_TITLE_DES">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="count" type="text" default="5" label="LABEL_TW_NUMBER" description="LABEL_TW_NUMBER_DES" />
+            </fieldset>
+            <fieldset name="account">
+                <field type="spacer" name="&lt;div style=&quot; border-bottom: 1px solid; padding: 5px; text-align:center; color: #FF875B; font-weight:bold;&quot;&gt;Module appearance &lt;/div&gt;" />
+				<field name="width" type="text" default="" label="LABEL_WIDTH" description="LABEL_WIDTH_DES" />
+				<field name="height" type="text" default="" label="LABEL_HEIGHT" description="LABEL_HEIGHT_DES" />
+				<field name="header" type="list" default="1" label="LABEL_SHOW_HEADER" description="LABEL_SHOW_HEADER_DES">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="twitter_icon" type="list" default="1" label="LABEL_ICON" description="LABEL_ICON_DES">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field type="spacer" name="&lt;div style=&quot;border-bottom: 1px solid; padding: 5px; text-align:center; color: #FF875B; font-weight:bold;&quot;&gt;Color options &lt;/div&gt;" />
+				<field name="bgd_color" type="color" default="#ffffff" label="LABEL_BACKGROUND" description="LABEL_BACKGROUND_DES" />
+				<field name="link_color" type="color" default="#0084B4" label="LABEL_LINK_COLOR" description="LABEL_LINK_COLOR_DES" />
+				<field name="border_color" type="color" default="#cccccc" label="LABEL_BORDER_COLOR" description="LABEL_BORDER_COLOR_DES" />
+				<field name="text_color" type="color" default="#333333" label="LABEL_TEXT_COLOR" description="LABEL_TEXT_COLOR_DES" />
+				<field name="header_link_color" type="color" default="#333333" label="LABEL_HEADER_COLOR" description="LABEL_HEADER_COLOR_DES" />
+				<field name="header_sub_color" type="color" default="#999999" label="LABEL_USER_COLOR" description="LABEL_USER_COLOR_DES" />
+				<field name="header_sub_hover_color" type="color" default="#666666" label="LABEL_USER_HV_COLOR" description="LABEL_USER_HV_COLOR_DES" />
+				<field name="search_title_color" type="color" default="#333333" label="LABEL_SEARCH_TITLE_COLOR" description="LABEL_SEARCH_TITLE_COLOR_DES" />
+				<field type="spacer" name="&lt;div style=&quot;border-bottom: 1px solid; padding: 5px; text-align:center; color: #FF875B; font-weight:bold;&quot;&gt;Tweet appearance &lt;/div&gt;" />
+				<field name="display_name" type="list" default="1" label="LABEL_DISPLAY_USER" description="LABEL_DISPLAY_USER_DES">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="avatars" type="list" default="0" label="LABEL_AVATAR" description="LABEL_AVATAR_DES">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="timestamps" type="list" default="1" label="LABEL_TIMESTAMP" description="LABEL_TIMESTAMP_DES">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="reply" type="list" default="1" label="LABEL_REP_LINK" description="LABEL_REP_LINK_DES">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="retweet" type="list" default="1" label="LABEL_RETWEET" description="LABEL_RETWEET_DES">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="favorite" type="list" default="1" label="LABEL_FAVORITE"  description="LABEL_FAVORITE_DES">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+
+			</fieldset>
+			<fieldset
+				name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="itemid">
+					<option
+						value="itemid"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+
+</extension>

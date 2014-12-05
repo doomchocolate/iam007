@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="system" method="upgrade">
+	<name>System - HikaShop Affiliate</name>
+	<creationDate>{__DAY__} {__MONTH__} {__YEAR__}</creationDate>
+	<version>{__PLUGIN_VERSION__}</version>
+	<author>HikaShop</author>
+	<authorEmail>dev@hikashop.com</authorEmail>
+	<authorUrl>http://www.hikashop.com</authorUrl>
+	<copyright>(C) 2010-{__YEAR__} HIKARI SOFTWARE. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<description>HikaShop System plugin to handle affiliates</description>
+	<files>
+		<filename plugin="hikashopaffiliate">hikashopaffiliate.php</filename>
+	</files>
+	<params addpath="/components/com_hikashop/params">
+		<param name="partner_key_name" type="text" label="Partner key name" description="Name of the affiliate key" default="partner_id"/>
+		<param name="after_init" type="radio" label="after initialisation" default="1" description="If turn off, the affiliate will only be registered after the routing of the pages have been done (it might not work with SEF in some cases, but might avoid problems in some others)" >
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+	</params>
+	<config>
+		<fields name="params" addfieldpath="/components/com_hikashop/fields">
+			<fieldset name="basic">
+				<field
+					name="partner_key_name"
+					type="text"
+					label="Partner key name"
+					default="partner_id"
+					description="Name of the affiliate key" />
+				<field
+					name="after_init"
+					type="radio"
+					label="after initialisation"
+					default="0"
+					description="If turn off, the affiliate will only be registered after the routing of the pages have been done (it might not work with SEF in some cases, but might avoid problems in some others)" >
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

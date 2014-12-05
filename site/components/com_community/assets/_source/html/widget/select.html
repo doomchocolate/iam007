@@ -1,0 +1,6 @@
+<span></span>
+<ul class="unstyled" style="display:none;">
+  <% if ( data.options && data.options.length ) for ( var i = 0; i < data.options.length; i++ ) { %>
+  <li data-value="<%= data.options[i][0] %>"><%= data.options[i][1] %></li>
+  <% } %>
+</ul>

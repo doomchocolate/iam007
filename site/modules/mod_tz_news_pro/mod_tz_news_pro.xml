@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+        type="module"
+        version="3.0"
+        client="site"
+        method="upgrade">
+    <name>mod_tz_news_pro</name>
+    <author>tuyennv</author>
+    <creationDate>2013</creationDate>
+    <copyright>Copyright (C) 2013 TemPlaza. All rights reserved.</copyright>
+    <license>GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html</license>
+    <authorEmail>support@templaza.com</authorEmail>
+    <authorUrl>www.templaza.com/</authorUrl>
+    <version>3.1.0</version>
+    <description>Module get article order by created, hits, title and view type: Accordion, Slider, Normal.
+    </description>
+    <files>
+        <filename module="mod_tz_news_pro">mod_tz_news_pro.php</filename>
+        <folder>tmpl</folder>
+        <folder>css</folder>
+        <folder>admin</folder>
+        <folder>images</folder>
+        <folder>js</folder>
+        <filename>helper.php</filename>
+        <filename>index.html</filename>
+        <filename>mod_tz_news_pro.xml</filename>
+    </files>
+    <languages folder="languages">
+        <language tag="en-GB">en-GB/en-GB.mod_tz_news_pro.ini</language>
+        <language tag="en-GB">en-GB/en-GB.mod_tz_news_pro.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic" addfieldpath="libraries/tzm/fields">
+                <field name="manager"
+                       type="radio"
+                       default="tz_portfolio"
+                       description="MOD_TZ_NEWS_MANAGER_DS"
+                       label="MOD_TZ_NEWS_MANAGER_LABEL"
+                       class="btn-group">
+                    <option value="tz_portfolio">TZ Portfolio</option>
+                    <option value="joomla_content">Joomla Content</option>
+                </field>
+                <field type="radio"
+                       name="enable_jquery"
+                       default="1"
+                       class="btn-group"
+                       label="MOD_TZ_NEWS_ENABLE_JQUERY_LABEL"
+                       description="MOD_TZ_NEWS_ENABLE_JQUERY_DS">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                <field name="image"
+                       type="list"
+                       default="XS"
+                       label="MOD_TZ_NEWS_TYPE_IMAGE_LABEL"
+                       description="MOD_TZ_NEWS_TYPE_IMAGE_DS">
+                    <option value="XS">MOD_TZ_NEWS_XSMALL</option>
+                    <option value="S">MOD_TZ_NEWS_SMALL</option>
+                    <option value="M">MOD_TZ_NEWS_MEDIUM</option>
+                    <option value="L">MOD_TZ_NEWS_LARGE</option>
+                    <option value="XL">MOD_TZ_NEWS_XLARGE</option>
+                </field>
+
+                <field type="radio" name="fitImage"
+                       class="btn-group" default="0"
+                       label="MOD_TZ_NEWS_PRO_FIT_IMAGE_LABEL">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field type="list"
+                       name="orderby"
+                       default="created"
+                       label="MOD_TZ_NEWS_ORDERBY_LABEL"
+                       description="MOD_TZ_NEWS_ORDERBY_DS">
+                    <option value="title">Title</option>
+                    <option value="created">Date Create</option>
+                    <option value="hits">Hits</option>
+                    <option value="ordering">ordering</option>
+                </field>
+
+                <field type="list"
+                       name="order"
+                       default="DESC"
+                       class="btn-group"
+                       label="MOD_TZ_NEWS_TYPE_ORDER_LABEL"
+                       description="MOD_TZ_NEWS_TYPE_ORDER_DS">
+                    <option value="ASC">MOD_TZ_NEWS_TYPE_ORDER_ASC</option>
+                    <option value="DESC">MOD_TZ_NEWS_TYPE_ORDER_DESC</option>
+                </field>
+
+                <field type="radio"
+                       name="show_title"
+                       default="1"
+                       class="btn-group"
+                       label="MOD_TZ_NEWS_TITLE_LABEL"
+                       description="MOD_TZ_NEWS_TITLE_DS">
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+
+
+                <field type="radio"
+                       name="show_image"
+                       default="1"
+                       class="btn-group"
+                       label="MOD_TZ_NEWS_IMAGE_LABEL"
+                       description="MOD_TZ_NEWS_IMAGE_DS">
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+
+                <field type="radio"
+                       name="show_description"
+                       default="1"
+                       class="btn-group"
+                       label="MOD_TZ_NEWS_DESCRIPTION_LABEL"
+                       description="MOD_TZ_NEWS_DESCRIPTION_DS">
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+
+                <field type="radio"
+                       name="show_date"
+                       default="1"
+                       class="btn-group"
+                       label="MOD_TZ_NEWS_DATE_LABEL"
+                       description="MOD_TZ_NEWS_DATE_DS">
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+
+                <field type="radio"
+                       name="show_readmore"
+                       default="1"
+                       class="btn-group"
+                       label="MOD_TZ_NEWS_READMORE_LABEL"
+                       description="MOD_TZ_NEWS_REDMORE_DS">
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+
+                <field type="radio"
+                       name="show_hits"
+                       default="1"
+                       class="btn-group"
+                       label="MOD_TZ_NEWS_HITS_LABEL"
+                       description="MOD_TZ_NEWS_HITS_DS">
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+
+                <field type="radio"
+                       name="show_category"
+                       default="1"
+                       class="btn-group"
+                       label="MOD_TZ_NEWS_CAT_LABEL"
+                       description="MOD_TZ_NEWS_CAT_DS">
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+
+                <field type="radio"
+                       name="show_author"
+                       default="1"
+                       class="btn-group"
+                       label="MOD_TZ_NEWS_AUTHOR_LABEL"
+                       description="MOD_TZ_NEWS_AUTHOR_DS">
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+
+                <field name="limit"
+                       type="text"
+                       size="30"
+                       label="MOD_TZ_NEWS_LIMIT_ARTICLE_LABEL"
+                       default="5"
+                       description="MOD_TZ_NEWS_LIMIT_ARTICLE_DS"/>
+
+                <field type="text"
+                       size="30"
+                       name="limit_text"
+                       default=""
+                       label="MOD_TZ_NEWS_LIMIT_INTROTEXT_LABEL"
+                       description="MOD_TZ_NEWS_LIMIT_INTROTEXT_DS"/>
+
+                <field type="text"
+                       size="30"
+                       name="limit_title"
+                       default=""
+                       label="MOD_TZ_NEWS_LIMIT_TITLE_LABEL"
+                       description="MOD_TZ_NEWS_LIMIT_TITLE_DS"/>
+
+                <field type="radio"
+                       name="redirect_page"
+                       default="0"
+                       class="btn-group"
+                       label="Link Redirect"
+                       description="Redirect to article or portfolio article">
+                    <option value="1">Portfolio</option>
+                    <option value="0">Article</option>
+                </field>
+                <field type="text" name="item_height" label="MOD_TZ_NEWS_PRO_ITEM_HEIGHT_LABEL"/>
+
+            </fieldset>
+
+            <fieldset name="Portfolio">
+                <field type="category"
+                       extension="com_content"
+                       multiple="true"
+                       name="catid"
+                       size="10"
+                       label="MOD_TZ_NEWS_CATEGORIES_LABEL"
+                       description="MOD_TZ_NEWS_CATEGORIES_DS">
+                </field>
+                <field type="radio"
+                       name="show_quote"
+                       default="0"
+                       class="btn-group"
+                       label="MOD_TZ_NEWS_QUOTE_LABEL"
+                       description="MOD_TZ_NEWS_QUOTE_DESC">
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+
+                <field type="radio"
+                       name="show_link"
+                       default="0"
+                       class="btn-group"
+                       label="MOD_TZ_NEWS_LINK_LABEL"
+                       description="MOD_TZ_NEWS_LINK_DESC">
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+
+                <field type="radio"
+                       name="show_audio"
+                       default="0"
+                       class="btn-group"
+                       label="MOD_TZ_NEWS_AUDIO_LABEL"
+                       description="MOD_TZ_NEWS_AUDIO_DESC">
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+            </fieldset>
+
+            <fieldset name="slide">
+
+                <field name="tz_auto"
+                       type="radio"
+                       class="btn-group"
+                       label="MOD_TZ_NEWS_PRO_AUTO_SILDE_LABEL"
+                       default="1"
+                       description="MOD_TZ_NEWS_PRO_AUTO_SILDE_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                <field name="tz_pausePlay"
+                       type="radio"
+                       label="MOD_TZ_NEWS_PRO_PAUSE_PLAY_LABEL"
+                       default="0"
+                       class="btn-group"
+                       description="MOD_TZ_NEWS_PRO_PAUSE_PLAY_DESC">
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+
+                <field name="tz_animationLoop"
+                       type="radio"
+                       class="btn-group"
+                       default="0"
+                       label="MOD_TZ_NEWS_PRO_ANIMATION_LOOP_LABEL"
+                       description="MOD_TZ_NEWS_PRO_ANIMATION_LOOP_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                <field name="tz_effect"
+                       type="radio"
+                       label="MOD_TZ_NEWS_PRO_EFFECT_LABEL"
+                       default="slide"
+                       class="btn-group"
+                       size="30"
+                       description="MOD_TZ_NEWS_PRO_EFFECT_DESC">
+                    <option value="slide">JSLIDE</option>
+                    <option value="fade">JFADE</option>
+                </field>
+
+                <field name="tz_direction_nav"
+                       type="radio"
+                       class="btn-group"
+                       default="0"
+                       label="MOD_TZ_NEWS_PRO_DIRECTION_NAV_LABEL"
+                       description="MOD_TZ_NEWS_PRO_DIRECTION_NAV_DESC">
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+
+                <field name="tz_animationSpeed"
+                       type="text"
+                       label="MOD_TZ_NEWS_PRO_ANIMATION_SPEED_LABEL"
+                       description="MOD_TZ_NEWS_PRO_ANIMATION_SPEED"
+                       default="600"
+                       class="btn-group"
+                       size="30"
+                        />
+
+                <field name="tz_slideSpeed"
+                       type="text"
+                       label="MOD_TZ_NEWS_PRO_SLIDE_SPEED_LABEL"
+                       default="5000"
+                       class="btn-group"
+                       size="30"
+                       description="MOD_TZ_NEWS_PRO_SLIDE_SPEED_DESC"/>
+                <field name="tz_slideItemWidth"
+                       type="text"
+                       label="MOD_TZ_NEWS_PRO_SLIDE_ITEM_WIDTH_LABEL"
+                       default="100"
+                       class="btn-group"
+                       size="30"
+                       description="MOD_TZ_NEWS_PRO_SLIDE_ITEM_WIDTH_DESC"/>
+                <field name="tz_slideMinItem"
+                       type="text"
+                       label="MOD_TZ_NEWS_PRO_SLIDE_MIN_ITEM_LABEL"
+                       default="1"
+                       class="btn-group"
+                       size="30"
+                       description="MOD_TZ_NEWS_PRO_SLIDE_MIN_ITEM_DESC"/>
+                <field name="tz_slideMaxItem"
+                       type="text"
+                       label="MOD_TZ_NEWS_PRO_SLIDE_MAX_ITEM_LABEL"
+                       default="5"
+                       class="btn-group"
+                       size="30"
+                       description="MOD_TZ_NEWS_PRO_SLIDE_MAX_ITEM_DESC"/>
+                <field name="tz_slideMoveItem"
+                       type="text"
+                       label="MOD_TZ_NEWS_PRO_SLIDE_MOVE_ITEM_LABEL"
+                       default="5"
+                       class="btn-group"
+                       size="30"
+                       description="MOD_TZ_NEWS_PRO_SLIDE_MOVE_ITEM_DESC"/>
+            </fieldset>
+
+            <fieldset name="marquee">
+                <field name="tz_customclass"
+                       type="list"
+                       label="MOD_TZ_NEWS_CUSTOM_CLASS_LABEL"
+                       default="simply-scroll"
+                       description="MOD_TZ_NEWS_CUSTOM_CLASS_LABEL">
+                    <option value="simply-scroll">Simply-scroll</option>
+                    <option value="vert">Vert</option>
+                </field>
+                <field name="tz_orientation"
+                       type="list"
+                       label="MOD_TZ_NEWS_ORIENTATION_LABEL"
+                       default="horizontal"
+                       description="MOD_TZ_NEWS_ORIENTATION_DESC">
+                    <option value="horizontal">horizontal</option>
+                    <option value="vertical">vertical</option>
+                </field>
+                <field name="tz_direction"
+                       type="list"
+                       label="MOD_TZ_NEWS_DIRECTION_LABEL"
+                       default="backwards"
+                       description="MOD_TZ_NEWS_DIRECTION_DESC">
+                    <option value="forwards">forwards</option>
+                    <option value="backwards">backwards</option>
+                </field>
+                <field name="tz_frameRate"
+                       type="text"
+                       label="MOD_TZ_NEWS_FRAME_RATE_LABEL"
+                       default="24"
+                       description="MOD_TZ_NEWS_FRAME_RATE_DESC"/>
+            </fieldset>
+            <fieldset name="carousel">
+                <field name="autoPlay"
+                       type="radio"
+                       class="btn-group"
+                       default="0"
+                       label="MOD_TZ_NEWS_PRO_CAROUSEL_AUTO_LABEL"
+                       description="MOD_TZ_NEWS_PRO_CAROUSEL_AUTO_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="navigation"
+                       type="radio"
+                       class="btn-group"
+                       default="0"
+                       label="MOD_TZ_NEWS_PRO_CAROUSEL_NAVIGATION_LABEL"
+                       description="MOD_TZ_NEWS_PRO_CAROUSEL_NAVIGATION_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field name="stopOnHover"
+                       type="radio"
+                       class="btn-group"
+                       default="0"
+                       label="MOD_TZ_NEWS_PRO_CAROUSEL_STOP_ON_HOVER_LABEL"
+                       description="MOD_TZ_NEWS_PRO_CAROUSEL_STOP_ON_HOVER_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field name="singleItem"
+                       type="radio"
+                       class="btn-group"
+                       default="0"
+                       label="MOD_TZ_NEWS_PRO_CAROUSEL_SINGLE_ITEM_LABEL"
+                       description="MOD_TZ_NEWS_PRO_CAROUSEL_SINGLE_ITEM_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field name="itemsScaleUp"
+                       type="radio"
+                       class="btn-group"
+                       default="0"
+                       label="MOD_TZ_NEWS_PRO_CAROUSEL_ITEMS_SCALE_UP_LABEL"
+                       description="MOD_TZ_NEWS_PRO_CAROUSEL_ITEMS_SCALE_UP_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field name="rewindNav"
+                       type="radio"
+                       class="btn-group"
+                       default="0"
+                       label="MOD_TZ_NEWS_PRO_CAROUSEL_REWIND_NAV_LABEL"
+                       description="MOD_TZ_NEWS_PRO_CAROUSEL_REWIND_NAV_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field name="pagination"
+                       type="radio"
+                       class="btn-group"
+                       default="0"
+                       label="MOD_TZ_NEWS_PRO_CAROUSEL_PAGINATION_LABEL"
+                       description="MOD_TZ_NEWS_PRO_CAROUSEL_PAGINATION_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field name="paginationNumbers"
+                       type="radio"
+                       class="btn-group"
+                       default="0"
+                       label="MOD_TZ_NEWS_PRO_CAROUSEL_PAGINATION_NUMBERS_LABEL"
+                       description="MOD_TZ_NEWS_PRO_CAROUSEL_PAGINATION_NUMBERS_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field name="items"
+                       type="text"
+                       default="5"
+                       label="MOD_TZ_NEWS_PRO_CAROUSEL_ITEMS_LABEL"
+                       description="MOD_TZ_NEWS_PRO_CAROUSEL_ITEMS_DESC"/>
+
+                <field name="slideSpeed"
+                       type="text"
+                       default="200"
+                       label="MOD_TZ_NEWS_PRO_CAROUSEL_SLIDE_SPEED_LABEL"
+                       description="MOD_TZ_NEWS_PRO_CAROUSEL_SLIDE_SPEED_DESC"/>
+
+                <field name="paginationSpeed"
+                       type="text"
+                       default="800"
+                       label="MOD_TZ_NEWS_PRO_CAROUSEL_PAGINATION_SPEED_LABEL"
+                       description="MOD_TZ_NEWS_PRO_CAROUSEL_PAGINATION_SPEED_DESC"/>
+
+                <field name="rewindSpeed"
+                       type="text"
+                       default="1000"
+                       label="MOD_TZ_NEWS_PRO_CAROUSEL_REWIND_SPEED_LABEL"
+                       description="MOD_TZ_NEWS_PRO_CAROUSEL_REWIND_SPEED_DESC"/>
+
+                <field type="text" name="itemHeight"
+                        label="MOD_TZ_NEWS_PRO_ITEM_HEIGHT_LABEL"/>
+            </fieldset>
+
+            <fieldset name="tooltip">
+                <field name="tz_fadeinspeed"
+                       type="text"
+                       label="MOD_TZ_NEWS_FADE_IN_SPEED_LABEL"
+                       default="200"
+                       size="30"
+                       description=""/>
+                <field name="tz_border_s"
+                       type="text"
+                       label="MOD_TZ_NEWS_BORDER_S_LABEL"
+                       default="black"
+                       size="30"
+                       description=""/>
+                <field name="tz_border_out"
+                       type="text"
+                       label="MOD_TZ_NEWS_BORDER_OUT_LABEL"
+                       default="darkred"
+                       size="30"
+                       description=""/>
+                <field name="tz_background_s"
+                       type="text"
+                       label="MOD_TZ_NEWS_BACKGROUND_S_LABEL"
+                       default="black"
+                       size="30"
+                       description=""/>
+                <field name="tz_background_out"
+                       type="text"
+                       label="MOD_TZ_NEWS_BACKGROUND_OUT_LABEL"
+                       default="darkred"
+                       size="30"
+                       description=""/>
+                <field name="tz_tooltip_status"
+                       type="list"
+                       label="MOD_TZ_NEWS_TOOLTIP_STATUS_LABEL"
+                       default="1"
+                       description="">
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+            </fieldset>
+
+            <fieldset name="Tabs">
+                <field name="type_tab"
+                       type="radio"
+                       class="btn-group"
+                       label="MOD_TZ_NEWS_PRO_TYPE_TAB"
+                       description="MOD_TZ_NEWS_PRO_TYPE_TAB_DESC" default="category">
+                    <option value="category">Category</option>
+                    <option value="modules">Modules</option>
+                </field>
+                <field name="modules"
+                       type="modules"
+                       multiple="multiple"
+                       class="chzn-select"
+                       label="MOD_TZ_NEWS_MODULES_LABEL"
+                       description="MOD_TZ_NEWS_MODULES_DS"/>
+
+                <field name="tabs_title_custom"
+                       type="textarea"
+                       rows="2" cols="60"
+                       default="Tab1, Tab1, Tab3"
+                       label="MOD_TZ_NEWS_CUSTOM_TITLE_LABEL"
+                       description="MOD_TZ_NEWS_CUSTOM_TITLE_DS"/>
+
+                <field name="tabs_title_type"
+                       type="radio"
+                       default="content"
+                       class="btn-group"
+                       label="MOD_TZ_NEWS_OPTION_TITLE_LABEL"
+                       description="MOD_TZ_NEWS_OPTION_TITLE_DS">
+                    <option value="content">MOD_TZ_NEWS_CONTENT_TITLE</option>
+                    <option value="custom">MOD_TZ_NEWS_CUSTOM</option>
+                </field>
+
+                <field name="tabs_position"
+                       type="radio"
+                       default="top"
+                       class="btn-group"
+                       label="MOD_TZ_NEWS_CONTENT_PISITION_TITLE_LABEL"
+                       description="MOD_TZ_NEWS_CONTENT_PISITION_TITLE_DS">
+                    <option value="top">MOD_TZ_NEWS_CONTENT_PISITION_TOP</option>
+                    <option value="bottom">MOD_TZ_NEWS_CONTENT_PISITION_BUTTOM</option>
+                </field>
+
+                <field name="tz_count"
+                       type="text"
+                       default="5"
+                       class="btn-group"
+                       label="MOD_TZ_NEWS_NUMBER_MODULE_LABEL"
+                       description="MOD_TZ_NEWS_NUMBER_MODULE_DS">
+                </field>
+            </fieldset>
+
+            <fieldset name="advanced">
+                <field name="layout"
+                       type="modulelayout"
+                       label="JFIELD_ALT_LAYOUT_LABEL"
+                       description="JFIELD_ALT_MODULE_LAYOUT_DESC"/>
+                <field type="text"
+                       name="moduleclass_sfx"
+                       size="30"
+                       label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                       description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC">
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="community" method="upgrade">
+	<name>PLG_MYARTICLES_TITLE</name>
+	<author>JomSocial Team</author>
+	<creationDate>March 2011</creationDate>
+	<copyright>Copyright 2008 - 2013 by iJoomla, Inc. - All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>support@jomsocial.com</authorEmail>
+	<authorUrl>http://www.jomsocial.com</authorUrl>
+	<version>3.2_RC3</version>
+	<isapplication>true</isapplication>
+	<description>PLG_MYARTICLES_XML_DESCRIPTION</description>
+	<languages>
+	    <language tag="en-GB">en-GB.plg_community_myarticles.ini</language>
+		<language tag="en-GB">en-GB.plg_community_myarticles.sys.ini</language>
+	</languages>
+	<files>
+		<file plugin="myarticles">myarticles.php</file>
+		<folder>myarticles</folder>
+	</files>
+	<params>
+		<param name="coreapp" type="list" default="0" label="Core Application" description="Causes this application to not appear in the users applications list but it will allow this application to appear in the user profile automatically if selected.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="position" type="list" default="content" label="Position" description="Default position if you select this as core apps">
+			<option value="content">Main  content</option>
+			<option value="sidebar-top">Sidebar top</option>
+			<option value="sidebar-bottom">Sidebar bottom</option>
+		</param>
+		<param name="section" type="text" default="" label="Category" description="Show only category listed in this textfield (seperated by comma eg. 1,2,3). Leave it blank to display all articles." />
+		<param name="limit" type="text" default="50" label="Limit" description="Limit the length of the content (default is 50)." />
+		<param name="count" type="text" default="10" label="Count" description="The number of comment to display (default is 10)" />
+		<param name="introtext" type="list" default="0" label="Introtext" description="Select whether to display the introtext of the article.">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="cache" type="list" default="1" label="Caching" description="Select whether to cache the content of this plugin">
+			<option value="1">Use Global</option>
+			<option value="0">No</option>
+		</param>
+		<param name="display_expired" type="list" default="1" label="Display Expired" description="Display expired articles based on the publish up / publish down date.">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+	</params>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="coreapp" type="list" default="0" label="Core Application" description="Causes this application to not appear in the users applications list but it will allow this application to appear in the user profile automatically if selected.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="position" type="list" default="content" label="Position" description="Default position if you select this as core apps">
+					<option value="content">Main  content</option>
+					<option value="sidebar-top">Sidebar top</option>
+					<option value="sidebar-bottom">Sidebar bottom</option>
+				</field>
+				<field name="section" type="text" default="" label="Category" description="Show only category listed in this textfield (seperated by comma eg. 1,2,3). Leave it blank to display all articles." />
+				<field name="limit" type="text" default="50" label="Limit" description="Limit the length of the content (default is 50)." />
+				<field name="count" type="text" default="10" label="Count" description="The number of comment to display (default is 10)" />
+				<field name="introtext" type="list" default="0" label="Introtext" description="Select whether to display the introtext of the article.">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="cache" type="list" default="1" label="Caching" description="Select whether to cache the content of this plugin">
+					<option value="1">Use Global</option>
+					<option value="0">No</option>
+				</field>
+				<field name="display_expired" type="list" default="1" label="Display Expired" description="Display expired articles based on the publish up / publish down date.">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension >

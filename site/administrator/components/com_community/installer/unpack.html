@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8"/>
+	<title>JomSocial Web Installer</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="JomSocial Web Installer">
+	<link rel="stylesheet" type="text/css" href="<?php echo JURI::root(); ?>/administrator/components/com_community/installer/css/bootstrap.min.css" media="screen" />
+	<!-- <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css" media="screen" /> -->
+	<link rel="stylesheet" type="text/css" href="<?php echo JURI::root(); ?>/administrator/components/com_community/installer/css/style.css" media="screen" />
+	<!-- <link rel="shortcut icon" type="images/ico" href="" /> -->
+    <!--[if IE]>
+    	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="<?php echo JURI::root(); ?>/administrator/components/com_community/installer/js/bootstrap.min.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+	<div class="container">
+		<div id="js-installer">
+			<div class="js-header">
+				<h1>JomSocial</h1>
+			</div>
+			<div class="tabbable tabs-left">
+
+				<ul class="nav nav-tabs">
+					<li><a href="#step-one" data-toggle="tab">Welcome</a></li>
+					<li  class="active"><a href="#step-three" data-toggle="tab">Unpacking files</a></li>
+					<li><a href="#step-seven" data-toggle="tab">Preparing Database</a></li>
+					<li><a href="#step-eight" data-toggle="tab">Updating Database</a></li>
+					<li><a href="#step-nine" data-toggle="tab">Installing Plugins</a></li>
+					<li><a href="#step-ten" data-toggle="tab">Installing Modules</a></li>
+					<li><a href="#step-eleven" data-toggle="tab">Done!</a></li>
+				</ul>
+
+				<div class="tab-content">
+
+
+
+					<div class="tab-pane active" id="step-three">
+						<div class="js-title clearfix">
+							<h2 class="pull-left">Installing JomSocial Files</h2>
+							<div class="pull-right">
+								<a id="btn-next" href="#" class="btn disabled">Next &raquo;</a>
+							</div>
+						</div>
+						<div class="well">
+							<div class="tabular-data loosemargin">
+								<div class="progress progress-striped active">
+									<div class="bar" style="width: 0%;"></div>
+								</div>
+
+								<table class="table">
+									<tbody>
+										<tr data-call="index.php?option=com_community&view=installer&task=ajax">
+											<td>Unpacking backend files</td>
+											<td>&nbsp;</td>
+											<td class="right" id="step1"><span class="badge">Waiting</span></td>
+										</tr>
+										<tr data-call="index.php?option=com_community&view=installer&task=ajax">
+											<td>Unpacking frontend files</td>
+											<td>&nbsp;</td>
+											<td class="right"  id="step2"><span class="badge">Waiting</span></td>
+										</tr>
+
+										<tr>
+											<td>Unpacking templates</td>
+											<td>&nbsp;</td>
+											<td class="right" id="step3"><span class="badge">Waiting</span></td>
+										</tr>
+										<tr>
+											<td>Installing ajax subsystem</td>
+											<td>&nbsp;</td>
+											<td class="right" id="step4"><span class="badge">Waiting</span></td>
+										</tr>
+										<tr>
+											<td>Installing ajax ai plugin</td>
+											<td>&nbsp;</td>
+											<td class="right" id="step5"><span class="badge">Waiting</span></td>
+										</tr>
+										<tr>
+											<td>Unpacking modules</td>
+											<td>&nbsp;</td>
+											<td class="right" id="step6"><span class="badge">Waiting</span></td>
+										</tr>
+
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+
+					<div class="tab-pane" id="step-four">
+						<div class="js-title clearfix">
+							<h2 class="pull-left">Installing JomSocial Ajax System</h2>
+							<div class="pull-right">
+								<a href="#" class="btn btn-primary">Next &raquo;</a>
+							</div>
+						</div>
+						<div class="well">
+							<div class="tabular-data loosemargin">
+								<div class="progress progress-striped active">
+									<div class="bar" style="width: 0%;"></div>
+								</div>
+
+								<table class="table">
+									<tbody>
+										<tr>
+											<td>Extracting</td>
+											<td>&nbsp;</td>
+											<td class="right"><span class="badge badge-success">Done</span></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+
+					<div class="tab-pane" id="step-five">
+						<div class="js-title clearfix">
+							<h2 class="pull-left">Installing JomSocial Frontend System</h2>
+							<div class="pull-right">
+								<a href="#" class="btn btn-primary">Next &raquo;</a>
+							</div>
+						</div>
+						<div class="well">
+							<div class="tabular-data loosemargin">
+								<div class="progress progress-striped active">
+									<div class="bar" style="width: 40%;"></div>
+								</div>
+
+								<table class="table">
+									<tbody>
+										<tr>
+											<td>Installation</td>
+											<td>&nbsp;</td>
+											<td class="right"><span class="badge badge-success">Done</span></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+
+					<div class="tab-pane" id="step-six">
+						<div class="js-title clearfix">
+							<h2 class="pull-left">Installing JomSocial Templates System</h2>
+							<div class="pull-right">
+								<a href="#" class="btn btn-primary">Next &raquo;</a>
+							</div>
+						</div>
+						<div class="well">
+							<div class="tabular-data loosemargin">
+								<div class="progress progress-striped active">
+									<div class="bar" style="width: 40%;"></div>
+								</div>
+
+								<table class="table">
+									<tbody>
+										<tr>
+											<td>Installation</td>
+											<td>&nbsp;</td>
+											<td class="right"><span class="badge badge-success">Done</span></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		$(document).ready(function() {
+		    install_backend();
+		});
+
+		function install_backend(){
+			$.ajax({
+				url: 'index.php?option=com_community&view=installer&task=ajax_unpack&filename=backend',
+			}).done(function() {
+				$('#step1').html('<span class="badge badge-success">Done</span>');
+				$('.bar').css('width', '15%');
+				install_frontend();
+			});
+		}
+
+		function install_frontend(){
+			$.ajax({
+				url: 'index.php?option=com_community&view=installer&task=ajax_unpack&filename=frontend',
+			}).done(function() {
+				$('#step2').html('<span class="badge badge-success">Done</span>');
+				$('.bar').css('width', '35%');
+				install_templates();
+			});
+		}
+
+		function install_templates(){
+			$.ajax({
+				url: 'index.php?option=com_community&view=installer&task=ajax_unpack&filename=templates',
+			}).done(function() {
+				$('#step3').html('<span class="badge badge-success">Done</span>');
+				$('.bar').css('width', '60%');
+				install_ajax();
+			});
+		}
+
+		function install_ajax(){
+			$.ajax({
+				url: 'index.php?option=com_community&view=installer&task=ajax_unpack&filename=azrul',
+			}).done(function() {
+				$('#step4').html('<span class="badge badge-success">Done</span>');
+				$('.bar').css('width', '80%');
+
+				install_ajaxAiPlugin();
+			});
+		}
+
+		function install_ajaxAiPlugin(){
+			$.ajax({
+				url: 'index.php?option=com_community&view=installer&task=ajax_unpack&filename=ai_plugins',
+			}).done(function() {
+				$('#step5').html('<span class="badge badge-success">Done</span>');
+				$('.bar').css('width', '90%');
+
+				setTimeout(install_modules, 1000);
+			});
+		}
+
+		function install_modules(){
+			$.ajax({
+				url: 'index.php?option=com_community&view=installer&task=ajax_unpack&filename=modules',
+			}).done(function() {
+				$('#step6').html('<span class="badge badge-success">Done</span>');
+				$('.bar').css('width', '100%');
+
+				setTimeout(install_done, 1000);
+			});
+		}
+
+		function install_done() {
+			var gotoURL, next, progress;
+
+			gotoURL = function gotoURL() {
+				window.location.href = "index.php?option=com_community&view=installer&task=prepdatabase";
+			};
+
+			next = $('#btn-next');
+			progress = $('.progress');
+
+			next.addClass('btn-primary');
+			next.removeClass('disabled');
+			next.on('click', function (e) {
+				e.preventDefault();
+				gotoURL();
+				return false;
+			});
+
+			progress.removeClass('progress-striped');
+			progress.addClass('progress-success');
+
+			next.click();
+		}
+	</script>
+</body>
+
+</html>

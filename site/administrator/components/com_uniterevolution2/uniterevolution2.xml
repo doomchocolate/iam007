@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="1.6.0" method="upgrade" client="admin">
+    <name>com_uniterevolution2</name>
+    <creationDate>August 2012</creationDate>
+    <author>Unite CMS</author>
+	<copyright>Copyright (C) 2012 UniteCMS.net, All rights reserved.</copyright>
+	<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<authorEmail>support@unitecms.net</authorEmail>
+	<authorUrl>http://www.unitecms.net</authorUrl>
+    <version>4.2.2</version>
+	
+	<description>
+		Revolution Slider extension and module installation success!
+	</description>
+	
+	<install>
+		<sql>
+            <file charset="utf8" driver="mysql">sql/install.sql</file>
+        </sql>
+    </install>
+	
+	<uninstall>
+		<sql>
+            <file charset="utf8" driver="mysql">sql/uninstall.sql</file>
+        </sql>
+    </uninstall>
+		
+	<media destination="com_uniterevolution2" folder="media">
+		<filename>index.html</filename>
+		<folder>cache</folder>
+		<folder>backup</folder>
+		<folder>assets</folder>
+	</media>
+	
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>uniterevolution2.php</filename>
+	</files>
+	
+    <administration>
+    	
+    	<menu img="components/com_uniterevolution2/images/icon-16-revolution.png">COM_UNITEREVOLUTION2</menu>
+		
+    	<files folder="admin">
+			<filename>config.xml</filename>
+			<filename>index.html</filename>
+            <filename>install.php</filename>
+			<filename>release_log.txt</filename>
+			<filename>revslider_admin.php</filename>
+			<filename>includes.php</filename>
+        	<filename>uniterevolution2.php</filename>			
+			
+			<folder>css</folder>
+			<folder>images</folder>
+            <folder>inc_php</folder>
+			<folder>js</folder>
+            <folder>language</folder>
+            <folder>settings</folder>
+            <folder>sql</folder>
+            <folder>temp</folder>
+            <folder>views</folder>
+        </files>
+        
+    </administration>
+	
+	<modules>
+		<module folder="modules" module="mod_unite_revolution2" name="Unite Revolution Slider" />
+	</modules>
+	
+	<scriptfile>install.php</scriptfile>
+	
+</extension>

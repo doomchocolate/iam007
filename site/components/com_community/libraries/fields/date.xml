@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<params>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="display" type="radio" default="0" label="Display As" description="Set the display type">
+			<option value="0" name='Age'>Age</option>
+			<option value="1" name='Date'>Date</option>
+		</param>
+		<param name="readonly" type="radio" default="0" label="Read Only" description="Set yes if you wanna make this field readonly">
+			<option value="0" name='No'>No</option>
+			<option value="1" name='Yes'>Yes</option>
+		</param>
+		<param name="maxrange" type="text" default="" label="Maximum Range in YYYY-MM-DD or 'today'" description="Set the maximum date" />
+		<param name="minrange" type="text" default="" label="Minimum Range in YYYY-MM-DD" description="Set the mimimum date" />
+		<param name="date_format" type="text" default="" label="Date Format" description="Set date format eg (Y m d -> Year Month Day)" />
+		<param name="style" type="text" default="" label="Style Atrribute" description="Use the css code to style the field" />
+	</params>
+</config>

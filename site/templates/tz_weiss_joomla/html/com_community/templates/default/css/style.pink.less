@@ -1,0 +1,63 @@
+#community-wrap
+{
+	.cToolBar
+	{
+		background: url(../images/bar-bg-pink.png) bottom repeat-x #F6E6F9;
+
+		.cMenu-Text:hover > a,
+		.cMenu-Text 	  > a.active
+		{
+			background: #ee69d5;
+			border-color: #cf28b0;
+		}
+		.cHas-Childs ul,
+		.cHas-Childs ul li,
+		.cHas-Childs ul li a
+		{
+			background: #ee69d5;
+			border-color: #cf28b0;
+			color: #f3dcef;
+		}
+		.cMenu-Icon a
+		{
+			&.active,
+			&:focus,
+			&:hover
+			{
+				background-color: #fff;
+			}
+		}
+	}
+	[class^="com-toolbar-"],
+	[class*=" com-toolbar-"]
+	{
+		background-image: url(../images/sprites-toolbar-pink.png)
+	}
+
+	.app-box-header
+	{
+		color: #CF28B0;
+	}
+
+	.app-box-main
+	{
+		.app-widget-header
+		{
+			background: #F6E6F9;
+			border: 1px solid #d6c0da;
+			border-bottom-color: #bfa7c4;
+
+			.app-box-title
+			{
+				color: #CF28B0;
+			}
+		}
+	}
+
+	[class^="com-app-"],
+	[class*=" com-app-"]
+	{
+		background-image: url(../images/sprites-app-pink.png);
+		width: 16px;
+	}
+}

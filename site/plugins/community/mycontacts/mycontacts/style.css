@@ -1,0 +1,102 @@
+#application-mycontact { display: inline-block; width: 100%; }
+
+#application-mycontact .l-side {
+	float: left;
+}
+#application-mycontact .r-side {
+	float: right;
+}
+#application-mycontact .l-side, 
+#application-mycontact .r-side {
+	width: 49%;
+}
+#application-mycontact .contact-basic p { margin: 0 0 10px; }
+
+
+#application-mycontact .contact_key {
+	font-size: 11px;
+	color: #999;
+}
+
+#application-mycontact .contact_value {
+	display: block;
+	font-weight: bold;
+}
+
+#application-mycontact #mycontacts_imlist {
+	border-top: solid 1px #eee;
+	padding: 10px 0;
+	margin-top: 10px;
+}
+
+#application-mycontact .icons {
+	width: 25%;
+	float: left;
+	margin-bottom: 10px;
+}
+
+#application-mycontact .icon {
+	text-indent: 20px;
+	background: transparent url(icons-16x16.png) no-repeat 0 0;
+	line-height: 16px;
+}
+
+#application-mycontact .icon_skype {
+	background-position: 0 0;	
+}
+
+#application-mycontact .icon_google {
+	background-position: 0 -20px;	
+}
+
+#application-mycontact .icon_yim {
+	background-position: 0 -40px;	
+}
+
+#application-mycontact .icon_msn {
+	background-position: 0 -60px;	
+}
+
+#application-mycontact .icon_aim {
+	background-position: 0 -80px;	
+}
+
+#application-mycontact .icon_icq {
+	background-position: 0 -100px;	
+}
+
+#application-mycontact .im_info {
+	font-size: 90%;
+	color: #555;
+}
+#application-mycontact .contact-screen
+{
+	border-top: 1px solid #e5e5e5;
+	padding-top: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.app-widget #application-mycontact .l-side, 
+.app-widget #application-mycontact .r-side,
+.app-widget #application-mycontact .icons {
+	width: auto;
+	float: none;
+}
+
+.app-widget #mycontacts_container .icons {
+	float: left;
+	width: 50%;
+}
+
+
+
+

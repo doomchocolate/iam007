@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.5/module-install.dtd">
+<extension version="2.5" type="module" client="site" method="upgrade">
+	<name>Community - Activity Stream</name>
+	<author>JomSocial Team</author>
+	<creationDate>March 2011</creationDate>
+	<copyright>Copyright (C) 2008 - 2010 JomSocial. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>support@jomsocial.com</authorEmail>
+	<authorUrl>http://www.jomsocial.com</authorUrl>	
+	<version>3.2_RC3</version>
+	<description>Activity Stream</description>
+	<files>
+		<filename module="mod_activitystream">mod_activitystream.php</filename>
+		<filename>mod_activitystream.xml</filename>
+		<folder>tmpl</folder>
+	</files>
+	<params>
+		<param name="max_entry" type="text" default="10" label="Max Entry" description="Max entry to show." />
+		<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+		<param name="show_content" type="list" default="0" label="Show Activity Content" description="Display or hide activity contents.">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+	</params>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="max_entry" type="text" default="10" label="Max Entry" description="Max entry to show." />
+				<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

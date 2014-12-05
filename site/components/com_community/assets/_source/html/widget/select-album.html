@@ -1,0 +1,10 @@
+<span></span>
+<ul class="unstyled" style="display:none;">
+  <% if ( data.options && data.options.length ) for ( var i = 0; i < data.options.length; i++ ) { %>
+  <li data-value="<%= data.options[i][0] %>">
+    <p class="reset-gap"><%= data.options[i] && data.options[i][1] || '-' %></p>
+    <small><i class="joms-icon-<%= data.options[i] && data.options[i][3] ? '' + data.options[i][3] : 'globe' %>"></i>
+      <%= data.options[i] && data.options[i][2] ? '' + data.options[i][2] : '-' %></small>
+  </li>
+  <% } %>
+</ul>

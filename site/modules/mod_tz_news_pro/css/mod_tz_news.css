@@ -1,0 +1,134 @@
+ul.tz_news li{
+    padding: 0;
+    background: none;
+    margin-bottom: 20px;
+    list-style: none;
+}
+ul.tz_news li img{
+    float:left;
+    margin-right: 10px;
+}
+ul.tz_news li span{
+    display: block;
+}
+span.tz_date{
+    font-style: italic;
+}
+.info_accordion{
+    display: none;
+}
+
+#slides {
+    position: relative;
+}
+.slides_container {
+    display: block;
+
+    position: relative;
+}
+.slides_container div.slide {
+    display: block;
+    width: 490px;
+}
+.notopmargin {
+    margin-top: 0 !important;
+}
+.one-fourth {
+    float: left;
+    margin-right: 48px;
+    width: 220px;
+}
+.last {
+    margin-right: 0 !important;
+}
+.notopmargin {
+    margin-top: 0 !important;
+}
+p.small-italic {
+    font-style: italic;
+    color: #5A5A5A;
+    font-family: 'Verdana',sans-serif;
+    font-size: 0.7em;
+    line-height: 1.6em;
+}
+#slides h5 {
+    padding: 20px 0 10px;
+}
+#slides h5 a{
+    color: #666666;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.next{
+    padding-left: 10px;
+    color: #000000;
+}
+.prev{
+    color: #000000;
+}
+#slides ul.pagination li {
+    display: inline;
+    float:left;
+    padding: 0;
+    background: none;
+    height: 22px;
+
+
+}
+#slides ul.pagination li.current a {
+    background-position: left -22px;
+}
+#slides ul.pagination li a {
+    background: url("../images/bullets.png") no-repeat scroll center top transparent;
+    float: left;
+    font-size: 0;
+    line-height: 20px
+
+}
+#slides .one-fourth img{
+    border: 3px solid #e8e9ea;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+#slides ul.pagination li.current{
+    width: auto;
+}
+/* css tabs */
+
+
+.tz_tabs_introtext{
+
+    padding:10px;
+    background:#fff;
+}
+
+.tz-wrap ul{
+    list-style: none;
+}
+
+.tabs li {
+
+    display:inline;
+}
+
+.tabs a {
+    padding:5px 10px;
+    display:inline-block;
+    background:#666;
+    color:#fff;
+    text-decoration:none;
+}
+
+.tabs a.active {
+    background:#fff;
+    color:#000;
+}
+.tz-wrap{
+
+    padding:10px;
+}
+.tz_description {
+    font-size: 13px;
+    color: #000000;
+}

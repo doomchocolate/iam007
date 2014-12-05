@@ -1,0 +1,89 @@
+.price-table{
+  color: @tzcolor;
+  font-size: 18px;
+  overflow: hidden;
+  font-weight: 300;
+  min-height: 628px;
+  position: relative;
+  text-align: center;
+  padding: 20px 20px 25px;
+  .transition(all 0.2s ease-in 0s);
+  border: 1px solid @tzMbordercolor;
+  &:hover{
+    color: @white;
+    background: #3f9ce4;
+    border-color: #3f9ce4;
+    .btn{
+      border: @white;
+      background: @white;
+      color: @tzBlueColor;
+    }
+  }
+  li{
+    padding: 5px 0;
+    line-height: 26px;
+  }
+  .btn{
+    font-size: 15px;
+    margin-top: 42px;
+    padding: 12px 24px;
+    text-transform: uppercase;
+  }
+  .btn-small{
+    font-size: 12px;
+    padding: 9px 16px;
+  }
+  .btn-success{
+    background: @priceSuccessColor;
+    border-color: @priceSuccessColor;
+    &:hover,&:focus{
+      background: mix(@priceSuccessColor,@white,50%);
+      border-color: mix(@priceSuccessColor,@white,50%);
+    }
+  }
+  .head{
+    font-size: 42px;
+    line-height: 48px;
+    padding: 35px 0 25px;
+  }
+  .description{
+    padding: 6px 0;
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .price{
+    font-size: 48px;
+    line-height: 52px;
+    padding: 23px 0 38px;
+    label{
+      font-size: 28px;
+      line-height: 30px;
+      vertical-align: top;
+      display: inline-block;
+    }
+  }
+  .popular{
+    top: 8%;
+    z-index: 2;
+    right: -37%;
+    width: 100%;
+    color: @white;
+    padding: 4px 0;
+    font-size: 12px;
+    font-weight: 700;
+    margin-top: -28px;
+    line-height: 15px;
+    position: absolute;
+    background: #E55F5F;
+    text-transform: uppercase;
+    .transform(rotate(45deg));
+  }
+}
+.price-btn{
+  text-align: center;
+}
+.price-success{
+  .price{
+    color: @priceSuccessColor;
+  }
+}

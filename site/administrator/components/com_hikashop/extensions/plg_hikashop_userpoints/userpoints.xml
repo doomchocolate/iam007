@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="2.5" method="upgrade" group="hikashop">
+	<name>Hikashop UserPoints Plugin</name>
+	<creationDate>{__DAY__} {__MONTH__} {__YEAR__}</creationDate>
+	<version>{__PLUGIN_VERSION__}</version>
+	<author>Obsidev</author>
+	<authorEmail>contact@obsidev.com</authorEmail>
+	<authorUrl>http://www.hikashop.com</authorUrl>
+	<copyright>(C) 2011-{__YEAR__} OBSIDEV. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<description>This plugin enables you to configure a User Points system</description>
+	<files>
+		<filename plugin="userpoints">userpoints.php</filename>
+		<filename>userpoints_checkout.php</filename>
+		<filename>userpoints_configuration.php</filename>
+	</files>
+	<params addpath="/components/com_hikashop/params">
+		<param name="pluginoptions" type="pluginoptions" default="plugin" label="hikashop" description="HikaShop options" />
+		<param name="order_status" type="text" default="" label="Valid order statuses" description="List of the valid order statuses. If empty, it uses the HikaShop configuration value"/>
+		<param type="spacer" label="Checkout" />
+		<param name="checkout_step" type="radio" default="1" label="Active checkout step" description=""><option value="0">No</option><option value="1">Yes</option></param>
+		<param name="hide_when_no_points" type="radio" default="1" label="Hide when no points" description=""><option value="0">No</option><option value="1">Yes</option></param>
+		<param name="show_points" type="list" default="hs" label="Show points" description="">
+			<option value="hk">HikaShop</option>
+			<option value="aup">AlphaUserPoints</option>
+		</param>
+		<param name="ask_no_coupon" type="radio" default="1" label="Ask for no coupon" description=""><option value="0">No</option><option value="1">Yes</option></param>
+	</params>
+	<config>
+		<fields name="params" addfieldpath="/components/com_hikashop/fields">
+			<fieldset name="basic">
+				<field id="pluginoptions" name="pluginoptions" type="pluginoptions" label="hikashop" description="HikaShop options" />
+				<field name="order_status" type="text" default="" label="Valid order statuses" description="List of the valid order statuses. If empty, it uses the HikaShop configuration value"/>
+				<field type="spacer" label="Checkout" />
+				<field name="checkout_step" type="radio" default="1" label="Active checkout step" description=""><option value="0">No</option><option value="1">Yes</option></field>
+				<field name="hide_when_no_points" type="radio" default="1" label="Hide when no points" description=""><option value="0">No</option><option value="1">Yes</option></field>
+				<field name="show_points" type="list" default="hs" label="Show points" description="">
+					<option value="hk">HikaShop</option>
+					<option value="aup">AlphaUserPoints</option>
+				</field>
+				<field name="ask_no_coupon" type="radio" default="1" label="Ask for no coupon" description=""><option value="0">No</option><option value="1">Yes</option></field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

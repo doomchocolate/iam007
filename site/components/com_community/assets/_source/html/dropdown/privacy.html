@@ -1,0 +1,10 @@
+<div class="joms-postbox-dropdown privacy-dropdown">
+  <ul class="unstyled">
+    <% if ( data && data.items && data.items.length ) for ( var i = 0; i < data.items.length; i++ ) { %>
+    <li data-priv="<%= data.items[i][0] %>">
+      <p class="reset-gap"><i class="joms-icon-<%= data.items[i][1] %>"></i><%= data.items[i][2] %></p>
+      <span><%= data.items[i][3] %></span>
+    </li>
+    <% } %>
+  </ul>
+</div>

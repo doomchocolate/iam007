@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.5/plugin-install.dtd">
+<install type="plugin" version="1.5" method="upgrade" group="hikashoppayment">
+	<name>Hikashop MasterCard Internet Gateway System (Australian) Payment Plugin</name>
+	<creationDate>February 2012</creationDate>
+	<version>1.0.0</version>
+	<author>Hikashop</author>
+	<authorEmail>dev@hikashop.com</authorEmail>
+	<authorUrl>http://www.hikashop.com</authorUrl>
+	<copyright>Copyright (C) 2010-2012 HIKARI SOFTWARE SARL - All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<description>This plugin enables you to setup your Australian MIGS (MasterCard, ANZ eGate, ACB - Australian Commonwealth Bank) payment system</description>
+	<files>
+		<filename plugin="migsvpc">migsvpc.php</filename>
+		<filename>migsvpc_configuration.php</filename>
+		<filename>migsvpc_thankyou.php</filename>
+		<filename>migsvpc.xml</filename>
+	</files>
+</install>

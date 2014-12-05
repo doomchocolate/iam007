@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.5/module-install.dtd">
+<extension version="2.5" type="module" client="site" method="upgrade">
+	<name>Community - JomSocial Statistics</name>
+	<author>JomSocial Team</author>
+	<creationDate>March 2011</creationDate>
+	<copyright>Copyright (C) 2008 - 2010 JomSocial. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>support@jomsocial.com</authorEmail>
+	<authorUrl>http://www.jomsocial.com</authorUrl>	
+	<version>3.2_RC3</version>
+	<description>JomSocial Statistics</description>
+	<languages>
+		<language tag="en-GB">en-GB.mod_statistics.ini</language>
+	</languages>
+	<files>
+		<filename module="mod_statistics">mod_statistics.php</filename>
+		<filename>mod_statistics.xml</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>tmpl/index.html</filename>
+		<filename>tmpl/default.php</filename>
+	</files>
+	<params>
+		<param name="cache" type="hidden" default="0" label="Caching" description="Disable global caching." />
+		<param name="customCache" type="list" default="1" label="Caching" description="Select whether to cache the content of this module.">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>		
+		<param name="members" type="list" default="1" label="Show total members" description="Show the total members.">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="groups" type="list" default="1" label="Show total groups" description="Show the total groups.">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="discussions" type="list" default="1" label="Show total discussions" description="Show the total discussions.">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="albums" type="list" default="1" label="Show total albums" description="Show the total albums.">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="photos" type="list" default="1" label="Show total photos" description="Show the total photos.">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="videos" type="list" default="1" label="Show total videos" description="Show the total videos.">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="bulletins" type="list" default="1" label="Show total bulletins" description="Show the total bulletins.">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="activities" type="list" default="1" label="Show total activities" description="Show the total activities.">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="walls" type="list" default="1" label="Show total walls" description="Show the total walls.">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="events" type="list" default="1" label="Show total events" description="Show the total events.">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="genders" type="list" default="1" label="Show total genders" description="Show the total genders.">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="genders_male" type="list" default="1" label="Show male" description="Show the total males.">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="genders_female" type="list" default="1" label="Show female" description="Show the total females.">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="genders_unspecified" type="list" default="1" label="Show unspecified" description="Show the total unspecified.">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="genders_fieldcode" type="text" default="FIELD_GENDER" label="Gender field code" description="If you have a custom gender field code then please set it here else just leave it as default" />
+		<param name="genders_male_display" type="text" default="Male" label="Male display text" description="Male gender display you set in your custom gender field" />
+		<param name="genders_female_display" type="text" default="Female" label="Female display text" description="Female gender display you set in your custom gender field" />
+		<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+	</params>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="cache" type="hidden" default="0" label="Caching" description="Disable global caching." />
+				<field name="customCache" type="list" default="1" label="Caching" description="Select whether to cache the content of this module.">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>		
+				<field name="members" type="list" default="1" label="Show total members" description="Show the total members.">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="groups" type="list" default="1" label="Show total groups" description="Show the total groups.">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="discussions" type="list" default="1" label="Show total discussions" description="Show the total discussions.">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="albums" type="list" default="1" label="Show total albums" description="Show the total albums.">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="photos" type="list" default="1" label="Show total photos" description="Show the total photos.">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="videos" type="list" default="1" label="Show total videos" description="Show the total videos.">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="bulletins" type="list" default="1" label="Show total bulletins" description="Show the total bulletins.">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="activities" type="list" default="1" label="Show total activities" description="Show the total activities.">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="walls" type="list" default="1" label="Show total walls" description="Show the total walls.">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="events" type="list" default="1" label="Show total events" description="Show the total events.">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="genders" type="list" default="1" label="Show total genders" description="Show the total genders.">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="genders_male" type="list" default="1" label="Show male" description="Show the total males.">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="genders_female" type="list" default="1" label="Show female" description="Show the total females.">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="genders_unspecified" type="list" default="1" label="Show unspecified" description="Show the total unspecified.">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="genders_fieldcode" type="text" default="FIELD_GENDER" label="Gender field code" description="If you have a custom gender field code then please set it here else just leave it as default" />
+				<field name="genders_male_display" type="text" default="Male" label="Male display text" description="Male gender display you set in your custom gender field" />
+				<field name="genders_female_display" type="text" default="Female" label="Female display text" description="Female gender display you set in your custom gender field" />
+				<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

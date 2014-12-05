@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="system" method="upgrade">
+    <name>System - Jomsocial Redirect</name>
+    <author>JomSocial Team</author>
+    <creationDate>Aug 11 2011</creationDate>
+    <copyright>Copyright 2008 - 2010 by Slashes &amp; Dots Sdn Bhd. All rights reserved</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <authorEmail>support@jomsocial.com</authorEmail>
+    <authorUrl>http://jomsocial.com</authorUrl>
+    <version>3.2_RC3</version>
+    <description></description>
+    <files>
+        <file plugin="jomsocialredirect">jomsocialredirect.php</file>
+    </files>
+    <languages>
+        <language tag="en-GB">en-GB.plg_system_jomsocialredirect.ini</language>
+    </languages>    	
+    <config>
+        <fields name="params" >
+            <fieldset name="basic">
+                <field name="override_com_user_registration" type="radio" default="1" label="Override com_user registration" description="com_user registration will redirect to JomSocial registration">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </field>
+                <field name="redirect_previous" type="radio" default="0" label="Redirect back to previous page" description="">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </field>
+                <field name="redirect_login" type="menuitem" default="1" label="Redirect login" description="" />
+                <field name="redirect_login_msg" type="text" default="LOGIN_SUCCESSFUL" label="Redirect login message" description="Custom message can use as language text or your own text" size="30" />
+                <field name="redirect_login_failed" type="menuitem" default="1" label="Redirect login failed" description="" />
+                <field name="redirect_login_failed_msg" type="text" default="LOGIN_FAILED" label="Redirect login failed message" description="Custom message can use as language text or your own text" size="30" />
+                <field name="redirect_logout" type="menuitem" default="1" label="Redirect logout" description="" />
+                <field name="redirect_logout_msg" type="text" default="YOU_HAVE_LOGGED_OUT" label="Redirect logout message" description="Custom message can use as language text or your own text" size="30" />
+                <field name="redirect_registration_msg" type="text" default="REDIRECTED_TO_COMMUNITY_REGISTRATION" label="Redirect community registration" description="Custom message can use as language text or your own text" size="30" />
+            </fieldset>
+        </fields>
+    </config>
+</extension>

@@ -1,0 +1,112 @@
+.btn,body #cWindow .btn{
+  color: @white;
+  font-size: 15px;
+  box-shadow: none;
+  font-weight: 700;
+  text-shadow: none;
+  .border-radius(0);
+  padding: 15px 46px;
+//  text-transform: uppercase;
+  background: @tzButtonColor;
+  border: 2px solid @tzButtonColor;
+  &:hover,&:focus{
+    color: @white;
+    background: mix(@tzButtonColor,@white,50%);
+    border-color: mix(@tzButtonColor,@white,50%);
+  }
+  &.active, &:active{
+    background: none;
+    box-shadow: none;
+    color: @tzButtonColor;
+    border-color: mix(@tzButtonColor,@white,50%);
+  }
+}
+body #cWindow .btn{
+  padding: 3px 20px;
+}
+.btn-primary,body #cWindow .btn-primary{
+  color: @tzcolor;
+  background: none;
+  border-color: @tzcolor;
+  &:hover,&:focus{
+    color: @white;
+    background: @tzcolor;
+    border-color: @tzcolor;
+  }
+}
+.btn-inverse,body #cWindow .btn-inverse{
+  color: @white;
+  background: none;
+  border-color: @white;
+  &:hover,&:focus{
+    background:rgb(29,139,224);
+    background: transparent\9;
+    background:rgba(29,139,224,0.5);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4c1d8be0,endColorstr=#4c1d8be0);
+    zoom: 1;
+    border-color: transparent;
+  }
+  &.active, &:active{
+    border-color: @tzButtonColor;
+  }
+}
+.btn-info,body #cWindow .btn-info{
+  background: @alertInfoColor;
+  border-color: @alertInfoColor;
+  &:hover,&:focus{
+    background: mix(@alertInfoColor,@white,50%);
+    border-color: mix(@alertInfoColor,@white,50%);
+  }
+  &.active, &:active{
+    color: @alertInfoColor;
+    border-color: @alertInfoColor;
+  }
+}
+.btn-success,body #cWindow .btn-success{
+  background: @alertSuccessColor;
+  border-color: @alertSuccessColor;
+  &:hover,&:focus{
+    background: mix(@alertSuccessColor,@white,50%);
+    border-color: mix(@alertSuccessColor,@white,50%);
+  }
+  &.active, &:active{
+    color: @alertSuccessColor;
+    border-color: @alertSuccessColor;
+  }
+}
+.btn-warning,body #cWindow .btn-warning{
+  background: @tzButtonWarningColor;
+  border-color: @tzButtonWarningColor;
+  &:hover,&:focus{
+    background: mix(@tzButtonWarningColor,@white,50%);
+    border-color: mix(@tzButtonWarningColor,@white,50%);
+  }
+  &.active, &:active{
+    color: @tzButtonWarningColor;
+    border-color: @tzButtonWarningColor;
+  }
+}
+.btn-danger,body #cWindow .btn-danger{
+  background: @tzButtonDangerColor;
+  border-color: @tzButtonDangerColor;
+  &:hover,&:focus{
+    background: mix(@tzButtonDangerColor,@white,50%);
+    border-color: mix(@tzButtonDangerColor,@white,50%);
+  }
+  &.active, &:active{
+    color: @tzButtonDangerColor;
+    border-color: @tzButtonDangerColor;
+  }
+}
+.btn-small,body #cWindow .btn-small{
+  font-size: 12px;
+  padding: 11px 39px;
+}
+.btn-large,body #cWindow .btn-large{
+  font-size: 18px;
+  padding: 20px 55px;
+}
+
+.btn-margin-top,body #cWindow .btn-margin-top{
+  margin-top: 35px;
+}

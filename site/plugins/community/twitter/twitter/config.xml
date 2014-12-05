@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="community">
+<params addPath="/administrator/components/com_community/elements">
+	<param name="signon" type="twitter" label="PLG_TWITTER_ALLOW_ACCESS" />
+	<param name="count" type="text" default="5" size="3" label="PLG_TWITTER_UPDATE_COUNT" description="PLG_TWITTER_UPDATE_COUNT_DESC" />
+	<param name="updateTwitter" type="list" default="0" label="PLG_TWITTER_UPDATE_TWITTER" description="PLG_TWITTER_UPDATE_TWITTER_DESC">
+		<option value="0" name="PLG_TWITTER_NO" />
+		<option value="1" name="PLG_TWITTER_YES" />
+	</param>
+	<param name="showFriends" type="list" default="0" label="PLG_TWITTER_SHOW_FRIENDS_UPDATE" description="PLG_TWITTER_SHOW_FRIENDS_UPDATE_DESC">
+		<option value="0" name="PLG_TWITTER_NO" />
+		<option value="1" name="PLG_TWITTER_YES" />
+	</param>
+</params>
+</extension>

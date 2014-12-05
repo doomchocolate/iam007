@@ -1,0 +1,9 @@
+# ----------------------------------------------------------------------
+# Enable Gzip compression if supported
+# ----------------------------------------------------------------------
+
+<IfModule deflate_module>
+  <FilesMatch "\.(html|txt|css|js|json)$">
+    SetOutputFilter DEFLATE
+  </FilesMatch>
+</IfModule>

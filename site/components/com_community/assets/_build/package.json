@@ -1,0 +1,16 @@
+{
+	"name": "jomsocial",
+	"devDependencies": {
+		"grunt": "latest",
+		"grunt-bowercopy": "latest",
+		"grunt-chmod": "latest",
+		"grunt-contrib-concat": "latest",
+		"grunt-contrib-copy": "latest",
+		"grunt-contrib-jshint": "latest",
+		"grunt-contrib-jst": "latest",
+		"grunt-contrib-requirejs": "latest",
+		"grunt-contrib-uglify": "latest",
+		"grunt-contrib-watch": "latest",
+		"grunt-mocha": "latest"
+	}
+}

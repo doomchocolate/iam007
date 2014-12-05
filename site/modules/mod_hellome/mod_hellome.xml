@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.5/module-install.dtd">
+<extension version="2.5" type="module" client="site" method="upgrade">
+    <name>Community - Hello Me</name>
+    <author>JomSocial Team</author>
+    <creationDate>March 2011</creationDate>
+    <copyright>Copyright (C) 2008 - 2010 JomSocial. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <authorEmail>support@jomsocial.com</authorEmail>
+    <authorUrl>http://www.jomsocial.com</authorUrl>
+    <version>3.2_RC3</version>
+    <description>Hello Me</description>
+    <languages>
+        <language tag="en-GB">en-GB.mod_hellome.ini</language>
+    </languages>
+    <files>
+        <filename module="mod_hellome">mod_hellome.php</filename>
+        <filename>mod_hellome.xml</filename>
+        <filename>helper.php</filename>
+        <filename>style.css</filename>
+        <folder>tmpl</folder>
+    </files>
+    <params>
+        <param name="cache" type="hidden" default="0" label="Caching" description="Disable global caching." />
+        <param name="customCache" type="list" default="1" label="Caching" description="Select whether to cache the content of this module.">
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </param>
+        <param name="show_avatar" type="list" default="1" label="Show avatar" description="Select whether to show the avatar.">
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </param>
+        <param name="show_karma" type="list" default="1" label="Show karma" description="Select whether to show the karma.">
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </param>
+        <param name="enable_login" type="list" default="1" label="Login Option" description="Select to enable the login form.">
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </param>
+        <param name="enable_facebookconnect" type="list" default="1" label="Facebook Connect" description="Select whether to enable facebook connect.">
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </param>
+        <param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+    </params>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="cache" type="hidden" default="0" label="Caching" description="Disable global caching." />
+                <field name="customCache" type="list" default="1" label="Caching" description="Select whether to cache the content of this module.">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+                <field name="show_avatar" type="list" default="1" label="Show avatar" description="Select whether to show the avatar.">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+                <field name="show_karma" type="list" default="1" label="Show karma" description="Select whether to show the karma.">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+                <field name="enable_login" type="list" default="1" label="Login Option" description="Select to enable the login form.">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+                <field name="enable_facebookconnect" type="list" default="1" label="Facebook Connect" description="Select whether to enable facebook connect.">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+                <field name="enable_alert" type="list" default="1" label="Show alert" description="">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+                <field name="enable_last_status" type="list" default="1" label="Show last status update" description="">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+                <field name="enable_edit_status" type="list" default="1" label="Show edit link" description="">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+                <field name="enable_menu" type="list" default="1" label="Show menu" description="">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>                
+                <field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+            </fieldset>
+        </fields>
+    </config>
+</extension>

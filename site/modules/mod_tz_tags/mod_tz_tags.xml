@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="2.5"
+	client="site"
+	method="upgrade">
+	<name>mod_tz_tags</name>
+	<author>tuyennv</author>
+	<creationDate>October 17th 2012</creationDate>
+	<copyright>Copyright (C) 2012 TemPlaza. All rights reserved.</copyright>
+	<license>GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html</license>
+	<authorEmail>support@templaza.com</authorEmail>
+	<authorUrl>www.templaza.com/</authorUrl>
+	<version>1.0.0</version>
+	<description>Module get Tags in Com TZ Portfolio
+     <![CDATA[
+    <link rel="stylesheet" type="text/css" href="../modules/mod_tz_tags/admin/stylemodule/tz-style-module.css" />
+    ]]>
+    </description>
+
+    <files>
+		<filename module="mod_tz_tags">mod_tz_tags.php</filename>
+		<folder>tmpl</folder>
+		<folder>css</folder>
+		<folder>admin</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_tz_tags.xml</filename>
+	</files>
+    <languages>
+        <language tag="en-GB">en-GB.mod_tz_tags.ini</language>
+        <language tag="en-GB">en-GB.mod_tz_tags.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+          <fieldset name="basic">
+            <field name="manager" type="radio" class="btn-group" default="tz_portfolio" description="Content manager" label="MANAGER">
+              <option value="tz_portfolio">TZ Portfolio</option>
+              <!--<option value="joomla_content">Joomla Content</option>-->
+            </field>
+              
+              <field name="tag-cat" type="category" extension="com_content" multiple="true" size="10" label="TAG_CAT"/>
+              <field name="tag-limit" type="text" label="TAG_LIMIT"/>
+              <field name="tag-link" type="radio" class="btn-group" default="yes" description="Content manager" label="TAG_LINK">
+                  <option value="yes">Yes</option>
+                  <option value="no">No</option>
+              </field>
+              <field name="tag-maxfont" type="text" label="TAG_MAXFONT" default="300"/>
+              <field name="tag-minfont" type="text" label="TAG_MINFONT" default="75"/>
+
+
+            <field type="text" name="moduleclass_sfx" size="30" 
+                   label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                   description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC">
+
+            </field>
+          </fieldset>
+
+        </fields>
+    </config>
+</extension>

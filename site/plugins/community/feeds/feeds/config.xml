@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="community">
+	<params>
+		<param name="path" type="text" default="" size="45" label="PLG_FEEDS_URL" description="PLG_FEEDS_URL_DESC" />
+		<param name="count" type="text" default="10" size="3" label="PLG_FEEDS_COUNT" description="PLG_FEEDS_COUNT_DESC" />		
+	</params>
+</extension>

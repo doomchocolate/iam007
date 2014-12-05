@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="community">
+	<params>
+		<param name="count" type="text" default="5" size="3" label="PLG_MYTAGGEDVIDEOS_TOTAL_VIDEO" description="PLG_MYTAGGEDVIDEOS_XML_DESCRIPTION" />		
+	</params>
+</extension>

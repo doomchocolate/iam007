@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="2.5" method="upgrade" group="hikashop">
+	<name>Hikashop Google Products Plugin</name>
+	<creationDate>{__DAY__} {__MONTH__} {__YEAR__}</creationDate>
+	<version>{__PLUGIN_VERSION__}</version>
+	<author>Hikashop</author>
+	<authorEmail>dev@hikashop.com</authorEmail>
+	<authorUrl>http://www.hikashop.com</authorUrl>
+	<copyright>(C) 2010-{__YEAR__} HIKARI SOFTWARE. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<description>This plugin enables you to get a Google Product feed</description>
+	<files>
+		<filename plugin="google_products">google_products.php</filename>
+	</files>
+	<params addpath="/components/com_hikashop/params">
+		<param name="enable_auto_update" type="radio" default="0" label="Enable Auto Upldate" description="Automatically update your google merchant feed via FTP">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="user_name" type="text" size="50" default="" label="FTP User Name" description="Your google account FTP username" />
+		<param name="google_password" type="password" size="50" default="" label="FTP Password" description="Your google account FTP password" />
+		<param name="file_name" type="text" size="50" default="" label="File Name" description="The file name you specified on your google merchant account (It has to end with '.xml')" />
+		<param name="local_path" type="text" size="50" default="" label="Local xml file path" description="You can optionally enter here a relative path from your website root directory (for example products/list.xml if you want it accessible on http://mywebsite.com/products/list.xml) so that the plugin saves the file on your website on each cron" />
+		<param name="frequency" type="text" size="50" default="86400" label="Frequency" description="Frequency at which the google feed will be updated (in seconds)" />
+		<param name="last_cron_update" type="text" size="50" default="1274903175" label="Last Update" description="Last date on which the products were updated via the CRON task" />
+		<param name="increase_perf" type="list" default="" label="Increase performances" description="If you have issues with memory limits or timeouts when using that plugin, you can turn on that option">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+			<option value="2">A lot</option>
+			<option value="3">A lot more</option>
+			<option value="10">No limit !</option>
+		</param>
+		<param name="brand" type="text" size="50" default="" label="Brand" description="Your products' brand" />
+		<param name="category" type="text" size="50" default="" label="Category" description="Your products' category (optional excpet for : 'Apparel and Accessories', 'Media', and 'Software') " />
+		<param name="price_displayed" type="list" default="0" label="Price Displayed" description="Choose the price you want to display if there is more than one">
+			<option value="cheapest">Cheapest</option>
+			<option value="average">Average</option>
+			<option value="expensive">Most Expensive</option>
+			<option value="unit">Unit</option>
+		</param>
+		<param name="taxed_price" type="radio" default="0" label="Taxed prices" description="Should the prices have tax applied">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="condition" type="text" size="50" default="" label="Product Condition" description="Your products condition (used, new,...)" />
+		<param name="preview" type="radio" default="0" label="Short Description" description="Display the description to the Readmore tag.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="message" type="text" size="50" default="No description" label="Message If No Description" description="Message displayed if a product doesn't have a description" />
+		<param name="item_id" type="text" size="50" default="" label="Item Id" description="If you want to display your products in a special context, you can add here a menu id" />
+		<param name="add_code" type="radio" default="0" label="Add Product Code" description="Display or not the product code">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="in_stock_only" type="radio" default="0" label="In stock products only" description="Only add the products with a sock above 0">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="age_group" type="text" size="50" default="" label="Age group" description="Your products' age group" />
+		<param name="gender" type="text" size="50" default="" label="Gender" description="Your products' gender" />
+		<param name="size" type="text" size="50" default="" label="Size" description="Your products' size" />
+		<param name="color" type="text" size="50" default="" label="Color" description="Your products' color" />
+		<param name="download" type="plugintrigger"  default="downloadXML" label="Download" description="Download the XML file. Then, you can import it manually in your google account" />
+	</params>
+	<config>
+		<fields name="params" addfieldpath="/components/com_hikashop/fields">
+			<fieldset name="basic">
+				<field name="enable_auto_update" type="radio" default="0" label="Enable Auto Upldate" description="Automatically update your google merchant feed via FTP">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field
+					name="user_name"
+					type="text"
+					label="FTP User Name"
+					size="50"
+					default=""
+					description="Your google account FTP username" />
+				<field
+					name="google_password"
+					type="password"
+					label="FTP Password"
+					size="50"
+					default=""
+					description="Your google account FTP password" />
+				<field
+					name="file_name"
+					type="text"
+					label="File Name"
+					size="50"
+					default=""
+					description="The file name you specified on your google merchant account (It has to end with '.xml')" />
+				<field
+					name="local_path"
+					type="text"
+					size="50"
+					default=""
+					label="Local xml file path"
+					description="You can optionally enter here a relative path from your website root directory (for example products/list.xml if you want it accessible on http://mywebsite.com/products/list.xml) so that the plugin saves the file on your website on each cron" />
+				<field
+					name="frequency"
+					type="text"
+					label="Frequency"
+					size="50"
+					default="86400"
+					description="Frequency at which the google feed will be updated (in seconds)" />
+				<field
+					name="last_cron_update"
+					type="text"
+					label="Last Update"
+					size="50"
+					default="1274903175"
+					description="Last date on which the products were updated via the CRON task" />
+				<field
+					name="increase_perf"
+					type="list"
+					default=""
+					label="Increase performances"
+					description="If you have issues with memory limits or timeouts when using that plugin, you can turn on that option">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+					<option value="2">A lot</option>
+					<option value="3">A lot more</option>
+					<option value="10">No limit !</option>
+				</field>
+				<field
+					name="brand"
+					type="text"
+					label="Brand"
+					size="50"
+					default=""
+					description="Your products' brand" />
+				<field name="category" type="text" size="50" default="" label="Category" description="Your products' category (optional excpet for : 'Apparel and Accessories', 'Media', and 'Software') " />
+				<field name="price_displayed" type="list" default="0" label="Price Displayed" description="Choose the price you want to dispay if there is more than one">
+					<option value="cheapest">Cheapest</option>
+					<option value="average">Average</option>
+					<option value="expensive">Most Expensive</option>
+					<option value="unit">Unit</option>
+				</field>
+				<field name="taxed_price" type="radio" default="0" label="Taxed prices" description="Should the prices have tax applied">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field
+					name="condition"
+					type="text"
+					label="Product Condition"
+					size="50"
+					default=""
+					description="Your products condition (used, new,...)" />
+				<field name="preview" type="radio" default="0" label="Short Description" description="Display the description to the Readmore tag.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="message" type="text" size="50" default="No description" label="Message If No Description" description="Message displayed if a product doesn't have a description" />
+				<field name="item_id" type="text" size="50" default="" label="Item Id" description="If you want to display your products in a special context you can add here a menu id" />
+				<field name="add_code" type="radio" default="0" label="Add Product Code" description="Display or not the product code">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="in_stock_only" type="radio" default="0" label="In stock products only" description="Only add the products with a sock above 0">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+
+				<field name="age_group" type="text" size="50" default="" label="Age group" description="Your products' age group" />
+				<field name="gender" type="text" size="50" default="" label="Gender" description="Your products' gender" />
+				<field name="size" type="text" size="50" default="" label="Size" description="Your products' size" />
+				<field name="color" type="text" size="50" default="" label="Color" description="Your products' color" />
+				<field
+					name="download"
+					type="plugintrigger"
+					default="downloadXML"
+					label="Download"
+					description="Download the XML file. Then, you can import it manualy in your google account" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

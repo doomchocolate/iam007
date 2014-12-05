@@ -1,0 +1,310 @@
+/*----- GENERAL -----*/
+
+#cWindow,
+#community-wrap *
+{
+	direction: rtl;
+	text-align: right;
+}
+
+
+
+/*----- FLOATING ELEMENTS -----*/
+
+#community-wrap .cFloat-R,
+#community-wrap .cSidebar,
+#community-wrap .cToolBar > li.cFloat-R,
+#community-wrap .cSubmenu li.action
+{
+	float: left;
+}
+#community-wrap .cFloat-L,
+#community-wrap .cFloatedList li, 
+#community-wrap .cThumbsList li, 
+#community-wrap .cThumbsList li a,
+#community-wrap .cToolBar > li,
+#community-wrap .cStream-Actions > i, 
+#community-wrap .cStream-Actions > span,
+#community-wrap .row-fluid [class*="span"]
+{
+	float: right;
+}
+
+
+
+/*----- GUESTBOX -----*/
+
+#community-wrap .cGuest-Intro
+{
+	margin: 5px 5px 5px 230px;
+}
+#community-wrap .cGuest-Intro .cGuest-Story li
+{
+	padding: 0 25px 0 0;
+}
+#community-wrap .cGuest-Intro .cGuest-Story li .com-icon-tick
+{
+	margin: 0 -25px 0 0;
+}
+
+
+/*----- LAYOUT -----*/
+
+#community-wrap .cSidebar + .cMain
+{
+	margin: 0 0 0 245px;
+}
+
+
+
+/*----- TOOLBAR -----*/
+
+#community-wrap .cToolBar .cMenu-Icon + .cMenu-Text,
+#community-wrap .cToolBar .cMenu-Text + .cMenu-Icon
+{
+	margin: 0 10px 0 0;
+}
+#community-wrap .cToolBar .cMenu-Text + .cMenu-Text
+{
+	margin: 0 3px 0 0;
+}
+#community-wrap .cToolBar .cMenu-Icon + .cMenu-Icon
+{
+	margin: 0 5px 0 0;
+}
+#community-wrap .cToolBar .cHas-Childs ul
+{
+	left: auto;
+	right: 0;
+}
+#community-wrap .cToolBar .cHas-Childs ul a
+{
+	padding: 5px 10px 5px 30px;
+}
+#community-wrap .com-toolbar-signout
+{
+	background-position: 0 -100px;
+}
+
+
+
+/*----- SUBMENU -----*/
+
+#community-wrap .cSubmenu li + li
+{
+	border-left: 0;
+	border-right: 1px solid #ccc;
+	margin: 0 7px 0 0;
+	padding: 0 7px 0 0;
+}
+#community-wrap .cSubmenu li.action.last-child
+{
+	border-right: 0;
+}
+
+
+
+/*----- TOOLBOX -----*/
+
+#community-wrap .cToolBox-Avatar
+{
+	margin: 0 0 0 14px;
+}
+
+
+
+/*----- PAGE ACTION BUTTONS -----*/
+
+#community-wrap .cPageAction > div
+{
+	float: left;
+}
+
+
+
+/*----- TABS -----*/
+
+#community-wrap .cTabsMenu li + li
+{
+	margin: 0 2px 0 0;
+}
+
+
+
+/*----- FORMS : LAYOUT & ELEMENTS -----*/
+
+#community-wrap .cFormList.cFormHorizontal .form-label
+{
+	float: right;
+	text-align: left;
+}
+#community-wrap .cFormList.cFormHorizontal .form-field
+{
+	margin: 0 175px 0 0;
+}
+#community-wrap .cFormList.cFormVertical .form-label
+{
+	text-align: right;
+}
+#community-wrap .cFormList.cFormFull .form-field {
+	margin: 0 0 0 14px;
+}
+#community-wrap .label-checkbox, 
+#community-wrap .label-radio
+{
+	padding: 0 25px 0 0;
+}
+#community-wrap .label-checkbox > input[type="checkbox"], 
+#community-wrap .label-radio > input[type="radio"]
+{
+	float: right;
+	margin: 1px -25px 0 0;
+}
+
+
+
+/*----- FORMS : PRIVACY -----*/
+
+#community-wrap .cFormList .form-privacy
+{
+	right: auto;
+	left: 0;
+}
+#community-wrap .form-privacy .js_dropDownMaster
+{
+	left: 0;
+	right: auto;
+}
+
+/*----- PAGE ADMIN -----*/
+
+#community-wrap .cPageAdmin li + li
+{
+	border-left: 0;
+	border-right: 1px dotted #CDA6AB;
+	margin: 0 10px 0 0;
+	padding: 0 10px 0 0;
+}
+
+
+
+/*----- PAGE -----*/
+
+#community-wrap .cPageInfo
+{
+	margin: 0 175px 0 0;
+}
+#community-wrap .cPageAvatar .cPage-Like
+{
+	left: auto;
+	right: -1px;
+}
+
+
+/*----- STREAM -----*/
+
+#community-wrap .cStream-Content
+{
+	margin: 0 58px 0 0;
+}
+#community-wrap .cStream-Icon
+{
+	margin: -2px 0 0 5px;
+}
+#community-wrap .cStream-Actions span + span
+{
+	background-position: right center;
+	margin: 0 5px 0 0;
+	padding: 0 7px 0 0;
+}
+#community-wrap .cStream-Comment .cStream-Content
+{
+	margin: 0 50px 0 0;
+}
+
+
+
+/*----- VIDEO -----*/
+
+#community-wrap .cVideo-Content
+{
+	margin: 0 122px 0 0
+}
+
+
+
+/*----- MODULES -----*/
+
+#community-wrap .cSearch-Box
+{
+	padding-right: 0;
+	padding-left: 38px;
+}
+#community-wrap .cSearch-Box .cButton-Search
+{
+	left: 5px;
+	right: auto;
+}
+
+#community-wrap .cEventMini .cEventDetails
+{
+	margin: 0 55px 0 0;
+}
+#community-wrap .cThumbDetails .cThumb-Detail
+{
+	margin: 0 53px 0 0;
+}
+#community-wrap .app-box-list.for-menu li
+{
+	padding-right: 25px;
+	padding-left: 0;	
+}
+#community-wrap .app-box-list.for-menu li i
+{
+	float: right;
+	margin: 0 -25px 0 0;
+}
+#community-wrap .app-box-footer {
+	text-align: left;
+}
+
+
+
+/*----- GRID -----*/
+
+#community-wrap .row-fluid [class*="span"]:first-child
+{
+	margin-left: auto;
+	margin-right: 0;
+}
+#community-wrap .row-fluid [class*="span"]
+{
+	margin-left: auto;
+	margin-right: 2.12766%;
+}
+
+
+
+/*----- INDEX LISTING -----*/
+
+#community-wrap .cIndex-Content
+{
+	margin: 0 79px 0 0;
+}
+#community-wrap .cIndex-Actions > div
+{
+	margin: 0 0 0 10px;
+}
+#community-wrap .cIndex-Actions > div.cFloat-R
+{
+	margin: 0 10px 0 0;
+}
+
+
+
+/*----- WALL -----*/
+
+#community-wrap .cComment-Body
+{
+	margin: 0 58px 0 0;
+}

@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN"
+        "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+<extension version="3.0" type="template" client="site" method="upgrade">
+    <name>tz_weiss_joomla</name>
+    <version>1.0</version>
+    <creationDate>04/17/2014</creationDate>
+    <author>TemPlaza</author>
+    <authorEmail>info@templaza.com</authorEmail>
+    <copyright>Copyright (C) 2012 TemPlaza. All rights reserved.</copyright>
+    <description><![CDATA[This is Plazart Framework]]></description>
+    <group>plazart</group>
+    <tzupdate>http://www.templaza.com/</tzupdate>
+    <files>
+        <filename>component.php</filename>
+        <filename>error.php</filename>
+        <filename>favicon.ico</filename>
+        <filename>index.php</filename>
+        <filename>offline.php</filename>
+        <filename>templateDetails.xml</filename>
+		<filename>templateInfo.php</filename>
+        <filename>template_preview.png</filename>
+        <filename>template_thumbnail.png</filename>
+        <folder>admin</folder>
+        <folder>config</folder>
+        <folder>css</folder>
+        <folder>html</folder>
+        <folder>fonts</folder>
+        <folder>images</folder>
+        <folder>js</folder>
+        <folder>language</folder>
+        <folder>layouts</folder>
+        <folder>less</folder>
+        <folder>libraries</folder>
+    </files>
+    <positions>
+        <position>about-us</position>
+        <position>bottom</position>
+        <position>bottom1</position>
+        <position>bottom2</position>
+        <position>bottom3</position>
+        <position>bottom4</position>
+        <position>bottom5</position>
+        <position>bottom6</position>
+        <position>breadcrumb</position>
+        <position>debug</position>
+        <position>footer</position>
+        <position>footer1</position>
+        <position>footer2</position>
+        <position>footer3</position>
+        <position>footer4</position>
+        <position>footer-copyright</position>
+        <position>footer-nav</position>
+        <position>headline</position>
+        <position>header</position>
+        <position>header2</position>
+        <position>header-top</position>
+        <position>header-top2</position>
+        <position>left</position>
+        <position>logo</position>
+        <position>menu</position>
+        <position>mainbody</position>
+        <position>mainbody_top</position>
+        <position>mainbody_bottom</position>
+        <position>mass-bottom</position>
+        <position>mass-top</position>
+        <position>partners</position>
+        <position>right</position>
+        <position>right2</position>
+        <position>search</position>
+        <position>services</position>
+        <position>services2</position>
+        <position>sidebar</position>
+        <position>skill</position>
+        <position>slideshow</position>
+        <position>social</position>
+        <position>social-top</position>
+        <position>statistics</position>
+        <position>testimonial</position>
+        <position>top</position>
+        <position>top2</position>
+        <position>top3</position>
+        <position>user1</position>
+        <position>user2</position>
+        <position>user3</position>
+        <position>user4</position>
+        <position>user5</position>
+        <position>user6</position>
+        <position>js_side_bottom</position>
+        <position>js_side_top</position>
+    </positions>
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.tpl_tz_weiss_joomla.ini</language>
+        <language tag="en-GB">en-GB/en-GB.tpl_tz_weiss_joomla.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="theme_params" label="TZ_THEME_LABEL" description="TZ_THEME_DESC"
+                      addfieldpath="/templates/tz_weiss_joomla/admin/elements">
+
+                <field name="logo_type" type="list" default="image" label="TPL_TZ_LANG_LOGO_TYPE"
+                       description="TPL_TZ_LANG_LOGO_TYPE_DESC">
+                    <option value="image">TPL_TZ_LANG_LOGO_TYPE_IMAGE</option>
+                    <option value="text">TPL_TZ_LANG_LOGO_TYPE_TEXT</option>
+                    <option value="css">TPL_TZ_LANG_LOGO_TYPE_CSS</option>
+                    <option value="none">TPL_TZ_LANG_LOGO_TYPE_NONE</option>
+                </field>
+
+                <field name="logo_image" type="media" default="" label="TPL_TZ_LANG_LOGO_IMAGE"
+                       description="TPL_TZ_LANG_LOGO_IMAGE_DESC"/>
+
+                <field name="logo_text" type="text" default="" label="TPL_TZ_LANG_LOGO_TEXT"
+                       description="TPL_TZ_LANG_LOGO_TEXT_DESC"/>
+
+                <field name="logo_slogan" type="text" default="" label="TPL_TZ_LANG_LOGO_SLOGAN"
+                       description="TPL_TZ_LANG_LOGO_SLOGAN_DESC"/>
+
+                <field name="favicon_image" type="media" default="" label="TPL_TZ_LANG_FAVICON_IMAGE"
+                       description="TPL_TZ_LANG_FAVICON_IMAGE_DESC"/>
+                <field
+                        name="framework_logo"
+                        type="radio"
+                        class="btn-group"
+                        label="TPL_TZ_LANG_FRAMEWORK_LOGO"
+                        default="1"
+                        description="TPL_TZ_LANG_FRAMEWORK_LOGO_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="copyrights" type="textarea" rows="3" cols="40" filter="raw" label="TPL_TZ_LANG_COPYRIGHTS"
+                       description="TPL_TZ_LANG_COPYRIGHTS_DESC"/>
+                <field name="webmaster_contact_type" type="list" default="1" label="TPL_TZ_LANG_WEBMASTER_CONTACT_TYPE"
+                       description="TPL_TZ_LANG_WEBMASTER_CONTACT_TYPE_DESC">
+                    <option value="email">TPL_TZ_LANG_WEBMASTER_CONTACT_TYPE_EMAIL</option>
+                    <option value="url">TPL_TZ_LANG_WEBMASTER_CONTACT_TYPE_URL</option>
+                    <option value="none">TPL_TZ_LANG_WEBMASTER_CONTACT_TYPE_NONE</option>
+                </field>
+                <field name="webmaster_contact" type="text" default="webmaster@templaza.com"
+                       label="TPL_TZ_LANG_WEBMASTER_CONTACT" description="TPL_TZ_LANG_WEBMASTER_CONTACT_DESC"/>
+                <field name="google_analytics" type="text" label="TPL_TZ_LANG_GOOGLE_ANALYTICS"
+                       description="TPL_TZ_LANG_GOOGLE_ANALYTICS_DESC"/>
+                <field name="show_to_top_button" type="radio"
+                       class="btn-group" default="1"
+                       label="TPL_TZ_WEISS_TO_TOP_BUTTON_LABEL">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+            </fieldset>
+            <fieldset name="layout_params">
+                <!--<field type="radio" name="right_to_left"-->
+                       <!--class="btn-group"  default="0"-->
+                       <!--label="TPL_TZ_WEISS_RIGHT_TO_LEFT_LABEL">-->
+                    <!--<option value="0">JNO</option>-->
+                    <!--<option value="1">JYES</option>-->
+                <!--</field>-->
+                <field name="max_page_width" type="text" default="" label="TPL_TZ_LANG_MAX_PAGE_WIDTH"
+                       description="TPL_TZ_LANG_MAX_PAGE_WIDTH_DESC"/>
+
+                <field name="max_page_width_value" type="list" default="px" label="TPL_TZ_LANG_MAX_PAGE_WIDTH_UNIT"
+                       description="TPL_TZ_LANG_MAX_PAGE_WIDTH_UNIT_DESC">
+                    <option value="px">TPL_TZ_LANG_PIXEL</option>
+                    <option value="%">TPL_TZ_LANG_PERCENT</option>
+                </field>
+                <field name="right_sidebar_width" type="list" default="span3" label="TPL_TZ_LANG_SIDEBAR_WIDTH_RIGHT"
+                       description="TPL_TZ_LANG_SIDEBAR_WIDTH_DESC">
+                    <option value="1">TPL_TZ_LANG_SPAN1</option>
+                    <option value="2">TPL_TZ_LANG_SPAN2</option>
+                    <option value="3">TPL_TZ_LANG_SPAN3</option>
+                    <option value="4">TPL_TZ_LANG_SPAN4</option>
+                    <option value="5">TPL_TZ_LANG_SPAN5</option>
+                    <option value="6">TPL_TZ_LANG_SPAN6</option>
+                    <option value="7">TPL_TZ_LANG_SPAN7</option>
+                    <option value="8">TPL_TZ_LANG_SPAN8</option>
+                    <option value="9">TPL_TZ_LANG_SPAN9</option>
+                    <option value="10">TPL_TZ_LANG_SPAN10</option>
+                </field>
+
+                <field name="left_sidebar_width" type="list" default="span3" label="TPL_TZ_LANG_SIDEBAR_WIDTH_LEFT"
+                       description="TPL_TZ_LANG_SIDEBAR_WIDTH_DESC">
+                    <option value="1">TPL_TZ_LANG_SPAN1</option>
+                    <option value="2">TPL_TZ_LANG_SPAN2</option>
+                    <option value="3">TPL_TZ_LANG_SPAN3</option>
+                    <option value="4">TPL_TZ_LANG_SPAN4</option>
+                    <option value="5">TPL_TZ_LANG_SPAN5</option>
+                    <option value="6">TPL_TZ_LANG_SPAN6</option>
+                    <option value="7">TPL_TZ_LANG_SPAN7</option>
+                    <option value="8">TPL_TZ_LANG_SPAN8</option>
+                    <option value="9">TPL_TZ_LANG_SPAN9</option>
+                    <option value="10">TPL_TZ_LANG_SPAN10</option>
+                </field>
+
+                <field type="plazartlayout" name="generate" />
+
+            </fieldset>
+
+            <!-- Font settings -->
+            <fieldset name="font_params" addfieldpath="/templates/tz_weiss_joomla/admin/elements">
+                <field name="font_link1" type="url" label="TPL_TZ_LANG_GOOGLE_FONTS_URL"
+                       description="TPL_TZ_LANG_GOOGLE_FONTS_URL_DESC" url="https://www.google.com/fonts"
+                       text="TPL_TZ_LANG_CLICK_HERE"/>
+                <field name="font_link2" type="url" label="TPL_TZ_LANG_SQUIRREL_FONTS_URL"
+                       description="TPL_TZ_LANG_SQUIRREL_FONTS_URL_DESC" url="http://www.fontsquirrel.com/fontface"
+                       text="TPL_TZ_LANG_CLICK_HERE"/>
+                <field name="font_link3" type="url" label="TPL_TZ_LANG_EDGE_FONTS_URL"
+                       description="TPL_TZ_LANG_EDGE_FONTS_URL_DESC" url="http://html.adobe.com/edge/webfonts/"
+                       text="TPL_TZ_LANG_CLICK_HERE"/>
+                <field name="font_name_group1" type="tzfont" directory="templates/tz_weiss_joomla/fonts/"
+                       label="TPL_TZ_LANG_FONT_NAME_G1" description="TPL_TZ_LANG_FONT_NAME_G1_DESC"/>
+                <field name="font_rules_group1" type="textarea" rows="6" cols="40" label="TPL_TZ_LANG_FONT_RULES_G1"
+                       description="TPL_TZ_LANG_FONT_RULES_G1_DESC"/>
+                <field name="font_name_group2" type="tzfont" directory="templates/tz_weiss_joomla/fonts/"
+                       label="TPL_TZ_LANG_FONT_NAME_G2" description="TPL_TZ_LANG_FONT_NAME_G2_DESC"/>
+                <field name="font_rules_group2" type="textarea" rows="6" cols="40" label="TPL_TZ_LANG_FONT_RULES_G2"
+                       description="TPL_TZ_LANG_FONT_RULES_G2_DESC"/>
+                <field name="font_name_group3" type="tzfont" directory="templates/tz_weiss_joomla/fonts/"
+                       label="TPL_TZ_LANG_FONT_NAME_G3" description="TPL_TZ_LANG_FONT_NAME_G3_DESC"/>
+                <field name="font_rules_group3" type="textarea" rows="6" cols="40" label="TPL_TZ_LANG_FONT_RULES_G3"
+                       description="TPL_TZ_LANG_FONT_RULES_G3_DESC"/>
+                <field name="font_name_group4" type="tzfont" directory="templates/tz_weiss_joomla/fonts/"
+                       label="TPL_TZ_LANG_FONT_NAME_G4" description="TPL_TZ_LANG_FONT_NAME_G4_DESC"/>
+                <field name="font_rules_group4" type="textarea" rows="6" cols="40" label="TPL_TZ_LANG_FONT_RULES_G4"
+                       description="TPL_TZ_LANG_FONT_RULES_G4_DESC"/>
+
+            </fieldset>
+
+            <fieldset name="socialapi_params" label="Social API">
+
+                <field name="fb_lang" type="text" default="en_US" label="TPL_TZ_LANG_FB_LANG"
+                       description="TPL_TZ_LANG_FB_LANG_DESC"/>
+
+                <!-- FB LIKE -->
+                <field
+                        name="fb_like"
+                        type="radio"
+                        class="btn-group"
+                        label="TPL_TZ_LANG_FB_LIKE"
+                        default="0"
+                        description="TPL_TZ_LANG_FB_LIKE_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field
+                        name="fb_like_send"
+                        type="radio"
+                        class="btn-group"
+                        label="TPL_TZ_LANG_FB_LIKE_SEND"
+                        default="0"
+                        description="TPL_TZ_LANG_FB_LIKE_SEND_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field name="fb_like_layout" type="list" default="standard" label="TPL_TZ_LANG_FB_LIKE_LAYOUT"
+                       description="TPL_TZ_LANG_FB_LIKE_LAYOUT_DESC">
+                    <option value="standard">standard</option>
+                    <option value="button_count">button_count</option>
+                    <option value="box_count">box_count</option>
+                </field>
+
+                <field
+                        name="fb_like_show_faces"
+                        type="radio"
+                        class="btn-group"
+                        label="TPL_TZ_LANG_FB_LIKE_SHOW_FACES"
+                        default="true"
+                        description="TPL_TZ_LANG_FB_LIKE_SHOW_FACES_DESC">
+                    <option value="false">JNO</option>
+                    <option value="true">JYES</option>
+                </field>
+
+                <field name="fb_like_width" type="text" default="500" label="TPL_TZ_LANG_FB_LIKE_WIDTH"
+                       description="TPL_TZ_LANG_FB_LIKE_WIDTH_DESC"/>
+                <field name="fb_like_action" type="list" default="like" label="TPL_TZ_LANG_FB_LIKE_ACTION"
+                       description="TPL_TZ_LANG_FB_LIKE_ACTION_DESC">
+                    <option value="like">like</option>
+                    <option value="recommend">recommend</option>
+                </field>
+                <field name="fb_like_font" type="list" default="arial" label="TPL_TZ_LANG_FB_LIKE_FONT"
+                       description="TPL_TZ_LANG_FB_LIKE_FONT_DESC">
+                    <option value="arial">arial</option>
+                    <option value="lucida grande">lucida grande</option>
+                    <option value="segoe ui">segoe ui</option>
+                    <option value="tahoma">tahoma</option>
+                    <option value="trebuchet ms">trebuchet ms</option>
+                    <option value="verdana">verdana</option>
+                </field>
+                <field name="fb_like_colorscheme" type="list" default="light" label="TPL_TZ_LANG_FB_LIKE_COLORSCHEME"
+                       description="TPL_TZ_LANG_FB_LIKE_COLORSCHEME_DESC">
+                    <option value="light">light</option>
+                    <option value="dark">dark</option>
+                </field>
+
+                <!-- G+ -->
+                <field
+                        name="google_plus"
+                        type="radio"
+                        class="btn-group"
+                        label="TPL_TZ_LANG_GOOGLE_PLUS"
+                        default="1"
+                        description="TPL_TZ_LANG_GOOGLE_PLUS_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field
+                        name="google_plus_count"
+                        type="radio"
+                        class="btn-group"
+                        label="TPL_TZ_LANG_GOOGLE_PLUS_COUNT"
+                        default="1"
+                        description="TPL_TZ_LANG_GOOGLE_PLUS_COUNT_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field name="google_plus_size" type="list" default="medium" label="TPL_TZ_LANG_GOOGLE_PLUS_SIZE"
+                       description="TPL_TZ_LANG_GOOGLE_PLUS_SIZE_DESC">
+                    <option value="standard">standard</option>
+                    <option value="small">small</option>
+                    <option value="medium">medium</option>
+                    <option value="tall">tall</option>
+                </field>
+
+                <field name="google_plus_lang" type="text" default="en-GB" label="TPL_TZ_LANG_GOOGLE_PLUS_LANG"
+                       description="TPL_TZ_LANG_GOOGLE_PLUS_LANG_DESC"/>
+
+                <!-- GOOGLE+ SHARE BUTTON -->
+                <field
+                        name="google_plus_share"
+                        type="radio"
+                        class="btn-group"
+                        label="TPL_TZ_LANG_GOOGLE_PLUS_SHARE"
+                        default="1"
+                        description="TPL_TZ_LANG_GOOGLE_PLUS_SHARE_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field name="google_plus_share_annotation" type="list" default="vertical-bubble"
+                       label="TPL_TZ_LANG_GOOGLE_PLUS_ANNOTATION" description="TPL_TZ_LANG_GOOGLE_PLUS_ANNOTATION">
+                    <option value="none">none</option>
+                    <option value="inline">inline</option>
+                    <option value="vertical-bubble">bubble (vertical)</option>
+                    <option value="bubble">bubble (horizontal)</option>
+                </field>
+
+                <field name="google_plus_share_size" type="list" default="20" label="TPL_TZ_LANG_GOOGLE_PLUS_SHARE_SIZE"
+                       description="TPL_TZ_LANG_GOOGLE_PLUS_SHARE_SIZE_DESC">
+                    <option value="15">small</option>
+                    <option value="20">medium</option>
+                    <option value="24">large</option>
+                </field>
+
+                <!-- TWEET BTN -->
+                <field
+                        name="tweet_btn"
+                        type="radio"
+                        class="btn-group"
+                        label="TPL_TZ_LANG_TWEET_BTN"
+                        default="0"
+                        description="TPL_TZ_LANG_TWEET_BTN_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field name="tweet_btn_data_count" type="list" default="vertical"
+                       label="TPL_TZ_LANG_TWEET_BTN_DATA_COUNT" description="TPL_TZ_LANG_TWEET_BTN_DATA_COUNT_DESC">
+                    <option value="vertical">vertical count</option>
+                    <option value="horizontal">horizontal count</option>
+                    <option value="none">no count</option>
+                </field>
+
+                <field name="tweet_btn_data_via" type="text" default="" label="TPL_TZ_LANG_TWEET_BTN_DATA_VIA"
+                       description="TPL_TZ_LANG_TWEET_BTN_DATA_VIA_DESC"/>
+
+                <field name="tweet_btn_data_lang" type="list" default="en" label="TPL_TZ_LANG_TWEET_BTN_DATA_LANG"
+                       description="TPL_TZ_LANG_TWEET_BTN_DATA_LANG_DESC">
+                    <option value="en">English</option>
+                    <option value="fr">French</option>
+                    <option value="de">German</option>
+                    <option value="es">Spanish</option>
+                    <option value="ja">Japanese</option>
+                    <option value="nl">Dutch</option>
+                    <option value="id">Indonesian</option>
+                    <option value="it">Italian</option>
+                    <option value="ko">Korean</option>
+                    <option value="pt">Portuguese</option>
+                    <option value="ru">Russian</option>
+                    <option value="tr">Turkish</option>
+                </field>
+
+                <!-- Pinterest BTN -->
+                <field
+                        name="pinterest_btn"
+                        type="radio"
+                        class="btn-group"
+                        label="TPL_TZ_LANG_PINTEREST_BTN"
+                        default="0"
+                        description="TPL_TZ_LANG_PINTEREST_BTN_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field name="pinterest_btn_style" type="list" default="horizontal"
+                       label="TPL_TZ_LANG_PINTEREST_BTN_STYLE" description="TPL_TZ_LANG_PINTEREST_BTN_STYLE_DESC">
+                    <option value="horizontal">TPL_TZ_LANG_PINTEREST_HORIZONTAL</option>
+                    <option value="vertical">TPL_TZ_LANG_PINTEREST_VERTICAL</option>
+                    <option value="none">TPL_TZ_LANG_PINTEREST_NONE</option>
+                </field>
+
+                <!-- Excluded -->
+                <field name="excluded_arts" type="text" label="TPL_TZ_LANG_EXCLUDED_ARTS"
+                       description="TPL_TZ_LANG_EXCLUDED_ARTS_DESC"/>
+                <field name="excluded_cats" type="category" extension="com_content" default="" multiple="multiple"
+                       label="TPL_TZ_LANG_EXCLUDED_CATS" description="TPL_TZ_LANG_EXCLUDED_CATS_DESC"/>
+            </fieldset>
+            <fieldset name="community_params" label="TPL_TZ_WEISS_JOMSOCIAL_PARAMS_FIELDSET_LABEL">
+                <field type="media" name="jomsocial_bg_header"
+                       label="TPL_TZ_WEISS_JOMSOCIAL_BG_HEADER_LABEL"/>
+            </fieldset>
+
+            <!-- Dev settings -->
+            <fieldset name="dev_params" addfieldpath="/templates/tz_fest/admin/elements">
+                <field
+                        name="use_zoom_mobile"
+                        type="radio"
+                        class="btn-group"
+                        label="TPL_TZ_LANG_ZOOM_MOBILE_LABEL"
+                        default="1"
+                        description="TPL_TZ_LANG_ZOOM_MOBILE_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field
+                        name="css_override"
+                        type="radio"
+                        class="btn-group"
+                        label="TPL_TZ_LANG_CSS_OVERRIDE"
+                        default="0"
+                        description="TPL_TZ_LANG_CSS_OVERRIDE_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field
+                        name="css_prefixer"
+                        type="radio"
+                        class="btn-group"
+                        label="TPL_TZ_LANG_CSS_PREFIXER"
+                        default="0"
+                        description="TPL_TZ_LANG_CSS_PREFIXER_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="css_custom" type="textarea" rows="6" cols="40" label="TPL_TZ_LANG_CSS_CUSTOM"
+                       description="TPL_TZ_LANG_CSS_CUSTOM_DESC"/>
+                <field
+                        name="chrome_frame_support"
+                        type="radio"
+                        class="btn-group"
+                        label="TPL_TZ_LANG_CHROME_FRAME_SUPPORT"
+                        default="0"
+                        description="TPL_TZ_LANG_CHROME_FRAME_SUPPORT_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>

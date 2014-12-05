@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.5/module-install.dtd">
+<extension version="2.5" type="module" client="site" method="upgrade">
+	<name>Community - Latest Discussion</name>
+	<author>JomSocial Team</author>
+	<creationDate>March 2011</creationDate>
+	<copyright>Copyright (C) 2008 - 2010 JomSocial. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>support@jomsocial.com</authorEmail>
+	<authorUrl>http://www.jomsocial.com</authorUrl>	
+	<version>3.2_RC3</version>
+	<description>Show the active discussion</description>
+	<languages>
+		<language tag="en-GB">en-GB.mod_latestdiscussion.ini</language>
+	</languages>
+	<files>
+		<filename module="mod_latestdiscussion">mod_latestdiscussion.php</filename>
+		<filename>mod_latestdiscussion.xml</filename>
+		<filename>helper.php</filename>
+		<folder>tmpl</folder>
+	</files>
+	<params>
+		<param name="cache" type="list" default="1" label="Caching" description="Select whether to cache the content of this module">
+			<option value="1">Use global</option>
+			<option value="0">No caching</option>
+		</param>
+		<param name="count" type="text" default="5" label="Count" description="The number of latest discussion to display (default is 5)" />
+		<param name="show_avatar" type="list" default="1" label="Show avatar" description="Select whether to show the avatar">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="repeat_avatar" type="list" default="1" label="Repeat Avatar" description="Select whether to repeat the avatar for similar groups.">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="show_private_discussion" type="list" default="1" label="Show Private Discussion" description="Select whether to show discussion from private groups.">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="moduleclass_sfx" type="text" default="app-box" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+	</params>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="cache" type="list" default="1" label="Caching" description="Select whether to cache the content of this module">
+					<option value="1">Use global</option>
+					<option value="0">No caching</option>
+				</field>
+				<field name="count" type="text" default="5" label="Count" description="The number of latest discussion to display (default is 5)" />
+				<field name="show_avatar" type="list" default="1" label="Show avatar" description="Select whether to show the avatar">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="repeat_avatar" type="list" default="1" label="Repeat Avatar" description="Select whether to repeat the avatar for similar groups.">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="show_private_discussion" type="list" default="1" label="Show Private Discussion" description="Select whether to show discussion from private groups.">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="moduleclass_sfx" type="text" default="app-box" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

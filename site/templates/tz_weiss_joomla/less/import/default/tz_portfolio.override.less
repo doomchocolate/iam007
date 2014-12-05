@@ -1,0 +1,969 @@
+.TzLetters{
+  margin-bottom: 20px;
+  .breadcrumb{
+    padding-top: 0;
+    a{
+      color: @tzcolor;
+      &.disabled{
+        color: lighten(@tzcolor,70%);
+      }
+    }
+  }
+}
+.option-combo{
+  margin-bottom: 15px;
+  .btn{
+    border: none;
+    font-size: 12px;
+    color: @tzcolor;
+    font-weight: 700;
+    background: none;
+    .border-radius(0);
+    text-shadow: none;
+    .box-shadow(none);
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    &.selected,
+    &:hover,&:focus,&:active{
+      color: @white;
+      background: @tzcolor;
+    }
+  }
+  .btn-small{
+    padding: 2px 10px;
+  }
+}
+#tz_options{
+  margin-bottom: 12px;
+  .selected{
+    color: @white;
+    background: @tzcolor;
+  }
+}
+#portfolio{
+  margin-top: -30px;
+}
+#TzContent{
+  .page-heading{
+    margin-bottom: 40px;
+  }
+}
+.element{
+  text-align: center;
+  a{
+    color: @tzcolor;
+//    &:hover,&:focus{
+//      color: @tzBlueColor;
+//    }
+  }
+  .TzInner{
+    margin: 30px;
+    overflow: hidden;
+    position: relative;
+    padding: 20px 30px 13px;
+    border: 5px solid @tzcolor;
+    .TzIcon{
+      color: @tzcolor;
+      .dropdown-menu{
+        min-width: 78px;
+        font-size: 13px;
+        text-align: left;
+        .border-radius(0);
+        a{
+          color: @tzcolor;
+          padding: 3px 15px;
+          text-transform: none;
+          &:hover,&:focus{
+            color: @tzBlueColor;
+            .fa{
+              color: @tzBlueColor;
+            }
+          }
+        }
+        li > a:hover,
+        li > a:focus{
+          background: none;
+        }
+        .fa{
+          font-size: 14px;
+          padding-right: 5px;
+        }
+      }
+      .fa{
+        margin-bottom: 0;
+        display: inline-block;
+      }
+      .fa-cog{
+        font-size: 18px;
+        padding-right: 5px;
+      }
+      .fa-caret-down{
+        font-size: 12px;
+      }
+    }
+    &.audio,
+    &.imagegallery{
+      border: none;
+      color: @white;
+      padding: 20px 30px 22px;
+      background: rgba(0,0,0,0.9);
+      a{
+        color: @white;
+      }
+      .TzTimeLineMedia, .TzPortfolioMedia{
+        margin-bottom: 25px;
+      }
+      .TZcategory-name{
+        font-weight: 600;
+        margin-bottom: 22px;
+      }
+      .TzPortfolioDescription{
+        padding: 0;
+      }
+
+      .TzPortfolioMedia img{
+        opacity: 0.8;
+      }
+
+      .TzPortfolioTitle,
+      .title{
+        margin-bottom: 12px;
+      }
+      .TzIcon{
+        .dropdown-menu{
+          min-width: 78px;
+          font-size: 13px;
+          text-align: left;
+          .border-radius(0);
+          a{
+            color: @tzcolor;
+            padding: 3px 15px;
+            text-transform: none;
+            &:hover,&:focus{
+              color: @tzBlueColor;
+              .fa{
+                color: @tzBlueColor;
+              }
+            }
+          }
+          li > a:hover,
+          li > a:focus{
+            background: none;
+          }
+          .fa{
+            font-size: 14px;
+          }
+        }
+        .fa{
+          margin-bottom: 0;
+          display: inline-block;
+        }
+        .fa-cog{
+          font-size: 18px;
+          padding-right: 5px;
+        }
+        .fa-caret-down{
+          font-size: 12px;
+        }
+      }
+      .center-info{
+        padding:0;
+      }
+    }
+    &.image,
+    &.video {
+      border: none;
+      color: @white;
+      padding-top: 22px;
+      padding-bottom: 17px;
+      .TZcategory-name{
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        font-weight: 600;
+        text-align: center;
+        position: relative;
+        margin-bottom: 0;
+      }
+      .TzPortfolioMedia{
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        img{
+          max-width: none;
+          position: absolute;
+        }
+      }
+      .TzPortfolioDescription{
+        z-index: 1;
+        padding: 0;
+        position: relative;
+      }
+      .background{
+        z-index: 1;
+        background: rgba(0,0,0,0.3);
+      }
+      a{
+        color: @white;
+      }
+      .fa{
+        display: block;
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+      .TzPortfolioTitle,
+      .title{
+        margin-bottom: 0;
+      }
+      .TzIcon{
+        .dropdown-menu{
+          min-width: 78px;
+          font-size: 13px;
+          text-align: left;
+          .border-radius(0);
+          a{
+            color: @tzcolor;
+            padding: 3px 15px;
+            text-transform: none;
+            &:hover,&:focus{
+              color: @tzBlueColor;
+              .fa{
+                color: @tzBlueColor;
+              }
+            }
+          }
+          li > a:hover,
+          li > a:focus{
+            background: none;
+          }
+          .fa{
+            font-size: 14px;
+          }
+        }
+        .fa{
+          margin-bottom: 0;
+          display: inline-block;
+        }
+        .fa-cog{
+          font-size: 18px;
+          padding-right: 5px;
+        }
+        .fa-caret-down{
+          font-size: 12px;
+        }
+      }
+    }
+    &.noneMedia{
+      .center-info{
+        padding: 110px 0;
+      }
+    }
+    &.video{
+      border: none;
+      .background{
+        &:before{
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          content: " ";
+          position: absolute;
+          background: url("../../../images/video-pattern.png") repeat-y scroll left top;
+        }
+        &:after{
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          content: " ";
+          margin: 0 30px;
+          position: absolute;
+          background: none repeat scroll 0 0 rgba(255, 255, 255, 0.1);
+        }
+        background: url("../../../images/video-pattern.png") repeat-y scroll right top  rgba(0, 0, 0, 0.3);
+      }
+    }
+    &.link{
+      padding-bottom: 0;
+      .TzLink{
+        padding: 0;
+      }
+      .TZcategory-name{
+        margin-bottom: 0;
+      }
+      .introtext{
+        padding: 80px 0 90px;
+        .title,.TzPortfolioTitle{
+          margin-bottom: 0;
+        }
+      }
+
+    }
+    .TzQuote{
+      padding: 0;
+      .text{
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 36px;
+        font-style: normal;
+        margin-bottom: 0;
+        padding:80px 0;
+        p{
+          line-height: 1.53em;
+          margin:0;
+        }
+      }
+      .TZcategory-name{
+        margin-bottom: 0;
+      }
+      .author{
+        font-size: 12px;
+        color: @tzcolor;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+    }
+  }
+  .TZcategory-name{
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    .fa{
+      float: left;
+    }
+  }
+  .TzPortfolioDate{
+    margin-bottom: 3px;
+  }
+  .tz_audio_thumbnail{
+    text-align: center;
+    position: relative;
+    .fa{
+      left: 0;
+      top: 50%;
+      width: 100%;
+      font-size: 72px;
+      margin-top: -35px;
+      position: absolute;
+      color: rgba(255,255,255,0.5);
+    }
+  }
+  .background{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0,0,0,0.5);
+  }
+  .TzPortfolioTitle,
+  .title{
+    font-size: 24px;
+    line-height: 36px;
+  }
+  .TzPortfolioDescription{
+    padding: 0;
+
+  }
+  .center-info{
+    padding:60px 0;
+    position: relative;
+    text-align: center;
+  }
+  .introtext{
+    font-size: 12px;
+    line-height: 24px;
+  }
+  .TzPortfolioReadmore{
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+}
+#infscr-loading{
+  .tz-icon-spinner{
+    font-size: 36px;
+  }
+}
+#TzContent div#infscr-loading{
+  color: @tzcolor;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 36px;
+  em{
+    font-style: normal;
+  }
+}
+#tz_append a.tzNomore{
+  font-size: 36px;
+  line-height: 40px;
+}
+#portfolio,#timeline{
+  margin-bottom: 102px;
+}
+
+.blog{
+  .fa{
+    color: #cacaca;
+    font-size: 18px;
+    margin-right: 6px;
+  }
+  .TzArticleBlogInfo{
+    color: #aaa;
+    font-size: 15px;
+    margin-bottom: 21px;
+    a{
+      color: #aaa;
+      &:hover,&:focus{
+        color: @tzBlueColor;
+      }
+    }
+    > span{
+      margin-right: 24px;
+    }
+  }
+  .TzBlogTitle,.title{
+    font-size: 42px;
+    color: @tzcolor;
+    font-weight: 300;
+    line-height: 52px;
+    margin-bottom: 40px;
+    a{
+      color: @tzcolor;
+      &:hover,&:focus{
+        color: @tzBlueColor;
+      }
+    }
+  }
+  .TzDescription{
+    font-size: 15px;
+    p{
+      line-height: 29px;
+    }
+  }
+  .TzLink{
+    padding-bottom: 13px;
+    .fa{
+      color: #cacaca;
+      font-size: 36px;
+    }
+    .introtext{
+      font-size: 18px;
+      line-height: 28px;
+      p{
+        line-height: 29px;
+      }
+    }
+  }
+  .TzQuote{
+    padding-bottom: 43px;
+    .fa{
+      color: #cacaca;
+    }
+    > .fa{
+      font-size: 42px;
+      margin-right: 28px;
+    }
+    .text{
+      font-size: 42px;
+      font-weight: 300;
+      line-height: 52px;
+      font-style: normal;
+      padding-bottom: 16px;
+    }
+    .author{
+      font-size: 15px;
+      padding-bottom: 16px;
+    }
+  }
+  .caret{
+    border-left-color: #cbcbcb;
+    border-right-color: #cbcbcb;
+  }
+  .TzIcon{
+    .fa-caret-down{
+      font-size: 12px;
+    }
+  }
+}
+.TzIcon{
+  .fa-caret-down{
+    font-size: 12px;
+  }
+  .btn-group.open .dropdown-toggle{
+    background: none;
+    box-shadow: none;
+    display: inline-block;
+  }
+  .dropdown-menu{
+    font-size: 13px;
+    min-width: 100px;
+    .border-radius(0);
+    a{
+      color: @tzcolor;
+      padding: 3px 15px;
+      &:hover,&:focus{
+        color: @tzBlueColor;
+        .fa{
+          color: @tzBlueColor;
+        }
+      }
+    }
+    li > a:hover,
+    li > a:focus{
+      background: none;
+    }
+    .fa{
+      top: 2px;
+      font-size: 13px;
+      position: relative;
+    }
+  }
+}
+
+.TzBlogMedia,.TzArticleMedia{
+  margin-bottom: 38px;
+}
+.TzReadmore{
+  color: #00acff;
+  &:hover,&:focus{
+    color: @tzcolor;
+  }
+}
+.TzArticleTag{
+  a{
+    display: inline-block;
+  }
+}
+.TzTags,.TzArticleTag{
+  margin-bottom: 22px;
+  text-transform: capitalize;
+  .fa{
+    color: #696969;
+    font-size: 15px;
+  }
+  a{
+    color: #696969;
+    font-weight: 300;
+    margin-right: 5px;
+    font-style: italic;
+    margin-bottom: 8px;
+    &:hover,&:focus{
+      color: @tzBlueColor;
+    }
+  }
+}
+
+.TzLeading, .TzItem{
+  margin-bottom: 55px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f4f4f4;
+}
+
+.TzArticleInfo{
+  color: #aaa;
+  font-size: 15px;
+  margin-bottom: 11px;
+  a{
+    color: #aaa;
+    &:hover,&:focus{
+      color: @tzBlueColor;
+    }
+  }
+  > span{
+    margin-right: 24px;
+    margin-bottom: 9px;
+  }
+  .fa{
+    color: #cacaca;
+    font-size: 18px;
+    margin-right: 6px;
+  }
+}
+.TzArticleTitle{
+  font-size: 42px;
+  color: @tzcolor;
+  font-weight: 300;
+  line-height: 52px;
+  margin-bottom: 40px;
+  a{
+    color: @tzcolor;
+    &:hover,&:focus{
+      color: @tzBlueColor;
+    }
+  }
+}
+.TzArticleDescription{
+  font-size: 15px;
+  p{
+    line-height: 29px;
+  }
+}
+.item-page{
+  .fa{
+    color: #cacaca;
+    font-size: 18px;
+    margin-right: 6px;
+  }
+  .TzIcon{
+    color: @tzcolor;
+    .fa-caret-down{
+      font-size: 12px;
+    }
+  }
+  .AuthorBlock{
+    padding: 42px 0;
+    border-top: 1px solid #f4f4f4;
+  }
+  .rTitle{
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 40px;
+    margin-bottom: 29px;
+  }
+}
+.tz_portfolio_like_button{
+  margin-bottom: 28px;
+  &.breadcrumb{
+    border: none;
+  }
+}
+.AuthorDetails{
+  color: @tzcolor;
+  font-size: 15px;
+  line-height: 2em;
+  padding-bottom: 38px;
+  p{
+    line-height: 2em;
+  }
+  .AuthorName{
+    font-size: 24px;
+    margin: 0 0 12px;
+    line-height: 30px;
+    a{
+      font-size: 24px;
+      color: @tzcolor;
+      line-height: 30px;
+      font-weight: normal;
+      text-transform: none;
+      text-transform: uppercase;
+      &:hover,&:focus{
+        text-decoration: none;
+        color: @tzBlueColor;
+      }
+    }
+  }
+}
+.AuthorGender{
+  padding-right: 10px;
+}
+.AuthorAvatar{
+  padding: 0;
+  width: 150px;
+  float: right;
+  height: 150px;
+  background: none;
+  overflow: hidden;
+  margin-left: 30px;
+  margin-top: 10px;
+  .border-radius(50%);
+
+  img{
+    width:100%;
+    border:none;
+    max-width: 100%;
+    display: inline-block;
+  }
+}
+.TzAuthorInfo{
+  border:none;
+  margin:0;
+  > a{
+    color: @tzcolor;
+    margin-right: 15px;
+    &:hover,&:focus{
+      color: @tzBlueColor;
+    }
+  }
+}
+.TzRelatedTitle{
+  font-size: 24px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.TzRelated{
+  margin-bottom: 30px;
+  .TzItem{
+    border: none;
+    margin-left: 15px;
+    padding-bottom: 0;
+    list-style: decimal;
+    a{
+      color: @tzcolor;
+      &:hover,&:focus{
+        color: @tzBlueColor;
+      }
+    }
+  }
+}
+.TzPortfolioItemPage{
+  .TzArticleInfo{
+    margin-bottom: 60px;
+    > span{
+      display: table;
+    }
+  }
+  .TzArticleMedia{
+    margin-bottom: 50px;
+    img{
+      width: auto;
+      position: relative;
+      max-width: none;
+    }
+    .flexslider{
+      img{
+        width: 100%;
+        min-width:0;
+        min-height:0;
+      }
+    }
+  }
+  .TzArticleTitle{
+    margin-bottom: 20px;
+  }
+
+
+}
+
+.TzTagHeading{
+  color: @white;
+  margin-top: 0;
+  font-size: 48px;
+  font-weight: 300;
+  line-height: 50px;
+  margin-bottom: 69px;
+  background: @tzcolor;
+  display: inline-block;
+  padding: 4px 15px 4px 12px;
+}
+.date-group .date{
+  color: @tzBlueColor;
+  border-bottom: 1px solid @tzBlueColor;
+}
+.FacebookButton{
+  float: left;
+  margin-right: 30px;
+}
+.flexslider{
+  width: 100% !important;
+}
+.flex-direction-nav li a{
+  width: 70px;
+  height: 70px;
+  font-size: 0;
+  color: @white;
+  text-indent: 0;
+  line-height: 70px;
+  text-align: center;
+  font-style: normal;
+  font-weight: normal;
+  background: @tzcolor;
+  display: inline-block;
+  font-family: FontAwesome;
+  color: rgba(255, 255, 255, 0.7);
+  &.flex-prev{
+    left: 0;
+    &:before{
+      content: "\f104";
+      font-size: 47px;
+    }
+  }
+  &.flex-next:before{
+    content: "\f105";
+    font-size: 47px;
+  }
+}
+.flexslider ul.flex-direction-nav li,
+.flexslider ul.flex-direction-nav li a{
+  margin-top: -35px;
+}
+.flexslider ul, .flexslider ol{
+  &.flex-direction-nav{
+    display: table;
+  }
+}
+.TzItemPortfolioInner{
+.PortfolioDetailTop{
+  background:  rgba(0,0,0,0.5);
+  line-height: 20px;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  padding:20px;
+  text-align: left;
+  .transition(all 0.5s ease 0s);
+  a{
+    font-size: 14px;
+    color:#fff;
+    text-transform: uppercase;
+    font-family: inherit;
+    font-weight: 600;
+    line-height: 20px;
+    display: inline-block;
+    i{
+      color:#fff;
+      font-size: 14px;
+    }
+  }
+  .pagenav{
+    margin:0;
+    float:right;
+    li{
+      a{
+        padding:0 0 0 58px;
+        border:none;
+        background: none;
+      }
+    }
+    .next{
+      i{
+        margin-left: 6px;
+      }
+    }
+  }
+}
+  .PortfolioDetailContent{
+    .transition(all 0.5s ease 0s);
+    margin-top:0;
+  }
+.PortfolioDetailContent,
+.PortfolioDetailInfo,
+.PortfolioDetailMedia{
+  max-width: 900px;
+  margin: auto;
+  .TzArticleInfo > span{
+    display:inline;
+    color:#cacaca;
+    font-size: 18px;
+    font-weight: 600;
+    .transition(all 0.5s ease 0s);
+  }
+  h1.TzArticleTitle{
+    font-size: 60px;
+    font-weight: 300;
+    line-height: 1em;
+    color:#fff;
+    margin-bottom: 27px;
+    .transition(all 0.5s ease 0s);
+  }
+  .TzArticleInfo{
+    margin-bottom:30px;
+  }
+  .TzArticleInfo, .TzArticleTag  {
+    span, a, i{
+      .transition(all 0.5s ease 0s);
+    }
+  }
+  .TzArticleDescription{
+    opacity: 0.7;
+    p{
+      line-height: 32px;
+      font-size: 18px;
+    }
+  }
+  .tz_portfolio_like_button {
+    margin-bottom: 90px;
+  }
+}
+.TzArticleMedia{
+  margin-bottom:0;
+}
+
+  .PortfolioDetailInfo{
+    position: absolute;
+    bottom:100px;
+
+  }
+  .TzArticleTag{
+    a{
+      font-size: 15px;
+      font-weight: 600;
+      font-style: italic;
+    }
+  }
+  .FacebookButton, .TwitterButton, .GooglePlusOneButton, .PinterestButton, .LinkedinButton{
+    display: inline-block !important;
+  }
+  .intro-effect-fadeout.modify{
+    .PortfolioDetailInfo{
+      .TzArticleInfo {
+        span, a, i{
+          color:#999;
+        }
+      }
+      .TzArticleTag{
+        a{
+          color:#ababab;
+        }
+      }
+      h1.TzArticleTitle{
+        color:#000;
+      }
+    }
+
+    .PortfolioDetailTop{
+      background:rgba(255,255,255,0.5);
+      .transition(all 0.5s ease 0s);
+      a, i{
+        color:#000;
+        .transition(all 0.5s ease 0s);
+      }
+    }
+  }
+
+}
+.scrolling{
+  .TzItemPortfolioInner{
+    .PortfolioDetailContent{
+      margin-top:-80px;
+      .transition(all 0.3s ease 0s);
+    }
+  }
+}
+
+.TzPortfolioNoneMedia{
+  padding-top: 80px;
+  .TzArticleMedia{
+    height: auto !important;
+    margin:0 !important;
+    .tz_audio, .tz_portfolio_video{
+      margin-bottom: 35px;
+    }
+  }
+  .PortfolioDetailInfo{
+    position: relative;
+    bottom:0 !important;
+    h1.TzArticleTitle{
+      color:#555555 !important;
+    }
+    .TzArticleInfo{
+      span,i,a{
+        color:#cacaca;
+      }
+
+    }
+    .TzArticleTag{
+      a{
+        color:#aaaaaa;
+      }
+    }
+  }
+  .PortfolioDetailContent{
+    margin-top: 0 !important;
+  }
+}

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="community" method="upgrade">
+	<name>PLG_FRIENDSLOCATION_TITLE</name>
+	<author>JomSocial Team</author>
+	<creationDate>March 2011</creationDate>
+	<copyright>Copyright 2008 - 2013 by iJoomla, Inc. - All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>support@jomsocial.com</authorEmail>
+	<authorUrl>http://www.jomsocial.com</authorUrl>
+	<version>3.2_RC3</version>
+	<isapplication>true</isapplication>
+	<description>PLG_FRIENDSLOCATION_XML_DESCRIPTION</description>
+	<languages>
+	    <language tag="en-GB">en-GB.plg_community_friendslocation.ini</language>
+		<language tag="en-GB">en-GB.plg_community_friendslocation.sys.ini</language>
+	</languages>
+	<files>
+		<file plugin="friendslocation">friendslocation.php</file>
+		<folder>friendslocation</folder>
+	</files>	
+	<params>
+		<param name="coreapp" type="list" default="0" label="Core Application" description="Causes this application to not appear in the users applications list but it will allow this application to appear in the user profile automatically if selected.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="cache" type="list" default="1" label="Caching" description="Select whether to cache the content of this plugin">
+			<option value="1">Use Global</option>
+			<option value="0">No</option>
+		</param>
+		<param name="position" type="list" default="content" label="Position" description="Default position if you select this as core apps">
+			<option value="content">Main  content</option>
+			<option value="sidebar-top">Sidebar top</option>
+			<option value="sidebar-bottom">Sidebar bottom</option>
+		</param>
+		<param name="town_field_code" type="text" default="FIELD_CITY" label="Town field code" description="The town field code. (default is FIELD_CITY)" />
+		<param name="state_field_code" type="text" default="FIELD_STATE" label="State field code" description="The state field code. (default is FIELD_STATE)" />
+		<param name="country_field_code" type="text" default="FIELD_COUNTRY" label="Country field code" description="The country field code. (default is FIELD_COUNTRY)" />
+		<param name="count" type="text" default="0" label="Count" description="The number of friend to display (default is 0 no limit)" />	
+		<param name="show_karma" type="list" default="1" label="Show karma / point" description="Select whether to show the karma or points">
+			<option value="1">Karma</option>
+			<option value="2">Points</option>
+			<option value="0">None</option>
+		</param>
+		<param name="width" type="text" default="480" label="Width" description="Width of the canvas (default is 480px)" />
+		<param name="height" type="text" default="340" label="Height" description="Height of the canvas (default is 340px)" />
+	</params>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="coreapp" type="list" default="0" label="Core Application" description="Causes this application to not appear in the users applications list but it will allow this application to appear in the user profile automatically if selected.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="cache" type="list" default="1" label="Caching" description="Select whether to cache the content of this plugin">
+					<option value="1">Use Global</option>
+					<option value="0">No</option>
+				</field>
+				<field name="position" type="list" default="content" label="Position" description="Default position if you select this as core apps">
+					<option value="content">Main  content</option>
+					<option value="sidebar-top">Sidebar top</option>
+					<option value="sidebar-bottom">Sidebar bottom</option>
+				</field>
+				<field name="town_field_code" type="text" default="FIELD_CITY" label="Town field code" description="The town field code. (default is FIELD_CITY)" />
+				<field name="state_field_code" type="text" default="FIELD_STATE" label="State field code" description="The state field code. (default is FIELD_STATE)" />
+				<field name="country_field_code" type="text" default="FIELD_COUNTRY" label="Country field code" description="The country field code. (default is FIELD_COUNTRY)" />
+				<field name="count" type="text" default="0" label="Count" description="The number of friend to display (default is 0 no limit)" />	
+				<field name="show_karma" type="list" default="1" label="Show karma / point" description="Select whether to show the karma or points">
+					<option value="1">Karma</option>
+					<option value="2">Points</option>
+					<option value="0">None</option>
+				</field>
+				<field name="width" type="text" default="480" label="Width" description="Width of the canvas (default is 480px)" />
+				<field name="height" type="text" default="340" label="Height" description="Height of the canvas (default is 340px)" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,184 @@
+.TzVote-stars,
+.TzVote-stars-small {
+    background-position: left top;
+    display: inline-block;
+    height: 25px;
+    line-height: 25px;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    vertical-align: middle;
+    width: 96px;
+}
+
+.TzVote-stars-small {
+    height: 22px;
+    line-height: 22px;
+    width: 110px;
+}
+
+.TzVote-stars li,
+.TzVote-stars-small li {
+    background-position: 0;
+    background-image: none;
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+.TzVote-stars,
+.TzVote-stars li a:hover,
+.TzVote-stars li.current-rating,
+.TzVote-stars-small,
+.TzVote-stars-small li a:hover,
+.TzVote-stars-small li.current-rating {
+    background-image: url(../images/star.png);
+    background-color: transparent;
+    background-repeat: repeat-x;
+}
+
+.TzVote-stars li a:hover,
+.TzVote-stars li.current-rating,
+.TzVote-stars-small li a:hover,
+.TzVote-stars-small li.current-rating {
+    background-position: left -1000px;
+}
+
+.TzVote-stars-small,
+.TzVote-stars-small li a:hover,
+.TzVote-stars-small li.current-rating {
+    background-image: url(../images/star_small.png);
+}
+
+.TzVote-stars li a,
+.TzVote-stars li.current-rating,
+.TzVote-stars-small li a,
+.TzVote-stars-small li.current-rating {
+    border: medium none;
+    cursor: pointer;
+    left: 0;
+    outline-color: 0;
+    outline-style: none;
+    outline-width: medium;
+    overflow: hidden;
+    position: absolute;
+    text-indent: -1000em;
+    top: 0;
+}
+
+.TzVote-stars li a,
+.TzVote-stars li.current-rating {
+    height: 25px;
+    line-height: 25px;
+}
+
+.TzVote-stars-small li a,
+.TzVote-stars-small li.current-rating {
+    height: 22px;
+    line-height: 22px;
+}
+
+.TzVote-stars li a:hover,
+.TzVote-stars-small li a:hover {
+    background-position: left bottom;
+}
+
+.TzVote-stars li a:focus,
+.TzVote-stars li a:active,
+.TzVote-stars-small li a:focus,
+.TzVote-stars-small li a:active {
+    background: none;
+}
+
+.TzVote-stars li.current-rating,
+.TzVote-stars-small li.current-rating {
+    background-position: left center;
+    z-index: 1;
+}
+
+li a.ev-one-star,
+li a.ev-two-stars,
+li a.ev-three-stars,
+li a.ev-three-stars,
+li a.ev-four-stars,
+li a.ev-five-stars {
+    margin: 0;
+    padding: 0;
+}
+
+li a.ev-one-star {
+    width: 20%;
+    z-index: 6;
+}
+
+li a.ev-two-stars {
+    width: 40%;
+    z-index: 5;
+}
+
+li a.ev-three-stars {
+    width: 60%;
+    z-index: 4;
+}
+
+li a.ev-four-stars {
+    width: 80%;
+    z-index: 3;
+}
+
+li a.ev-five-stars {
+    width: 100%;
+    z-index: 2;
+}
+
+.TzVote-count {
+    display: inline-block;
+    font-size: 90%;
+    vertical-align: middle;
+}
+
+
+/* For Bootstrap style */
+.rating {
+    display: inline-block;
+    direction: rtl;
+    text-align: center;
+    cursor: pointer;
+}
+.rating > .rating-item:last-child{
+    margin: 0;
+}
+.rating > .rating-item {
+    display: inline-block;
+    position: relative;
+    width: auto;
+    text-decoration: none;
+    margin-left: -4px;
+    padding-right: 3px;
+}
+.TzVote-count{
+    padding-left: 3px;
+}
+.rating > .voted span{
+    display: inline-block;
+    margin: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    padding-right: 3px;
+}
+
+.rating > .rating-item:hover span:before,
+.rating > .rating-item:hover ~ a span:before,
+.rating > .voted:before,
+.rating > .rating-item:hover:before,
+.rating > .rating-item:hover ~ .rating-item:before {
+    /*content: "\42";*/
+    color: #c66969;
+    top: 0;
+    left: 0;
+}

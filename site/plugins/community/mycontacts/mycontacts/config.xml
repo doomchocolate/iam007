@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="community">
+<params>
+	<param name="home_address" type="text" default="" label="MYCONTACT_HOME_ADDRESS" description="MYCONTACT_HOME_ADDRESS" />
+        <param name="city" type="text" default="" label="MYCONTACT_CITY" description="MYCONTACT_CITY" />
+        <param name="postal_code" type="text" default="" label="MYCONTACT_POSTAL_CODE" description="MYCONTACT_POSTAL_CODE" />
+        <param name="country" type="text" default="" label="MYCONTACT_COUNTRY" description="MYCONTACT_COUNTRY" />
+        <param name="phone_number" type="text" default="" label="MYCONTACT_PHONE_NUMBER" description="MYCONTACT_PHONE_NUMBER" />
+        <param name="mobile_number" type="text" default="" label="MYCONTACT_MOBILE_NUMBER" description="MYCONTACT_MOBILE_NUMBER" />
+        <param name="fax_number" type="text" default="" label="MYCONTACT_FAX_NUMBER" description="MYCONTACT_FAX_NUMBER" />
+        <param name="my_company" type="text" default="" label="MYCONTACT_MY_COMPANYy" description="MYCONTACT_MY_COMPANY" />
+        <param name="work_address" type="text" default="" label="MYCONTACT_COMP_WEBSITE" description="MYCONTACT_COMP_WEBSITE" />
+        <param name="website" type="text" default="" label="MYCONTACT_WEBSITE" description="MYCONTACT_WEBSITE" />
+        <param name="department" type="text" default="" label="MYCONTACT_DEPARTMENT" description="MYCONTACT_DEPARTMENT" />
+        <param name="job_title" type="text" default="" label="MYCONTACT_JOB_TITLE" description="MYCONTACT_JOB_TITLE" /> 
+        <param name="main_im_id" type="text" default="" label="MYCONTACT_MAIN_IM_ID" description="MYCONTACT_MAIN_IM_ID" />
+        <param name="icq" type="text" default="" label="MYCONTACTS_ICQ" description="MYCONTACTS_ICQ" />
+        <param name="aim" type="text" default="" label="MYCONTACTS_AIM" description="MYCONTACTS_AIM" />
+        <param name="yim" type="text" default="" label="MYCONTACTS_YIM" description="MYCONTACTS_YIM" />
+        <param name="msn" type="text" default="" label="MYCONTACTS_MSN" description="MYCONTACTS_MSN" />
+        <param name="google" type="text" default="" label="MYCONTACTS_GOOGLE" description="MYCONTACTS_GOOGLE" />
+        <param name="skype" type="text" default="" label="MYCONTACTS_SKYPE" description="MYCONTACTS_SKYPE" />
+</params>
+</extension>

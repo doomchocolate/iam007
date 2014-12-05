@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" method="upgrade">
+	<name>mod_hikashop_custom</name>
+	<creationDate>{__DAY__} {__MONTH__} {__YEAR__}</creationDate>
+	<version>{__PLUGIN_VERSION__}</version>
+	<author>Hikari Software</author>
+	<authorEmail>dev@hikashop.com</authorEmail>
+	<authorUrl>http://www.hikashop.com</authorUrl>
+	<copyright>(C) 2010-{__YEAR__} HIKARI SOFTWARE. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<description>Content display for Hikashop</description>
+	<files>
+		<filename module="mod_hikashop_custom">mod_hikashop_custom.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<config>
+		<fields name="params" addfieldpath="/modules/mod_hikashop_custom/admin/fields">
+			<fieldset name="basic">
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field id="hikashopmodule" name="hikashopmodule" type="hikashopmodule" label="hikashop" description="HikaShop options" />
+                <field type="hikashopcategory" name="category" multiple="true" label="JCATEGORY"/>
+                <field type="radio" name="image_force_size"
+                       default="0" class="btn-group"
+                       label="MOD_HIKASHOP_CUSTOM_IMAGE_FORCE_SIZE_LABEL">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field type="text" name="image_width" label="MOD_HIKASHOP_CUSTOM_IMAGE_WIDTH_LABEL"/>
+                <field type="text" name="image_height" label="MOD_HIKASHOP_CUSTOM_IMAGE_HEIGHT_LABEL"/>
+                <field type="list" name="image_scale_mode"
+                       default="inside"
+                       label="MOD_HIKASHOP_CUSTOM_IMAGE_SCALE_MODE_LABEL">
+                    <option value="inside">MOD_HIKASHOP_CUSTOM_KEEP_RATIO</option>
+                    <option value="outside">MOD_HIKASHOP_CUSTOM_CROP</option>
+                </field>
+                <field type="menuitem" name="menu_id" label="MOD_HIKASHOP_CUSTOM_MENU_LABEL">
+                    <option value="0">JNONE</option>
+                </field>
+			</fieldset>
+            <fieldset name="advanced">
+
+                <field name="layout" type="modulelayout"
+                       label="JFIELD_ALT_LAYOUT_LABEL"
+                       description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+                <field name="moduleclass_sfx" type="textarea" rows="3"
+                       label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                       description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+                <field name="cache" type="list"
+                       default="1"
+                       label="COM_MODULES_FIELD_CACHING_LABEL"
+                       description="COM_MODULES_FIELD_CACHING_DESC">
+                    <option value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+
+                <field name="cache_time" type="text"
+                       default="900"
+                       label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+                       description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+                <field name="cachemode" type="hidden"
+                       default="static">
+                    <option value="static"></option>
+                </field>
+            </fieldset>
+		</fields>
+	</config>
+</extension>

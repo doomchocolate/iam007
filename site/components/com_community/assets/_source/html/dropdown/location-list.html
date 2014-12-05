@@ -1,0 +1,8 @@
+<% if ( data && data.items && data.items.length ) for ( var i = 0; i < data.items.length; i++ ) { %>
+<li data-index="<%= i %>">
+  <p class="reset-gap"><%= data.items[i].name %></p>
+  <span><%= data.items[i].vicinity || data.language.geolocation.near_here %></span>
+</li>
+<% } else { %>
+<li><em><%= data.language.geolocation.empty %></em></li>
+<% } %>

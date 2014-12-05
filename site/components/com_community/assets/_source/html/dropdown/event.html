@@ -1,0 +1,32 @@
+<div class="joms-postbox-dropdown event-dropdown">
+  <div style="clear:both">
+    <div class="event-time-column">
+      <span><%= data.language.event.category %> <span style="color:red">*</span></span>
+      <div class="joms-event-category joms-select"></div>
+    </div>
+    <div class="event-time-column">
+      <span><%= data.language.event.location %> <span style="color:red">*</span></span>
+      <input type="text" class="input-block-level" name="location" placeholder="<%= data.language.event.location_hint %>">
+    </div>
+  </div>
+  <div style="clear:both">
+    <div class="event-time-column">
+      <span><%= data.language.event.start %> <span style="color:red">*</span></span>
+      <input type="text" class="input-block-level joms-pickadate-startdate" placeholder="<%= data.language.event.start_date_hint %>">
+      <input type="text" class="input-block-level joms-pickadate-starttime" placeholder="<%= data.language.event.start_time_hint %>">
+      <span class="event-all-day joms-event-allday" style="margin-left:0;visibility:hidden">
+        <span>All Day Event</span>
+        <span style="position:relative"><i class="joms-icon-check-empty"></i></span></span>
+    </div>
+    <div class="event-time-column">
+      <span><%= data.language.event.end %> <span style="color:red">*</span></span>
+      <input type="text" class="input-block-level joms-pickadate-enddate" placeholder="<%= data.language.event.end_date_hint %>">
+      <input type="text" class="input-block-level joms-pickadate-endtime" placeholder="<%= data.language.event.end_time_hint %>">
+    </div>
+  </div>
+  <nav class="joms-postbox-tab selected">
+    <div class="joms-postbox-action event-action">
+      <button class="joms-postbox-done"><%= data.language.event.done_button %></button>
+    </div>
+  </nav>
+</div>

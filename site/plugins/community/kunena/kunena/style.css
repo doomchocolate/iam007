@@ -1,0 +1,16 @@
+#applications-kunena .apps-item
+{
+	border-bottom: 1px solid #e5e5e5;
+	padding-bottom: 7px;
+	margin-bottom: 7px;
+}
+#applications-kunena .apps-headline
+{
+	font-weight: bold;
+}
+#applications-kunena .apps-meta
+{
+	font-size: 90%;
+	color: #999;
+	margin-top: 3px;
+}

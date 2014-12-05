@@ -1,0 +1,34 @@
+
+/*---------------------------------
+ *  Featured Video
+ *---------------------------------*/
+.featured-video{width:auto;height:184px;}
+
+/* Navbar */
+body #community-wrap .cSlider-nav{width:97%; margin: 0 auto; height:100%;padding:10px;}
+body #community-wrap .cSlider-nav-clip {margin:0 55px}
+body #community-wrap .cSlider-nav-clip ul li{float:left; margin:0 5px 0 0; list-style:none; position: relative;}
+body #community-wrap .cSlider-nav-clip ul li > a{display:block;width:196px;height:304px;overflow:hidden;margin:0;opacity:0.8;}
+body #community-wrap .cSlider-nav-clip ul li > a:hover{opacity:1;}
+
+/* Navbar buttons */
+body #community-wrap .cSlider-nav .cSlider-nav-btn{position:absolute;top:0;}
+body #community-wrap .cSlider-nav .cSlider-nav-btn span{display:none;}
+body #community-wrap .cSlider-nav .cSlider-nav-btn a{display:block;width:34px;height:34px;background:transparent url("arrows-h.png") no-repeat center 0;}
+body #community-wrap .cSlider-nav .cSlider-nav-btn a:hover, 
+body #community-wrap .cSlider-nav .cSlider-nav-btn a:focus, 
+body #community-wrap .cSlider-nav .cSlider-nav-btn a:active {background:transparent url("arrows-h.png") no-repeat center 0; outline: 0}
+body #community-wrap .cSlider-nav .cSlider-nav-prev {left:20px; top:60px}
+body #community-wrap .cSlider-nav .cSlider-nav-next {right:20px;top:60px}
+body #community-wrap .cSlider-nav .cSlider-nav-prev a, 
+body #community-wrap .cSlider-nav .cSlider-nav-prev a:hover, 
+body #community-wrap .cSlider-nav .cSlider-nav-prev a:focus, 
+body #community-wrap .cSlider-nav .cSlider-nav-prev a:active {background-position:0 center;}
+body #community-wrap .cSlider-nav .cSlider-nav-next a, 
+body #community-wrap .cSlider-nav .cSlider-nav-next a:hover, 
+body #community-wrap .cSlider-nav .cSlider-nav-next a:focus, 
+body #community-wrap .cSlider-nav .cSlider-nav-next a:active {background-position:-36px center;}
+
+
+/* Buttons > Disable */
+body #community-wrap .cSlider-nav .cSlider-btn-disable{opacity:0.3/*can be set to any value until 1*/;cursor:default;}

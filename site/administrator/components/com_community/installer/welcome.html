@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8"/>
+	<title>JomSocial Web Installer</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="JomSocial Web Installer">
+	<link rel="stylesheet" type="text/css" href="<?php echo JURI::root(); ?>/administrator/components/com_community/installer/css/bootstrap.min.css" media="screen" />
+	<!-- <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css" media="screen" /> -->
+	<link rel="stylesheet" type="text/css" href="<?php echo JURI::root(); ?>/administrator/components/com_community/installer/css/style.css" media="screen" />
+	<!-- <link rel="shortcut icon" type="images/ico" href="" /> -->
+    <!--[if IE]>
+    	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="<?php echo JURI::root(); ?>/administrator/components/com_community/installer/js/bootstrap.min.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+	<div class="container">
+		<div id="js-installer">
+			<div class="js-header">
+				<h1>JomSocial</h1>
+			</div>
+			<div class="tabbable tabs-left">
+				<ul class="nav nav-tabs">
+					<li class="active"><a href="#step-one" data-toggle="tab">Welcome</a></li>
+					<li><a href="#step-three" data-toggle="tab">Unpacking files</a></li>
+					<li><a href="#step-seven" data-toggle="tab">Preparing Database</a></li>
+					<li><a href="#step-eight" data-toggle="tab">Updating Database</a></li>
+					<li><a href="#step-nine" data-toggle="tab">Installing Plugins</a></li>
+					<li><a href="#step-ten" data-toggle="tab">Installing Modules</a></li>
+					<li><a href="#step-tweleve" data-toggle="tab">Done!</a></li>
+				</ul>
+
+				<div class="tab-content">
+					<div class="tab-pane active" id="step-one">
+						<div class="js-title clearfix">
+							<h2 class="pull-left">JomSocial Installer</h2>
+							<div class="pull-right">
+								<?php if($allowContinue) {?>
+								<a href="<?php echo JRoute::_('index.php?option=com_community&view=installer&task=unpack');?>" class="btn btn-primary">Next &raquo;</a>
+								<?php } ?>
+							</div>
+						</div>
+
+						<?php
+						function statusBadge($check, $okMsg, $errorMsg)
+						{
+							if($check){
+								return '<span class="badge badge-success">'.$okMsg.'</span>';
+							} else {
+								return '<span class="badge badge-important">'.$errorMsg.'</span>';
+							}
+						}
+
+						function statusMinBadge($check, $min, $val)
+						{
+							$valCheck = $val;
+							if(strpos($valCheck, 'M')){
+								$valCheck = 1024*$val;
+							}
+							if($valCheck >= $min){
+								return '<span class="badge badge-success">'.$val.'</span>';
+							} else {
+								return '<span class="badge badge-warning">'.$val.'</span>';
+							}
+						}
+						?>
+
+						<?php if(!$allowContinue) {?>
+							<div class="alert alert-error">I am sorry, but your server did not meet the minimum requirement to install JomSocial</div>
+						<?php } ?>
+
+
+						<div class="well">
+							<p>Below are the core files needed to proceed with the installation</p>
+							<div class="tabular-data loosemargin">
+								<table class="table">
+									<tbody>
+										<tr>
+											<td>Backend archive</td>
+											<td>&nbsp;</td>
+											<td class="right"><?php echo statusBadge($check['backend'], 'OK', 'Missing'); ?></td>
+										</tr>
+										<tr>
+											<td>Ajax archive</td>
+											<td>&nbsp;</td>
+											<td class="right"><?php echo statusBadge($check['backend'], 'OK', 'Missing'); ?></td>
+										</tr>
+										<tr>
+											<td>Frontend archive</td>
+											<td>&nbsp;</td>
+											<td class="right"><?php echo statusBadge($check['backend'], 'OK', 'Missing'); ?></td>
+										</tr>
+										<tr>
+											<td>Template archive</td>
+											<td>&nbsp;</td>
+											<td class="right"><?php echo statusBadge($check['backend'], 'OK', 'Missing'); ?></td>
+										</tr>
+										<tr>
+											<td>Core plugin archive</td>
+											<td>&nbsp;</td>
+											<td class="right"><?php echo statusBadge($check['backend'], 'OK', 'Missing'); ?></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+
+						<div class="well">
+							<h3>Folder writable</h3>
+							<p>The following fodlder need to be writable for the installation to proceed</p>
+							<div class="tabular-data loosemargin">
+								<table class="table">
+									<tbody>
+										<tr>
+											<td>/administrator/components/com_community/</td>
+											<td>&nbsp;</td>
+											<td class="right"><?php echo statusBadge($check['writable_backend'], 'Yes', 'No'); ?></td>
+										</tr>
+										<tr>
+											<td>/components/com_community/</td>
+											<td>&nbsp;</td>
+											<td class="right"><?php echo statusBadge($check['writable_frontend'], 'Yes', 'No'); ?></td>
+										</tr>
+										<tr>
+											<td>/plugins/</td>
+											<td>&nbsp;</td>
+											<td class="right"><?php echo statusBadge($check['writable_plugin'], 'Yes', 'No'); ?></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+
+						<div class="well">
+							<p>If any of these are not supported (marked as No), your system does not meet the requirements for installation. Some features might not be available. Please take appropriate actions to correct the errors.</p>
+							<div class="tabular-data">
+								<table class="table">
+									<tbody>
+										<tr>
+											<td>JPEG Library</td>
+											<td class="muted">&nbsp;</td>
+											<td class="right"><?php echo statusBadge($check['lib_jpeg'], 'Yes', 'No'); ?></td>
+										</tr>
+										<tr>
+											<td>PNG Library</td>
+											<td class="muted">&nbsp;</td>
+											<td class="right"><?php echo statusBadge($check['lib_png'], 'Yes', 'No'); ?></td>
+										</tr>
+										<tr>
+											<td>GIF Library</td>
+											<td class="muted">&nbsp;</td>
+											<td class="right"><?php echo statusBadge($check['lib_gif'], 'Yes', 'No'); ?></td>
+										</tr>
+										<tr>
+											<td>GD Library</td>
+											<td class="muted">&nbsp;</td>
+											<td class="right"><?php echo statusBadge($check['lib_gd'], 'Yes', 'No'); ?></td>
+										</tr>
+										<tr>
+											<td>GD2 Library</td>
+											<td class="muted">&nbsp;</td>
+											<td class="right"><?php echo statusBadge($check['lib_gd2'], 'Yes', 'No'); ?></td>
+										</tr>
+										<tr>
+											<td>cURL Library</td>
+											<td class="muted">&nbsp;</td>
+											<td class="right"><?php echo statusBadge($check['lib_curl'], 'Yes', 'No'); ?></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+
+						<div class="well">
+							<h3>Recommended PHP configuration</h3>
+							<div class="tabular-data loosemargin">
+								<table class="table">
+									<thead>
+										<tr>
+											<th>Setting</th>
+											<th>Minimum value</th>
+											<th>Current value</th>
+										</tr>
+									</thead>
+									<tbody>
+										<!--
+										<tr>
+											<td>PHP Version</td>
+											<td>5.2.4 +</td>
+											<td class="right"><?php echo statusBadge($check['php_min_version'], 'OK', 'ERROR'); ?></td>
+										</tr>
+										-->
+										<tr>
+											<td>max_execution_time</td>
+											<td>300</td>
+											<td class="right"><?php echo statusMinBadge($check['php_max_execution_time'], 300, $check['php_max_execution_time']); ?></td>
+										</tr>
+										<tr>
+											<td>max_input_time</td>
+											<td>300</td>
+											<td class="right"><?php echo statusMinBadge($check['php_max_input_time'], 300, $check['php_max_input_time']); ?></td>
+										</tr>
+										<tr>
+											<td>memory_limit</td>
+											<td>128</td>
+											<td class="right"><?php echo statusMinBadge($check['php_memory_limit'], 128, $check['php_memory_limit']); ?></td>
+										</tr>
+										<tr>
+											<td>post_max_size</td>
+											<td>4096</td>
+											<td class="right"><?php echo statusMinBadge($check['php_post_max_size'], 4096, $check['php_post_max_size']); ?></td>
+										</tr>
+										<tr>
+											<td>upload_max_filesize</td>
+											<td>4096</td>
+											<td class="right"><?php echo statusMinBadge($check['php_upload_max_filesize'], 4096,$check['php_upload_max_filesize']); ?></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+
+						<div class="well">
+							<h3>Recommended MySQL configuration</h3>
+							<div class="tabular-data loosemargin">
+								<table class="table">
+									<thead>
+										<tr>
+											<th>Setting</th>
+											<th>Recommended value</th>
+											<th>Current value</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>wait_timeout</td>
+											<td>120</td>
+											<td class="right"><?php echo statusMinBadge($check['my_wait_timeout'], 120, $check['my_wait_timeout']); ?></td>
+										</tr>
+										<tr>
+											<td>connect_timeout</td>
+											<td>120</td>
+											<td class="right"><?php echo statusMinBadge($check['my_connect_timeout'], 120, $check['my_connect_timeout']); ?></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="tab-pane" id="step-eight">
+						<div class="js-title clearfix">
+							<h2 class="pull-left">Updating JomSocial Database</h2>
+							<div class="pull-right">
+								<a href="#" class="btn btn-primary">Next &raquo;</a>
+							</div>
+						</div>
+						<div class="well">
+							<div class="tabular-data loosemargin">
+								<div class="progress progress-striped active">
+									<div class="bar" style="width: 40%;"></div>
+								</div>
+
+								<table class="table">
+									<tbody>
+										<tr>
+											<td>Update config</td>
+											<td>&nbsp;</td>
+											<td class="right"><span class="badge badge-success">Done</span></td>
+										</tr>
+										<tr>
+											<td>Create menu item</td>
+											<td>&nbsp;</td>
+											<td class="right"><span class="badge badge-success">Done</span></td>
+										</tr>
+										<tr>
+											<td>Create JomSocial toolbar</td>
+											<td>&nbsp;</td>
+											<td class="right"><span class="badge badge-success">Done</span></td>
+										</tr>
+										<tr>
+											<td>Add custom field</td>
+											<td>&nbsp;</td>
+											<td class="right"><span class="badge badge-success">Done</span></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+
+					<div class="tab-pane" id="step-nine">
+						<div class="js-title clearfix">
+							<h2 class="pull-left">Installing JomSocial Plugins</h2>
+							<div class="pull-right">
+								<a href="#" class="btn btn-primary">Next &raquo;</a>
+							</div>
+						</div>
+						<div class="well">
+							<div class="tabular-data loosemargin">
+								<div class="progress progress-striped active">
+									<div class="bar" style="width: 40%;"></div>
+								</div>
+
+								<table class="table">
+									<tbody>
+										<tr>
+											<td>Extracting plugins</td>
+											<td>&nbsp;</td>
+											<td class="right"><span class="badge badge-success">Done</span></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+
+					<div class="tab-pane" id="step-ten">
+						<div class="js-title clearfix">
+							<h2 class="pull-left">Installation Completed!</h2>
+							<div class="pull-right">
+								<a href="#" class="btn btn-primary">Next &raquo;</a>
+							</div>
+						</div>
+						<div class="alert alert-success">
+							Installation has been completed!
+							Please upgrade your modules and plugins too.
+						</div>
+						<div class="well js-done">
+							<h3>Important!</h3>
+							<p>
+								Before you begin, you might want to take a look at the following documentations first:
+							</p>
+							<ul>
+								<li><a href="#">Creating menu links</a></li>
+								<li><a href="#">Setting up scheduled task to process email</a></li>
+								<li><a href="#">Installing applications for JomSocial</a></li>
+								<li><a href="#">Installing modules for JomSocial</a></li>
+							</ul>
+							<p class="last">
+								You can read the full documentation at <a href="#">JomSocial Documentation</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>

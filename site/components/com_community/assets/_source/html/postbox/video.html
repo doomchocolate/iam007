@@ -1,0 +1,56 @@
+<div>
+  <div id="joms-postbox-video-upload" style="position:absolute;top:0;left:0;width:1px;height:1px;overflow:hidden">
+    <button id="joms-postbox-video-upload-btn">Upload</button>
+  </div>
+  <% if ( data && data.enable_upload ) { %>
+  <div class="joms-postbox-inner-panel joms-initial-panel">
+    <div class="joms-postbox-double-panel">
+      <ul class="unstyled clearfix">
+        <li class="joms-postbox-video-url" data-action="share"><i class="joms-icon-link"></i> <%= data.language.video.share_button %></li>
+        <li class="joms-postbox-video-upload" data-action="upload"><i class="joms-icon-cloud-upload"></i> <%= data.language.video.upload_button %>
+          <% if ( data && data.video_maxsize > 0 ) { %>
+          <span><%= data.language.video.upload_maxsize %> <%= data.video_maxsize %>mb</span>
+          <% } %>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <% } %>
+  <div class="joms-postbox-video">
+    <div class="joms-postbox-video-state-url" style="display:none">
+      <div class="joms-postbox-inner-panel">
+        <div class="joms-postbox-url"></div>
+        <div class="joms-postbox-fetched"></div>
+      </div>
+    </div>
+    <% if ( data && data.enable_upload ) { %>
+    <div class="joms-postbox-video-state-upload" style="display:none">
+      <div class="joms-postbox-inner-panel">
+        <div class="joms-postbox-url"></div>
+        <div style="padding-top: 3px;">
+          <div class="joms-postbox-photo-progressbar" style="position:relative;top:auto;bottom:auto;left:auto;right:auto;background-color:#eee;">
+            <div class="joms-postbox-photo-progress" style="width:0"></div>
+          </div>
+        </div>
+        <div style="padding-top: 10px;">
+          <div class="joms-fetched-category joms-select"></div>
+        </div>
+      </div>
+    </div>
+    <% } %>
+    <div class="joms-postbox-inputbox"></div>
+    <nav class="joms-postbox-tab selected">
+      <ul class="unstyled">
+        <li data-tab="location"><i class="joms-icon-map-marker"></i><span class="visible-desktop"><%= data.language.video.location %></span></li>
+        <li data-tab="privacy"><i></i><span class="visible-desktop"></span></li>
+      </ul>
+      <div class="joms-postbox-action">
+        <button class="joms-postbox-cancel"><%= data.language.postbox.cancel_button %></button>
+        <button class="joms-postbox-save"><%= data.language.postbox.post_button %></button>
+      </div>
+      <div class="joms-postbox-loading" style="display:none;">
+        <img src="<%= data.juri.root %>components/com_community/assets/ajax-loader.gif">
+      <div>
+    </nav>
+  </div>
+</div>

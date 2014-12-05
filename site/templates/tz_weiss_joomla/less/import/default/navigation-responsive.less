@@ -1,0 +1,504 @@
+/** 
+ *------------------------------------------------------------------------------
+ * @package       T3 Framework for Joomla!
+ *------------------------------------------------------------------------------
+ * @copyright     Copyright (C) 2004-2013 JoomlArt.com. All Rights Reserved.
+ * @license       GNU General Public License version 2 or later; see LICENSE.txt
+ * @authors       JoomlArt, JoomlaBamboo, (contribute to this project at github 
+ *                & Google group to become co-author)
+ * @Google group: https://groups.google.com/forum/#!forum/t3fw
+ * @Link:         http://t3-framework.org 
+ *------------------------------------------------------------------------------
+ */
+
+// ---------------------------------------------------------
+// RESPONSIVE NAVIFATION FOR MOBILE
+// ---------------------------------------------------------
+@media (max-width: @navbarCollapseWidth) {
+
+// Always show submenu for navigation
+  .always-show .mega > .mega-dropdown-menu,
+  .always-show .dropdown-menu {
+    display: block !important;
+  }
+
+// ------------------------------------------------------
+// Support fixed navbar when collapsed
+// -------------------------------------------------------
+  .navbar-collapse-fixed-top,
+  .navbar-collapse-fixed-bottom {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  // style for normal collapsed menu
+    .nav-collapse.in {
+      position: fixed;
+      width: 100%;
+      overflow-y: auto;
+      top: @navbarHeight;
+      bottom: 0;
+      > * {
+        padding-bottom: 50px;
+      }
+    }
+  }
+
+  .navbar-collapse-fixed-bottom {
+    bottom: 0;
+    top: auto;
+    .nav-collapse.in {
+      top: 0;
+      bottom: @navbarHeight;
+    }
+  }
+
+  // -------------------------------------------------------
+  // NAVIGATIONS ELEMENTS
+  // -------------------------------------------------------
+
+  // BREADCRUMBS
+  // -------------------------------------------------------
+  .plazart-navhelper {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+
+
+
+  // -------------------------------------------------------
+  //  JA MAIN MENU
+  // -------------------------------------------------------
+
+  .plazart-mainnav {
+    height: auto;
+    margin-left: -20px;
+    margin-right: -20px;
+
+    .navbar{
+      width: auto;
+    }
+    // Toggle Button
+    .navbar .btn-navbar {
+    }
+
+    .navbar-inner{
+      min-height: 0;
+    }
+
+    .navbar .btn-navbar:hover {
+      cursor: pointer;
+    }
+
+
+    // COLLAPSIBLE NAVBAR
+    // ----------------------------------------------------
+
+    // The nav
+    .nav-collapse {
+      margin-top: (@PlazartglobalMargin / 2);
+      background: #fff;
+      display: none;
+      //#gradient > .vertical(@navbarBackground, @navbarBackgroundHighlight);
+    }
+
+    .nav-collapse .nav {
+      margin: 0;
+    }
+
+    .nav-collapse .nav > li {
+    }
+
+    .nav-collapse .nav > li > a {
+      margin-bottom: 0;
+    }
+
+
+    // Nav and dropdown links in navbar
+    // -------------------------------
+    .nav-collapse .nav > li > a,
+    .nav-collapse .dropdown-menu a {
+      border-bottom: 1px solid @hrBorder;
+      padding: (@PlazartglobalPadding / 2) @PlazartglobalPadding;
+      font-weight: bold;
+      //color: @navbarLinkColor;
+      text-shadow: none;
+      .border-radius(0);
+    }
+
+    .nav-collapse .dropdown-menu li + li a {
+      margin-bottom: 0;
+    }
+
+    // Hover state
+    .nav-collapse .nav > li > a:hover {
+      background-color: @dropdownLinkBackgroundHover;
+      background-image: none;
+      .reset-filter();
+    }
+
+
+    // dropdown links
+    // --------------
+    .nav-collapse .dropdown-menu a {
+      border-top: 1px solid darken(@navbarBackground, 5%);
+      border-bottom: 0;
+      font-weight: normal;
+      padding: (@PlazartglobalPadding / 2) @PlazartglobalPadding;
+    }
+
+
+    // Hover state
+    .nav-collapse .dropdown-menu a:hover {
+      background-color: @dropdownLinkBackgroundHover;
+      background-image: none;
+      .reset-filter();
+    }
+
+
+    // Dropdowns in the navbar
+    // -----------------------
+    .nav-collapse .dropdown-menu {
+      margin: 0;
+      padding: 0;
+      background-color: @navbarBackground;
+      border: none;
+      .border-radius(0);
+      .box-shadow(none);
+    }
+    
+    
+    // Full width when fixed
+    // ---------------------
+    &.navbar-collapse-fixed-top {
+      margin-left: 0;
+      margin-right: 0;
+    }
+    // End
+  }
+
+
+  // -------------------------------------------------------
+  //  JA MAIN MENU (Inverted)
+  // -------------------------------------------------------
+
+  .PlazartNavbar() when (@PlazartNavbarInverted = 1) {
+
+    // Begin: Mixin Styling
+    background: @grayDark;
+    border-top: 1px solid @grayDark;
+
+    // Toggle Button
+    .navbar .btn-navbar {
+    }
+
+
+    // COLLAPSIBLE NAVBAR
+    // ----------------------------------------------------
+
+    // The nav
+    .nav-collapse {
+      background: @grayDarker;
+      color: @grayLighter;
+    }
+
+
+    // Nav and dropdown links in navbar
+    // -------------------------------
+    .nav-collapse .nav > li > a,
+    .nav-collapse .dropdown-menu a {
+      border-bottom: 1px solid @gray;
+    }
+
+    // Hover state
+    .nav-collapse .nav > li > a:hover,
+    .nav-collapse .dropdown-menu a:hover {
+      background-color: @dropdownLinkBackgroundHover;
+    }
+
+
+    // dropdown links
+    // --------------
+    .nav-collapse .dropdown-menu a {
+      border-top: 1px solid @gray;
+      border-bottom: 0;
+    }
+
+
+    // Hover state
+    .nav-collapse .dropdown-menu a:hover {
+      background-color: @dropdownLinkBackgroundHover;
+    }
+
+
+    // Dropdowns in the navbar
+    // -----------------------
+    .nav-collapse .dropdown-menu {
+      background-color: @grayDark;
+    }
+
+  // End: Mixin Styling
+  }
+
+  .PlazartNavbar() when (@PlazartNavbarInverted = 0) {
+    // Leave blank here because we will use the default style.
+  }
+
+  // Calling the styles
+  .plazart-mainnav {
+    .PlazartNavbar();
+  }
+
+
+
+  // ----------------------------------------------------
+  // MISC
+  // ----------------------------------------------------
+  .plazart-mainnav .navbar .nav > li > .dropdown-menu {
+    // Hiding Menu and Divider in nav-collapse
+    &:before, &:after, .divider {
+      display: none;
+    }
+  }
+
+  .plazart-mainnav .customization {
+    display: none;
+  }
+
+  // End Responsive
+
+
+  #off-canvas-nav .plazart-megamenu .span12.mega-col-nav .mega-inner{
+    padding: 0;
+  }
+
+  .off-canvas-enabled div#off-canvas-nav{
+    background-color: rgba(255, 255, 255, 0.3);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    pointer-events: auto;
+    z-index: 1001;
+  }
+  .off-canvas-enabled nav#plazart-mainnav{
+    display: inline-block;
+  }
+
+  .off-canvas {
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+  }
+  .off-canvas body {
+    height: 100%;
+    overflow-x: hidden;
+    width: 100%;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    z-index: 0;
+  }
+  .off-canvas body > * {
+    left: 0;
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+    -webkit-transition: -webkit-transform 500ms ease;
+    -moz-transition: -moz-transform 500ms ease;
+    -o-transition: -o-transform 500ms ease;
+    transition: transform 500ms ease;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  .off-canvas #plazart-mainnav .nav-collapse {
+    display: none;
+  }
+  .off-canvas #off-canvas-nav {
+    display: block;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    background: none;
+    filter: alpha(opacity=0);
+    pointer-events: none;
+  }
+  .off-canvas #off-canvas-nav div.plazart-mainnav {
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+  #off-canvas-nav .plazart-mainnav{
+    top: 0 !important;
+    width: 250px;
+    height: 100%;
+    left: 0;
+    margin-left: 0;
+    overflow-y: auto;
+    padding-top: 68px;
+    position: absolute;
+  }
+  .off-canvas #off-canvas-nav .plazart-mainnav .nav-collapse {
+    height: auto;
+    display: block;
+    overflow: visible;
+    padding-left: 42px;
+    padding-bottom: 20px;
+    background: none;
+  }
+  .off-canvas-enabled body > * {
+    -webkit-transform: translateX(250px);
+    -moz-transform: translateX(250px);
+    -ms-transform: translateX(250px);
+    -o-transform: translateX(250px);
+    transform: translateX(250px);
+  }
+  .off-canvas-enabled #off-canvas-nav {
+    z-index: 1001;
+    pointer-events: auto;
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  #off-canvas-nav .plazart-mainnav{
+    z-index: 2;
+    background: #1f1f1f;
+    .plazart-megamenu{
+      padding: 0;
+      border: none;
+    }
+    .dropdown-menu{
+      width: auto !important;
+      > .mega-dropdown-inner{
+        padding: 0;
+      }
+    }
+//    .plazart-megamenu ul.mega-nav .mega-group > .mega-group-title,
+//    .plazart-megamenu div.dropdown-menu .mega-nav .mega-group > .mega-group-title,
+//    .plazart-megamenu div.dropdown-menu .active .mega-nav .mega-group > .mega-group-title{
+//      color: @grayDark2;
+//    }
+    .plazart-megamenu .mega-nav .mega-group > .mega-group-title,
+    .plazart-megamenu .dropdown-menu .mega-nav .mega-group > .mega-group-title,
+    .plazart-megamenu .dropdown-menu .active .mega-nav .mega-group > .mega-group-title{
+      border: none;
+      font-size: 14px;
+      font-weight: 600;
+      margin-top: 15px;
+    }
+    .dropdown-submenu{margin-top: 15px;}
+    .nav li.dropdown > .dropdown-toggle{
+      background-color: transparent;
+      .caret{
+        display: none;
+      }
+    }
+    .nav li{
+      &.dropdown.open,&.dropdown.active,&.dropdown.open.active{
+        > .dropdown-toggle .caret{
+          border-top-color: @tzcolor;
+        }
+      }
+    }
+    .nav-collapse {
+      margin: 0;
+      .nav > li{
+        padding: 0 0 28px;
+        border-bottom: 1px solid #d3d7d9;
+        &.dropdown.open.active > a{
+          border: none; &:hover,&:focus{border: none;}
+        }
+        &:hover,&:focus{
+          .dropdown-menu{display: block;}
+        }
+      }
+      .nav > li a{
+        color: @white;
+        &:hover,&:focus,&:active{
+          background: none;
+          border: none;
+        }
+      }
+      .nav > li > a{
+        font-size: 14px; text-transform: uppercase;
+        &:hover,&:focus,&:active{background: none; .caret{border-top-color: @tzcolor;}}
+      }
+      .nav > li.active > a{color: @white;}
+      .dropdown-menu{
+        background: #1f1f1f;
+        .mega-nav > li{
+          padding: 0;
+          a{
+            color: @white;
+            padding: 3px 0;
+            font-size: 13px;
+          }
+        }
+        a{ border-top: none;}
+      }
+      .nav li a,.dropdown-menu a{text-align: left;}
+      .nav > li > a, .dropdown-menu > a{
+        margin: 0;
+        opacity: 1;
+        color: @white;
+        font-size: 16px;
+        font-weight: 700;
+        padding: 0 0 3px;
+      }
+    }
+    .btnred a{background: inherit; color: inherit;}
+    > li.active.btnred > a{background: inherit; color: #404041; opacity: 1; margin: 0;}
+    > li.btnred > a{
+      color: #fff;
+      &:hover{background: inherit; color: #404041;}
+    }
+    .row-fluid [class*="span"]{
+      width: auto;
+      float: none;
+      margin-left: 0;
+    }
+  }
+
+  .plazart-mainnav.navbar-collapse-fixed-top{
+    position: relative;
+  }
+  .off-canvas-enabled div#off-canvas-nav {
+    position: absolute;
+    background-color: transparent;
+  }
+  .plazart-mainnav .nav-collapse .nav > li > a,
+  .plazart-mainnav .nav-collapse .dropdown-menu a{
+    border: none;
+  }
+  #off-canvas-nav .plazart-mainnav{
+    .box-sizing();
+    .tz-logo{
+      margin-bottom: 58px;
+    }
+  }
+  #off-canvas-nav .plazart-mainnav .nav-collapse .nav > li{
+    border: none;
+  }
+  .plazart-mainnav .dropdown-menu .active > a,
+  .plazart-mainnav .dropdown-menu .active > a:hover{
+    background: none;
+    color: @tzBlueColor;
+  }
+  #off-canvas-nav .plazart-mainnav .nav-collapse .dropdown-menu .mega-nav > li a{
+    &:hover,&:focus{
+      color: @tzBlueColor;
+    }
+  }
+  #off-canvas-nav .plazart-mainnav .nav-collapse .dropdown-menu .mega-nav > li.active > a{
+    color: @tzBlueColor;
+  }
+}

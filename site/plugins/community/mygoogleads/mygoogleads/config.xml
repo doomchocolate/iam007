@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="community">
+<params>
+		<param name="googleCode" type="textarea" class="fullwidth" style="font-size:xx-small;" default="" label="PLG_GOOGLE_ADS_CODE" description="PLG_GOOGLE_ADS_CODE_DESC" />
+</params>
+</extension>

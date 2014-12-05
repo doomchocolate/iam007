@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="community">
+	<params>
+		<param name="count" type="text" default="5" size="3" label="PLG_TOTAL_DISPLAYED" description="PLG_TOTAL_DISPLAYED_DESC" />		
+	</params>
+</extension>

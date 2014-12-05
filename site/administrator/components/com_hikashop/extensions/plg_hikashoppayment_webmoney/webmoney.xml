@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="2.5" method="upgrade" group="hikashoppayment">
+	<name>Hikashop WebMoney payment plugin</name>
+	<author>CM-S.ru</author>
+	<creationDate>{__DAY__} {__MONTH__} {__YEAR__}</creationDate>
+	<version>{__PLUGIN_VERSION__}</version>
+	<copyright>Copyright (C) 2012-2013 CM-S.ru. All rights reserved.</copyright>
+	<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<authorEmail>cms@cm-s.ru</authorEmail>
+	<authorUrl>http://cm-s.ru</authorUrl>
+
+	<description>
+		<![CDATA[
+			Плагин оплаты WebMoney. Дополнительные сведения или новые версии на сайте <a href="http://cm-s.ru/" target="_blank">CM-S.ru</a>
+		]]>
+	</description>
+
+	<files>
+		<filename plugin="webmoney">webmoney.php</filename>
+		<filename>webmoney_configuration.php</filename>
+		<filename>webmoney_end.php</filename>
+	</files>
+
+	<params addpath="/components/com_hikashop/params">
+		<param name="pluginoptions" type="pluginoptions" default="plugin" label="hikashop" description="HikaShop options" />
+	</params>
+
+	<config>
+		<fields name="params" addfieldpath="/components/com_hikashop/fields">
+			<fieldset name="basic">
+				<field id="pluginoptions" name="pluginoptions" type="pluginoptions" label="hikashop" description="HikaShop options" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

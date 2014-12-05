@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8"/>
+	<title>JomSocial Web Installer</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="JomSocial Web Installer">
+	<meta name="author" content="Zul Azman">
+	<link rel="stylesheet" type="text/css" href="<?php echo JURI::root(); ?>/administrator/components/com_community/installer/css/bootstrap.min.css" media="screen" />
+	<!-- <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css" media="screen" /> -->
+	<link rel="stylesheet" type="text/css" href="<?php echo JURI::root(); ?>/administrator/components/com_community/installer/css/style.css" media="screen" />
+	<!-- <link rel="shortcut icon" type="images/ico" href="" /> -->
+    <!--[if IE]>
+    	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="<?php echo JURI::root(); ?>/administrator/components/com_community/installer/js/bootstrap.min.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+	<div class="container">
+		<div id="js-installer">
+			<div class="js-header">
+				<h1>JomSocial</h1>
+			</div>
+			<div class="tabbable tabs-left">
+
+				<ul class="nav nav-tabs">
+					<li><a href="#step-one" data-toggle="tab">Welcome</a></li>
+					<li><a href="#step-three" data-toggle="tab">Unpacking files</a></li>
+					<li><a href="#step-seven" data-toggle="tab">Preparing Database</a></li>
+					<li><a href="#step-eight" data-toggle="tab">Updating Database</a></li>
+					<li><a href="#step-nine" data-toggle="tab">Installing Plugins</a></li>
+					<li><a href="#step-ten" data-toggle="tab">Installing Modules</a></li>
+					<li class="active"><a href="#step-ten" data-toggle="tab">Done!</a></li>
+					<li><a href='http://www.jomsocial.com/newsletter-publisher/subscribe-me' target='_blank'>Subscribe JomSocial Newsletter</a></li>
+				</ul>
+
+				<div class="tab-content">
+
+					<div class="tab-pane active" id="step-ten">
+						<div class="js-title clearfix">
+							<h2 class="pull-left">Installation Completed!</h2>
+							<div class="pull-right">
+								<a id="btn-next" href="<?php echo JRoute::_('index.php?option=com_community');?>" class="btn btn-success">Done</a>
+							</div>
+						</div>
+						<div class="alert alert-success">
+							Installation has been completed!
+						</div>
+						<div class="well js-done">
+							<h3>Important!</h3>
+							<p>
+								Before you begin, you might want to take a look at the following documentations first:
+							</p>
+							<ul>
+								<li><a href="http://documentation.jomsocial.com/wiki/Setting_up_Cron_Job" target="_blank">Setting up scheduled task to process emails.</a></li>
+								<!--li><a href="http://documentation.jomsocial.com/wiki/Installing_Plugin" target="_blank">Installing applications for JomSocial</a></li>
+								<li><a href="http://documentation.jomsocial.com/wiki/Installing_Module" target="_blank">Installing modules for JomSocial</a></li-->
+							</ul>
+							<p class="last">
+								You can read the full documentation at <a target="_blank" href="http://documentation.jomsocial.com/">JomSocial Documentation</a>
+							</p>
+						</div>
+						<div id="fb-root"></div>
+						<script>(function(d, s, id) {
+						  var js, fjs = d.getElementsByTagName(s)[0];
+						  if (d.getElementById(id)) return;
+						  js = d.createElement(s); js.id = id;
+						  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=122488231156080";
+						  fjs.parentNode.insertBefore(js, fjs);
+						}(document, 'script', 'facebook-jssdk'));</script>
+						<div class="fb-like" data-href="http://facebook.com/JomSocial" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div>
+						<a href="https://twitter.com/jomsocial" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @jomsocial</a>
+						<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>
+

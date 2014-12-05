@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="community">
+	<params>
+		<param name="count" type="text" default="5" size="3" label="PLG_MYVIDEOS_TOTAL_VIDEO" description="PLG_MYVIDEOS_XML_DESCRIPTION" />		
+	</params>
+</extension>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" client="site" method="upgrade">
+    <name>mod_tz_social_custom</name>
+    <author>DuongTVTemplaza</author>
+    <creationDate>November 22th 2013</creationDate>
+    <authorEmail>support@templaza.com</authorEmail>
+    <authorUrl>www.templaza.com</authorUrl>
+    <description>MOD_TZ_SOCIAL_CUSTOM_XML_DESCRIPTION</description>
+    <files>
+        <filename module="mod_tz_social_custom">mod_tz_social_custom.php</filename>
+        <filename>helper.php</filename>
+        <filename>index.html</filename>
+        <folder>admin</folder>
+        <folder>tmpl</folder>
+    </files>
+    <languages folder="languages">
+        <language tag="en-GB">en-GB/en-GB.mod_tz_social_custom.ini</language>
+        <language tag="en-GB">en-GB/en-GB.mod_tz_social_custom.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field type="radio" name="show_description"
+                       class="btn-group" default="0"
+                       label="MOD_TZ_SOCIAL_CUSTOM_SHOW_DESCRIPTION_LABEL">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field type="textarea" name="description" label="MOD_TZ_SOCIAL_CUSTOM_DESCRIPTION_LABEL"/>
+            </fieldset>
+            <fieldset name="social_share" label="MOD_TZ_SOCIAL_CUSTOM_SOCIAL_SHARE_FIELDSET_LABEL">
+                <field type="radio" name="show_facebook_button"
+                       class="btn-group" default="0"
+                       label="MOD_TZ_SOCIAL_CUSTOM_SHOW_FACEBOOK_BUTTON_LABEL">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field type="radio" name="show_twitter_button"
+                       class="btn-group" default="0"
+                       label="MOD_TZ_SOCIAL_CUSTOM_SHOW_TWITTER_BUTTON_LABEL">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field type="radio" name="show_google_plus_button"
+                       class="btn-group" default="0"
+                       label="MOD_TZ_SOCIAL_CUSTOM_SHOW_GOOGLE_PLUS_BUTTON_LABEL">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field type="radio" name="show_pinterest_button"
+                       class="btn-group" default="0"
+                       label="MOD_TZ_SOCIAL_CUSTOM_SHOW_PINTEREST_BUTTON_LABEL">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field type="radio" name="show_linkedin_button"
+                       class="btn-group" default="0"
+                       label="MOD_TZ_SOCIAL_CUSTOM_SHOW_LINKEDIN_BUTTON_LABEL">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+            </fieldset>
+            <fieldset name="social_links"
+                      addfieldpath="/modules/mod_tz_social_custom/admin/formfields"
+                    label="MOD_TZ_SOCIAL_CUSTOM_SOCIAL_LINKS_FIELDSET_LABEL">
+                <field type="radio" name="show_social_title"
+                        class="btn-group" default="0"
+                        label="MOD_TZ_SOCIAL_CUSTOM_SHOW_SOCIAL_TITLE_LABEL">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field type="radio" name="follow" class="btn-group" default="nofollow"
+                       label="MOD_TZ_SOCIAL_CUSTOM_FOLLOW_NOFOLLOW_LABEL">
+                    <option value="">MOD_TZ_SOCIAL_CUSTOM_FOLLOW</option>
+                    <option value="nofollow">MOD_TZ_SOCIAL_CUSTOM_NO_FOLLOW</option>
+                </field>
+                <field type="tzsocial" name="social" label="MOD_TZ_SOCIAL_CUSTOM_INFORMATION_LABEL">
+                    <tzfield type="text" name="social_title"
+                             required="true"
+                             label="MOD_TZ_SOCIAL_CUSTOM_TITLE_LABEL"/>
+                    <tzfield type="text" name="social_link"
+                             required="true" default="#"
+                             label="MOD_TZ_SOCIAL_CUSTOM_LINK_LABEL"/>
+                    <tzfield type="text" name="social_icon_class"
+                            label="MOD_TZ_SOCIAL_CUSTOM_ICON_CLASS_LABEL"/>
+                    <tzfield type="media" name="social_image"
+                            label="MOD_TZ_SOCIAL_CUSTOM_IMAGE_LABEL"/>
+                    <tzfield type="media" name="social_image_hover"
+                             label="MOD_TZ_SOCIAL_CUSTOM_IMAGE_HOVER_LABEL"/>
+                </field>
+            </fieldset>
+
+            <fieldset name="advanced">
+
+                <field name="layout" type="modulelayout"
+                    label="JFIELD_ALT_LAYOUT_LABEL"
+                    description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+                <field name="moduleclass_sfx" type="textarea" rows="3"
+                    label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                    description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+                <field name="cache" type="list" default="1"
+                    label="COM_MODULES_FIELD_CACHING_LABEL"
+                    description="COM_MODULES_FIELD_CACHING_DESC">
+                    <option value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+
+                <field name="cache_time" type="text" default="900"
+                    label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+                    description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+                <field name="cachemode" type="hidden"
+                    default="static">
+                    <option value="static"></option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>

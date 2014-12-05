@@ -1,0 +1,10 @@
+<div class="joms-postbox-dropdown mood-dropdown">
+  <ul class="joms-postbox-emoticon unstyled clearfix">
+    <% if ( data && data.items && data.items.length ) for ( var i = 0; i < data.items.length; i++ ) { %>
+    <li data-mood="<%= data.items[i] %>">
+      <div><i class="joms-emoticon joms-emo-<%= data.items[i] %>"></i><span><%= data.language.moodshort[ data.items[i] ] || data.items[i] %></span></div>
+    </li>
+    <% } %>
+    <li class="joms-remove-button"><%= data.language.status.remove_mood_button %></li>
+  </ul>
+</div>

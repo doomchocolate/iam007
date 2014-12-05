@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="2.5" method="upgrade" group="hikashop">
+	<name>Hikashop WaitList notification Plugin</name>
+	<creationDate>{__DAY__} {__MONTH__} {__YEAR__}</creationDate>
+	<version>{__PLUGIN_VERSION__}</version>
+	<author>Hikashop</author>
+	<authorEmail>dev@hikashop.com</authorEmail>
+	<authorUrl>http://www.hikashop.com</authorUrl>
+	<copyright>(C) 2010-{__YEAR__} HIKARI SOFTWARE. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<description>This plugin enables you to notify some customers when produts are not more out of stock.</description>
+	<files>
+		<filename plugin="waitlist_notify">waitlist_notify.php</filename>
+	</files>
+	<params addpath="/components/com_hikashop/params">
+		<param name="period" type="text" size="50" default="7200" label="Period" description="Period (in seconds)" />
+		<param name="last_cron_update" type="text" size="50" default="1274903175" label="Last update" description="Last date on which the products' stock was checked via the CRON task" />
+	</params>
+	<config>
+		<fields name="params" addfieldpath="/components/com_hikashop/fields">
+			<fieldset name="basic">
+				<field
+					name="period"
+					type="text"
+					label="Period"
+					size="50"
+					default="7200"
+					description="Period (in seconds)" />
+				<field
+					name="last_cron_update"
+					type="text"
+					label="Last update"
+					size="50"
+					default="1274903175"
+					description="Last date on which the products' stock was checked via the CRON task" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

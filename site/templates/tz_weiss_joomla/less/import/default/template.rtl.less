@@ -1,0 +1,55 @@
+.rtl{
+  body{
+    text-align: right;
+  }
+  .option-combo .btn{
+    float: right;
+  }
+  .element .TZcategory-name .fa{
+    float: right;
+    .transform(rotateY(180deg));
+  }
+  #tz-footer-nav{
+    text-align: left;
+    .menu{
+      float: left;
+      li{
+        float: right;
+        &:last-child{
+          padding-left: 0;
+        }
+      }
+    }
+  }
+  #tz-logo{
+    text-align: left;
+  }
+  .plazart-mainnav .navbar .nav > li{
+    &:first-child > a{
+      padding-right: 0;
+    }
+  }
+  .plazart-mainnav .navbar .btn-navbar{
+    float: right;
+  }
+  &.off-canvas-enabled body > *{
+    .transform(translateX(-250px));
+  }
+  &.off-canvas #off-canvas-nav div.plazart-mainnav{
+    left: auto;
+    right: -250px;
+  }
+  &.off-canvas #off-canvas-nav .plazart-mainnav .nav-collapse{
+    padding-left: 0;
+    padding-right: 42px;
+  }
+  #off-canvas-nav .plazart-mainnav{
+    .row-fluid [class*="span"]{
+      margin: 0;
+    }
+  }
+  #off-canvas-nav .plazart-mainnav .nav-collapse .nav li a,
+  #off-canvas-nav .plazart-mainnav .nav-collapse .dropdown-menu a{
+    text-align: right;
+  }
+}

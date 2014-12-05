@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<params>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="readonly" type="radio" default="0" label="Read Only" description="Set yes if you wanna make this field readonly">
+			<option value="0" name='No'>No</option>
+			<option value="1" name='Yes'>Yes</option>
+		</param>
+		<param name="style" type="text" default="" label="Style Atrribute" description="Use the css code to style the field" />
+	</params>
+</config>

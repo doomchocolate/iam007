@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="2.5" method="upgrade" group="system">
+	<name>Hikashop Google Analytics Plugin</name>
+	<creationDate>{__DAY__} {__MONTH__} {__YEAR__}</creationDate>
+	<version>{__PLUGIN_VERSION__}</version>
+	<author>Hikashop</author>
+	<authorEmail>dev@hikashop.com</authorEmail>
+	<authorUrl>http://www.hikashop.com</authorUrl>
+	<copyright>(C) 2010-{__YEAR__} HIKARI SOFTWARE. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<description>This plugin enables you to track your sales with Google Analytics</description>
+	<files>
+		<filename plugin="hikashopanalytics">hikashopanalytics.php</filename>
+	</files>
+	<params addpath="/components/com_hikashop/params">
+		<param name="account_1" type="text" size="20" default="" label="Google Analytics Account 1" description="Your Google Analytics Account with the format UA-XXXXX-X" />
+		<param name="currency_1" type="text" size="3" default="EUR" label="Google Analytics Account 1 currency" description="Your Google Analytics Account currency (three letter code)" />
+		<param name="account_2" type="text" size="20" default="" label="Google Analytics Account 2" description="Your Google Analytics Account with the format UA-XXXXX-X" />
+		<param name="currency_2" type="text" size="3" default="USD" label="Google Analytics Account 2 currency" description="Your Google Analytics Account currency (three letter code)" />
+		<param name="account_3" type="text" size="20" default="" label="Google Analytics Account 3" description="Your Google Analytics Account with the format UA-XXXXX-X" />
+		<param name="currency_3" type="text" size="3" default="JPY" label="Google Analytics Account 3 currency" description="Your Google Analytics Account currency (three letter code)" />
+		<param name="account_4" type="text" size="20" default="" label="Google Analytics Account 4" description="Your Google Analytics Account with the format UA-XXXXX-X" />
+		<param name="currency_4" type="text" size="3" default="GBP" label="Google Analytics Account 4 currency" description="Your Google Analytics Account currency (three letter code)" />
+		<param name="account_5" type="text" size="20" default="" label="Google Analytics Account 5" description="Your Google Analytics Account with the format UA-XXXXX-X" />
+		<param name="currency_5" type="text" size="3" default="CAD" label="Google Analytics Account 5 currency" description="Your Google Analytics Account currency (three letter code)" />
+		<param name="debug_mode" type="radio" default="0" label="Debug Mode" description="Enable or not the debug mode (use the debug_ga.js file">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+	</params>
+	<config>
+		<fields name="params" addfieldpath="/components/com_hikashop/fields">
+			<fieldset name="basic">
+				<field name="account_1" type="text" size="20" default="" label="Google Analytics Account 1" description="Your Google Analytics Account with the format UA-XXXXX-X" />
+				<field name="currency_1" type="text" size="3" default="EUR" label="Google Analytics Account 1 currency" description="Your Google Analytics Account currency (three letter code)" />
+				<field name="account_2" type="text" size="20" default="" label="Google Analytics Account 2" description="Your Google Analytics Account with the format UA-XXXXX-X" />
+				<field name="currency_2" type="text" size="3" default="USD" label="Google Analytics Account 2 currency" description="Your Google Analytics Account currency (three letter code)" />
+				<field name="account_3" type="text" size="20" default="" label="Google Analytics Account 3" description="Your Google Analytics Account with the format UA-XXXXX-X" />
+				<field name="currency_3" type="text" size="3" default="JPY" label="Google Analytics Account 3 currency" description="Your Google Analytics Account currency (three letter code)" />
+				<field name="account_4" type="text" size="20" default="" label="Google Analytics Account 4" description="Your Google Analytics Account with the format UA-XXXXX-X" />
+				<field name="currency_4" type="text" size="3" default="GBP" label="Google Analytics Account 4 currency" description="Your Google Analytics Account currency (three letter code)" />
+				<field name="account_5" type="text" size="20" default="" label="Google Analytics Account 5" description="Your Google Analytics Account with the format UA-XXXXX-X" />
+				<field name="currency_5" type="text" size="3" default="CAD" label="Google Analytics Account 5 currency" description="Your Google Analytics Account currency (three letter code)" />
+				<field name="debug_mode" type="radio" default="0" label="Debug Mode" description="Enable or not the debug mode (use the ga_debug.js file">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

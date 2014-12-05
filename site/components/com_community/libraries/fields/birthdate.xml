@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<params>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="display" type="radio" default="age" label="Display As" description="Set the display type">
+			<option value="age" name='Age'>Age</option>
+			<option value="date" name='Date'>Date</option>
+		</param>
+		<param name="readonly" type="radio" default="0" label="Read Only" description="Set yes if you wanna make this field readonly">
+			<option value="0" name='No'>No</option>
+			<option value="1" name='Yes'>Yes</option>
+		</param>
+		<param name="maxrange" type="text" default="150" label="COM_COMMUNITY_TITLE_MAXIMUM_RANGE_AGE" description="COM_COMMUNITY_TITLE_MAXIMUM_RANGE_AGE_DESC" />
+		<param name="minrange" type="text" default="1" label="COM_COMMUNITY_TITLE_MINIMUM_RANGE_AGE" description="COM_COMMUNITY_TITLE_MINIMUM_RANGE_AGE_DESC" />
+		<param name="date_format" type="text" default="" label="COM_COMMUNITY_TITLE_DATE_FORMAT_EXAMPLE" description="COM_COMMUNITY_TITLE_DATE_FORMAT_EXAMPLE_DESC" />
+		<param name="style" type="text" default="" label="COM_COMMUNITY_STYLE_ATTRIBUTE" description="COM_COMMUNITY_STYLE_ATTRIBUTE_DESC" />
+	</params>
+</config>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.5/module-install.dtd">
+<extension version="2.5" type="module" client="site" method="upgrade">
+	<name>Community - Latest group posts</name>
+	<author>JomSocial Team</author>
+	<creationDate>March 2011</creationDate>
+	<copyright>Copyright (C) 2008 - 2010 JomSocial. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>support@jomsocial.com</authorEmail>
+	<authorUrl>http://www.jomsocial.com</authorUrl>	
+	<version>3.2_RC3</version>
+	<description>Show recent wall posts from groups</description>
+	<files>
+		<filename module="mod_latestgrouppost">mod_latestgrouppost.php</filename>
+		<filename>mod_latestgrouppost.xml</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_latestgrouppost.ini</language>
+		<language tag="en-GB">en-GB.mod_latestgrouppost.sys.ini</language>
+	</languages>
+	<params>
+		<param name="cache" type="list" default="0" label="Caching" description="Select whether to cache the content of this module">
+			<option value="1">Use global</option>
+			<option value="0">No caching</option>
+		</param>
+		<param name="count" type="text" default="5" label="Count" description="The number of wall posts to display (default is 5)" />
+		<param name="charcount" type="text" default="100" label="Comment character count" description="The number of characters to be displayed for the comments" />
+		<param name="afterlogin_setting" type="list" default="" label="After Login" description="To display all public groups or user participated group only" >
+			<option value="1">Show my groups</option>
+			<option value="0">Show all groups</option>
+		</param>
+		<param name="moduleclass_sfx" type="text" default="app-box" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+	</params>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="cache" type="list" default="0" label="Caching" description="Select whether to cache the content of this module">
+					<option value="1">Use global</option>
+					<option value="0">No caching</option>
+				</field>
+				<field name="count" type="text" default="5" label="Count" description="The number of wall posts to display (default is 5)" />
+				<field name="charcount" type="text" default="100" label="Comment character count" description="The number of characters to be displayed for the comments" />
+				<field name="afterlogin_setting" type="list" default="" label="After Login" description="To display all public groups or user participated group only" >
+					<option value="1">Show my groups</option>
+					<option value="0">Show all groups</option>
+				</field>
+				<field name="moduleclass_sfx" type="text" default="app-box" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" client="site" method="upgrade">
+    <name>mod_tz_statistic</name>
+    <author>DuongTVTemplaza</author>
+    <creationDate>July 15th 2013</creationDate>
+    <authorEmail>support@templaza.com</authorEmail>
+    <authorUrl>www.templaza.com</authorUrl>
+    <version>2.0</version>
+    <description>MOD_TZ_STATISTIC_XML_DESCRIPTION</description>
+    <files>
+        <filename module="mod_tz_statistic">mod_tz_statistic.php</filename>
+        <filename>helper.php</filename>
+        <filename>index.html</filename>
+        <folder>admin</folder>
+        <folder>css</folder>
+        <folder>js</folder>
+        <folder>tmpl</folder>
+    </files>
+    <languages folder="languages">
+        <language tag="en-GB">en-GB/en-GB.mod_tz_statistic.ini</language>
+        <language tag="en-GB">en-GB/en-GB.mod_tz_statistic.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic" addfieldpath="/modules/mod_tz_statistic/admin/formfields">
+                <field name="column_width" type="list"
+                       default="4" label="MOD_TZ_STATISTIC_COLUMN_WIDTH_LABEL">
+                    <option value="1">MOD_TZ_STATISTIC_SPAN1</option>
+                    <option value="2">MOD_TZ_STATISTIC_SPAN2</option>
+                    <option value="3">MOD_TZ_STATISTIC_SPAN3</option>
+                    <option value="4">MOD_TZ_STATISTIC_SPAN4</option>
+                    <option value="5">MOD_TZ_STATISTIC_SPAN5</option>
+                    <option value="6">MOD_TZ_STATISTIC_SPAN6</option>
+                    <option value="7">MOD_TZ_STATISTIC_SPAN7</option>
+                    <option value="8">MOD_TZ_STATISTIC_SPAN8</option>
+                    <option value="9">MOD_TZ_STATISTIC_SPAN9</option>
+                    <option value="10">MOD_TZ_STATISTIC_SPAN10</option>
+                    <option value="11">MOD_TZ_STATISTIC_SPAN11</option>
+                    <option value="12">MOD_TZ_STATISTIC_SPAN12</option>
+                </field>
+                <field type="radio" name="show_heading"
+                       class="btn-group" default="0"
+                       label="MOD_TZ_STATISTIC_SHOW_HEADING_LABEL">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field type="text" name="heading"
+                       label="MOD_TZ_STATISTIC_HEADING_LABEL"/>
+                <field type="radio" name="bg_type"
+                       class="btn-group" default="0"
+                       label="MOD_TZ_STATISTIC_BACKGROUND_TYPE_LABEL">
+                    <option value="0">MOD_TZ_STATISTIC_BACKGROUND_VIDEO</option>
+                    <option value="1">MOD_TZ_STATISTIC_BACKGROUND_IMAGE</option>
+                </field>
+                <field type="media" name="background"
+                       label="MOD_TZ_STATISTIC_BACKGROUND_LABEL"/>
+                <field type="filelist" name="video_mp4"
+                       filter="\.mp4$" directory="images"
+                       label="MOD_TZ_STATISTIC_VIDEO_MP4_LABEL"
+                        description="MOD_TZ_STATISTIC_VIDEO_MP4_DESC"/>
+                <field type="filelist" name="video_webm"
+                       filter="\.webm$" directory="images"
+                       label="MOD_TZ_STATISTIC_VIDEO_WEBM_LABEL"
+                       description="MOD_TZ_STATISTIC_VIDEO_WEBM_DESC"/>
+                <field type="filelist" name="video_ogg"
+                       filter="\.ogg$|\.ogv$" directory="images"
+                       label="MOD_TZ_STATISTIC_VIDEO_OGG_LABEL"
+                       description="MOD_TZ_STATISTIC_VIDEO_OGG_DESC"/>
+                <field type="radio" name="autoplay"
+                       class="btn-group" default="1"
+                        label="MOD_TZ_STATISTIC_VIDEO_AUTOPLAY_LABEL">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field type="text" name="video_ratio"
+                        default="360:640"
+                        label="MOD_TZ_STATISTIC_VIDEO_RATIO_LABEL"
+                        description="MOD_TZ_STATISTIC_VIDEO_RATIO_DESC"/>
+                <field type="radio" name="loop"
+                       class="btn-group" default="1"
+                        label="MOD_TZ_STATISTIC_VIDEO_LOOP_LABEL">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field type="radio" name="muted"
+                       class="btn-group" default="1"
+                        label="MOD_TZ_STATISTIC_VIDEO_MUTED_LABEL">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <!--<field type="text" name="volume"-->
+                       <!--default="50"-->
+                       <!--label="MOD_TZ_STATISTIC_VIDEO_VOLUME_LABEL"-->
+                        <!--description="MOD_TZ_STATISTIC_VIDEO_VOLUME_DESC"/>-->
+                <field type="radio" name="show_bg_over"
+                        class="btn-group" default="1"
+                        label="MOD_TZ_STATISTIC_SHOW_BACKGROUND_OVER_LABEL">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field type="radio" name="show_introtext"
+                        class="btn-group" default="1"
+                        label="MOD_TZ_STATISTIC_SHOW_INTROTEXT_LABEL">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field type="editor" name="description"
+                       buttons="readmore,pagebreak" filter="raw"
+                       width="60%" height="250px"
+                       label="MOD_TZ_STATISTIC_INTROTEXT_LABEL"/>
+                <field type="tzstatistic" name="services" label="MOD_TZ_STATISTIC_INFORMATION_LABEL">
+                    <tzfield name="statistic_title" type="text"
+                             required="true"
+                             label="MOD_TZ_STATISTIC_TITLE_LABEL"/>
+                    <tzfield name="statistic_percent" type="text"
+                             required="true"
+                             label="MOD_TZ_STATISTIC_PERCENTAGE_LABEL"
+                            descripton="MOD_TZ_STATISTIC_PERCENTAGE_DESC"/>
+                    <!--<tzfield name="services_image" type="media" label="MOD_TZ_STATISTIC_IMAGE_LABEL"/>-->
+                    <!--<tzfield name="services_icon_font" type="text" label="MOD_TZ_STATISTIC_ICON_FONT_LABEL"/>-->
+                    <!--<tzfield name="services_description" type="editor"-->
+                             <!--buttons ="readmore,pagebreak" filter="raw"-->
+                             <!--label="MOD_TZ_STATISTIC_DESCRIPTION_LABEL"/>-->
+                </field>
+            </fieldset>
+
+            <fieldset name="view_options"
+                      label="MOD_TZ_STATISTIC_VIEW_OPTIONS_FIELDSET_LABEL">
+                <field type="color" name="trackColor"
+                       label="MOD_TZ_STATISTIC_TRACK_COLOR_LABEL"
+                        description="MOD_TZ_STATISTIC_TRACK_COLOR_DESC"/>
+                <field type="color" name="barColor"
+                       label="MOD_TZ_STATISTIC_BAR_COLOR_LABEL"
+                        description="MOD_TZ_STATISTIC_BAR_COLOR_DESC"/>
+                <field type="color" name="scaleColor"
+                       label="MOD_TZ_STATISTIC_SCALE_COLOR_LABEL"
+                        description="MOD_TZ_STATISTIC_SCALE_COLOR_DESC"/>
+                <field type="color" name="textColor"
+                       label="MOD_TZ_STATISTIC_TEXT_COLOR_LABEL"/>
+                <field type="color" name="bgColor"
+                       label="MOD_TZ_STATISTIC_BACKGROUND_COLOR_LABEL"/>
+                <field type="text" name="scaleLength"
+                       label="MOD_TZ_STATISTIC_SCALE_LENGTH_LABEL"
+                        description="MOD_TZ_STATISTIC_SCALE_LENGTH_DESC"/>
+                <field type="list" name="lineCap"
+                       default="butt"
+                       label="MOD_TZ_STATISTIC_LINE_CAP_LABEL"
+                        description="MOD_TZ_STATISTIC_LINE_CAP_DESC">
+                    <option value="butt">MOD_TZ_STATISTIC_BUTT</option>
+                    <option value="round">MOD_TZ_STATISTIC_ROUND</option>
+                    <option value="square">MOD_TZ_STATISTIC_SQUARE</option>
+                </field>
+                <field type="list" name="easing"
+                       label="MOD_TZ_STATISTIC_EASING_FUNCTION_LABEL"
+                       description="MOD_TZ_STATISTIC_EASING_FUNCTION_DESC">
+                    <option value="defaultEasing">MOD_TZ_STATISTIC_AUTO</option>
+                    <option value="jswing">jswing</option>
+                    <option value="def">def</option>
+                    <option value="easeInQuad">easeInQuad</option>
+                    <option value="easeOutQuad">easeOutQuad</option>
+                    <option value="easeInCubic">easeInCubic</option>
+                    <option value="easeOutCubic">easeOutCubic</option>
+                    <option value="easeInOutCubic">easeInOutCubic</option>
+                    <option value="easeInQuart">easeInQuart</option>
+                    <option value="easeOutQuart">easeOutQuart</option>
+                    <option value="easeInOutQuart">easeInOutQuart</option>
+                    <option value="easeInQuint">easeInQuint</option>
+                    <option value="easeOutQuint">easeOutQuint</option>
+                    <option value="easeInOutQuint">easeInOutQuint</option>
+                    <option value="easeInSine">easeInSine</option>
+                    <option value="easeOutSine">easeOutSine</option>
+                    <option value="easeInOutSine">easeInOutSine</option>
+                    <option value="easeInExpo">easeInExpo</option>
+                    <option value="easeOutExpo">easeOutExpo</option>
+                    <option value="easeInOutExpo">easeInOutExpo</option>
+                    <option value="easeInCirc">easeInCirc</option>
+                    <option value="easeOutCirc">easeOutCirc</option>
+                    <option value="easeInOutCirc">easeInOutCirc</option>
+                    <option value="easeInElastic">easeInElastic</option>
+                    <option value="easeOutElastic">easeOutElastic</option>
+                    <option value="easeInOutElastic">easeInOutElastic</option>
+                    <option value="easeInBack">easeInBack</option>
+                    <option value="easeOutBack">easeOutBack</option>
+                    <option value="easeInOutBack">easeInOutBack</option>
+                    <option value="easeInBounce">easeInBounce</option>
+                    <option value="easeOutBounce">easeOutBounce</option>
+                    <option value="easeInOutBounce">easeInOutBounce</option>
+                </field>
+                <field type="text" name="lineWidth"
+                       default="3"
+                       label="MOD_TZ_STATISTIC_LINE_WIDTH_LABEL"
+                       description="MOD_TZ_STATISTIC_LINE_WIDTH_DESC"/>
+                <field type="text" name="size"
+                       default="110"
+                       label="MOD_TZ_STATISTIC_SIZE_LABEL"
+                       description="MOD_TZ_STATISTIC_SIZE_DESC"/>
+                <field type="text" name="rotate"
+                       default="0"
+                       label="MOD_TZ_STATISTIC_ROTATE_LABEL"
+                       description="MOD_TZ_STATISTIC_ROTATE_DESC"/>
+                <field type="radio" name="animate"
+                       class="btn-group" default="1"
+                       label="MOD_TZ_STATISTIC_ANIMATION_LABEL"
+                       description="MOD_TZ_STATISTIC_ANIMATION_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field type="text" name="duration"
+                       label="MOD_TZ_STATISTIC_DURATION_LABEL"
+                       description="MOD_TZ_STATISTIC_DURATION_DESC"/>
+            </fieldset>
+
+            <fieldset name="advanced">
+
+                <field name="layout" type="modulelayout"
+                    label="JFIELD_ALT_LAYOUT_LABEL"
+                    description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+                <field name="moduleclass_sfx" type="textarea" rows="3"
+                    label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                    description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+                <field name="cache" type="list" default="1"
+                    label="COM_MODULES_FIELD_CACHING_LABEL"
+                    description="COM_MODULES_FIELD_CACHING_DESC">
+                    <option value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+
+                <field name="cache_time" type="text" default="900"
+                    label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+                    description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+                <field name="cachemode" type="hidden"
+                    default="static">
+                    <option value="static"></option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>

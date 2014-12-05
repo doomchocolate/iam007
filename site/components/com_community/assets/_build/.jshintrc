@@ -1,0 +1,31 @@
+{
+	"boss": true,
+	"eqeqeq": true,
+	"eqnull": true,
+	"expr": true,
+	"immed": true,
+	"noarg": true,
+	"onevar": false,
+	"quotmark": "single",
+	"smarttabs": true,
+	"trailing": true,
+	"undef": true,
+	"unused": true,
+
+	"sub": true,
+	"browser": true,
+
+	"globals": {
+		"define": true,
+		"require": true,
+		"module": true,
+
+		"$LAB": true,
+		"_": true,
+		"plupload": true,
+		"google": true,
+
+		"jax": true,
+		"joms": true
+	}
+}

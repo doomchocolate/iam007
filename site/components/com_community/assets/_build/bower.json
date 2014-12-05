@@ -1,0 +1,13 @@
+{
+	"name": "jomsocial",
+	"private": true,
+	"devDependencies": {
+		"json2": "latest",
+		"underscore": "latest",
+		"backbone": "latest",
+		"requirejs": "latest",
+		"chai": "latest",
+		"mocha": "latest",
+		"sinon": "latest"
+	}
+}

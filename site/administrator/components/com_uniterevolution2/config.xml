@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+
+	<fieldset name="component"
+		label="COM_UNITEREVOLUTION2_CONFIG_GLOBAL_SETTINGS_LABEL">
+
+ 	</fieldset>
+ 	
+</config>

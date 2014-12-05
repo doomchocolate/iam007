@@ -1,0 +1,57 @@
+.nav-tabs{
+  margin-bottom: 33px;
+  border-top: 2px solid @tzMbordercolor;
+  border-bottom: 2px solid @tzMbordercolor;
+  > li{
+    margin: 0;
+    padding: 0;
+    > a{
+      margin: 0;
+      border: none;
+      padding: 20px;
+      color: @tzcolor;
+      font-size: 24px;
+      line-height: 32px;
+      .border-radius(0);
+      &:hover{
+        color: @white;
+        background: @tzBlueColor;
+      }
+    }
+  }
+  > .active > a,
+  > .active > a:hover,
+  > .active > a:focus{
+    border: none;
+    color: @white;
+    background: @tzBlueColor;
+  }
+}
+.tab-content{
+  line-height: 24px;
+  margin-bottom: 30px;
+}
+.tabs-left > .nav-tabs{
+  border: none;
+  margin-right: 63px;
+  border-top: 2px solid @tzMbordercolor;
+  > li{
+    > a{
+      margin: 0;
+      .border-radius(0);
+      padding-left: 103px;
+      padding-right: 110px;
+      border-bottom: 2px solid @tzMbordercolor;
+      &:hover,&:focus{
+        border-color: transparent transparent @tzMbordercolor;
+      }
+    }
+  }
+  .active > a,
+  .active > a:hover,
+  .active > a:focus{
+    color: @white;
+    background: @tzBlueColor;
+    border-bottom: 2px solid @tzMbordercolor;
+  }
+}

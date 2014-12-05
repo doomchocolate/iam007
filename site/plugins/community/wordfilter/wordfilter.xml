@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="community" method="upgrade">
+	<name>PLG_WORDFILTER_TITLE</name>
+	<author>JomSocial Team</author>
+	<creationDate>March 2011</creationDate>
+	<copyright>Copyright 2008 - 2013 by iJoomla, Inc. - All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>support@jomsocial.com</authorEmail>
+	<authorUrl>http://www.jomsocial.com</authorUrl>
+	<version>3.2_RC3</version>
+	<isapplication>false</isapplication>
+	<isbrowsable>false</isbrowsable>
+	<description>PLG_WORDFILTER_XML_DESCRIPTION</description>
+	<languages>
+		<language tag="en-GB">en-GB.plg_community_wordfilter.ini</language>
+		<language tag="en-GB">en-GB.plg_community_wordfilter.sys.ini</language>
+	</languages>
+	<files>
+		<file plugin="wordfilter">wordfilter.php</file>
+	</files>
+
+	<menuitem>
+		<menu label="Inbox" position="toolbar">
+			<link label="Inbox">task=inbox</link>
+			<link label="Compose">task=compose</link>
+		</menu>
+	</menuitem>
+
+	<params>
+		<param name="replacement" type="text" default="*" label="Replacement Character" description="Censored words will be replaced with this character." />
+		<param name="badwords" type="textarea" default="fuck,shit" label="Enter blacklisted words" rows="5" cols="30" description="Enter words to be censored, separated by commas." />
+	</params>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="replacement" type="text" default="*" label="Replacement Character" description="Censored words will be replaced with this character." />
+				<field name="badwords" type="textarea" default="fuck,shit" label="Enter blacklisted words" rows="5" cols="30" description="Enter words to be censored, separated by commas." />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

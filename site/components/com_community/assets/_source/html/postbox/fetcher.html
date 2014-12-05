@@ -1,0 +1,33 @@
+<div class="joms-postbox-inner-panel">
+  <div style="position:relative">
+    <div class="joms-fetched-images">
+    <% if ( data.image && data.image.length ) { %>
+      <div style="height:120px">
+        <% for ( var i = 0; i < data.image.length; i++ ) { %>
+        <img src="<%= data.image[i] %>" style="width:100%;height:100%;<%= i ? 'display:none' : '' %>">
+        <% } %>
+      </div>
+      <% if ( data.image.length > 1 ) { %>
+      <div class="joms-fetched-nav" style="text-align:center">
+        <span class="joms-fetched-previmg" style="cursor:pointer">&laquo; prev</span> &nbsp;&nbsp;
+        <span class="joms-fetched-nextimg" style="cursor:pointer">next &raquo;</span>
+      </div>
+      <% } %>
+    <% } else { %>
+      <div style="height:120px;width:120px;background-color:#F9F9F9;color:7F8C8D;text-align:center;vertical">
+        &nbsp;<br>&nbsp;<br>no<br>thumbnail
+      </div>
+    <% } %>
+    </div>
+    <div class="joms-fetched-field joms-fetched-title">
+      <span style="font-weight:bold"><%= data.title || data.titlePlaceholder %></span>
+      <input type="text" value="<%= data.title || '' %>" >
+    </div>
+    <div class="joms-fetched-field joms-fetched-description">
+      <span><%= data.description || data.descPlaceholder %></span>
+      <textarea><%= data.description || '' %></textarea>
+    </div>
+    <div class="clearfix"></div>
+    <span class="joms-fetched-close" style="top:0"><i class="joms-icon-remove"></i>cancel</span>
+  </div>
+</div>

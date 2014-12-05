@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.5/module-install.dtd">
+<extension version="2.5" type="module" client="site" method="upgrade">
+	<name>Community - Dating Search</name>
+	<author>JomSocial Team</author>
+	<creationDate>March 2011</creationDate>
+	<copyright>Copyright (C) 2008 - 2010 JomSocial. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>support@jomsocial.com</authorEmail>
+	<authorUrl>http://www.jomsocial.com</authorUrl>
+	<version>3.2_RC3</version>
+	<description>Dating Search</description>
+	<languages>
+		<language tag="en-GB">en-GB.mod_datingsearch.ini</language>
+	</languages>
+	<files>
+		<filename module="mod_datingsearch">mod_datingsearch.php</filename>
+		<filename>mod_datingsearch.xml</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>tmpl/index.html</filename>
+		<filename>tmpl/default.php</filename>
+	</files>
+	<params>
+		<param name="field_gender" type="text" default="FIELD_GENDER" label="Gender Field Code" description="The gender field code in your custom profile, leave it as default if you did not perform any changes to this field." />
+        <param name="field_birthdate" type="text" default="FIELD_BIRTHDATE" label="Birthday Field Code" description="The birthday field code in your custom profile, leave it as default if you did not perform any changes to this field." />
+        <param name="field_country" type="text" default="FIELD_COUNTRY" label="Country Field Code" description="The country field code in your custom profile, leave it as default if you did not perform any changes to this field." />
+        <param name="field_state" type="text" default="FIELD_STATE" label="State Field Code" description="The state field code in your custom profile, leave it as default if you did not perform any changes to this field." />
+		<param name="field_city" type="text" default="FIELD_CITY" label="City Field Code" description="The city field code in your custom profile, leave it as default if you did not perform any changes to this field." />
+        <param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+	</params>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="field_gender" type="text" default="FIELD_GENDER" label="Gender Field Code" description="The gender field code in your custom profile, leave it as default if you did not perform any changes to this field." />
+				<field name="field_birthdate" type="text" default="FIELD_BIRTHDATE" label="Birthday Field Code" description="The birthday field code in your custom profile, leave it as default if you did not perform any changes to this field." />
+				<field name="field_country" type="text" default="FIELD_COUNTRY" label="Country Field Code" description="The country field code in your custom profile, leave it as default if you did not perform any changes to this field." />
+				<field name="field_state" type="text" default="FIELD_STATE" label="State Field Code" description="The state field code in your custom profile, leave it as default if you did not perform any changes to this field." />
+				<field name="field_city" type="text" default="FIELD_CITY" label="City Field Code" description="The city field code in your custom profile, leave it as default if you did not perform any changes to this field." />
+				<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="library" version="3.0" method="upgrade">
+    <name>lib_tzm</name>
+    <libraryname>tzm</libraryname>
+    <description>
+        Expert Extension
+    </description>
+    <creationDate>2013-02-21</creationDate>
+    <author>tuyennv</author>
+    <authorEmail>tuyennv@templaza.com</authorEmail>
+    <authorUrl>http://templaza.com/</authorUrl>
+    <copyright>Copyright (C)  templaza</copyright>
+    <license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPLv3</license>
+    <version>3.0.0</version>
+
+    <files>
+        <folder>fields</folder>
+        <folder>sources</folder>
+        <filename>index.html</filename>
+        <filename>tzm.php</filename>
+        <filename>tz_news.php</filename>
+        <filename>lib_tzm.xml</filename>
+    </files>
+
+</extension>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="community" method="upgrade">
+	<name>PLG_EVENTS_TITLE</name>
+	<author>JomSocial Team</author>
+	<creationDate>March 2011</creationDate>
+	<copyright>Copyright 2008 - 2013 by iJoomla, Inc. - All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>support@jomsocial.com</authorEmail>
+	<authorUrl>http://www.jomsocial.com</authorUrl>
+	<version>3.2_RC3</version>
+	<isapplication>true</isapplication>
+	<description>PLG_EVENTS_XML_DESCRIPTION</description>
+	<languages>
+		<language tag="en-GB">en-GB.plg_community_events.ini</language>
+		<language tag="en-GB">en-GB.plg_community_events.sys.ini</language>
+	</languages>
+	<files>
+		<file plugin="events">events.php</file>
+		<folder>events</folder>
+	</files>
+	<params addPath="/administrator/components/com_community/libraries/elements">
+		<param name="coreapp" type="list" default="0" label="Core Application" description="Causes this application to not appearin the users applications list but it will allow this application to appear in the user profile automatically if selected.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="cache" type="list" default="1" label="Caching" description="Select whether to cache the content of this plugin">
+			<option value="1">Use Global</option>
+			<option value="0">No</option>
+		</param>
+		<param name="sorting" type="list" default="1" label="Sorting" description="Select default sorting option">
+			<option value="latest">Latest first</option>
+			<option value="alphabetical">Alphabetical</option>
+			<option value="startdate">Start Date</option>
+		</param>
+		<param name="position" type="list" default="content|sidebar-top|sidebar-bottom"  label="Avalaible Positions" description="Select one or more available positions from the list.  You can use Ctrl-click to select more than one item.">
+			<option value="content">Content</option>
+			<option value="sidebar-top">Sidebar Top</option>
+			<option value="sidebar-bottom">Sidebar Bottom</option>
+		</param>
+	</params>
+	<config>
+		<fields name="params" addfieldpath="/administrator/components/com_community/libraries/fields">
+			<fieldset name="basic">
+				<field name="coreapp" type="list" default="0" label="Core Application" description="Causes this application to not appearin the users applications list but it will allow this application to appear in the user profile automatically if selected.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="cache" type="list" default="1" label="Caching" description="Select whether to cache the content of this plugin">
+					<option value="1">Use Global</option>
+					<option value="0">No</option>
+				</field>
+				<field name="sorting" type="list" default="1" label="Sorting" description="Select default sorting option">
+					<option value="latest">Latest first</option>
+					<option value="alphabetical">Alphabetical</option>
+					<option value="startdate">Start Date</option>
+				</field>
+				<field name="position" type="list" default="content|sidebar-top|sidebar-bottom"  label="Avalaible Positions" description="Select one or more available positions from the list.  You can use Ctrl-click to select more than one item.">
+					<option value="content">Content</option>
+					<option value="sidebar-top">Sidebar Top</option>
+					<option value="sidebar-bottom">Sidebar Bottom</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,38 @@
+<div class="joms-postbox-event">
+  <div class="joms-postbox-inner-panel">
+    <div class="joms-postbox-title"></div>
+    <div class="joms-postbox-event-detail">
+      <div class="joms-postbox-event-panel joms-postbox-event-label-category" style="display:none">
+        <div class="joms-postbox-event-title" style="padding-bottom:0;padding-top:8px">
+          <div class="joms-input-field-name"><%= data.language.event.category %></div>
+          <span class="joms-input-text" style="display:inline-block"></span>
+        </div>
+      </div>
+      <div class="joms-postbox-event-panel joms-postbox-event-label-location" style="display:none">
+        <div class="joms-postbox-event-title" style="padding-bottom:0;padding-top:8px">
+          <div class="joms-input-field-name"><%= data.language.event.location %></div>
+          <span class="joms-input-text" style="display:inline-block"></span>
+        </div>
+      </div>
+      <div class="joms-postbox-event-panel joms-postbox-event-label-date" style="display:none">
+        <div class="joms-postbox-event-title" style="padding-bottom:0;padding-top:8px">
+          <div class="joms-input-field-name"><%= data.language.event.date_and_time %></div>
+          <span class="joms-input-text" style="display:inline-block"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="joms-postbox-inputbox"></div>
+  <nav class="joms-postbox-tab selected">
+    <ul class="unstyled">
+      <li data-tab="event"><i class="joms-icon-cog"></i><span class="visible-desktop"><%= data.language.event.event_detail %></span></li>
+    </ul>
+    <div class="joms-postbox-action">
+      <button class="joms-postbox-cancel"><%= data.language.postbox.cancel_button %></button>
+      <button class="joms-postbox-save"><%= data.language.postbox.post_button %></button>
+    </div>
+    <div class="joms-postbox-loading" style="display:none;">
+      <img src="<%= data.juri.root %>components/com_community/assets/ajax-loader.gif">
+    <div
+  </nav>
+</div>

@@ -1,0 +1,36 @@
+@media (max-width: @navbarCollapseWidth) {
+  .plazart-mainnav.navbar-collapse-fixed-top{
+    position: relative;
+  }
+  .off-canvas-enabled div#off-canvas-nav {
+    position: absolute;
+    background-color: transparent;
+  }
+  .plazart-mainnav .nav-collapse .nav > li > a,
+  .plazart-mainnav .nav-collapse .dropdown-menu a{
+    border: none;
+  }
+  #off-canvas-nav .plazart-mainnav{
+    .box-sizing();
+    overflow: hidden;
+    .tz-logo{
+      margin-bottom: 58px;
+    }
+  }
+  #off-canvas-nav .plazart-mainnav .nav-collapse .nav > li{
+    border: none;
+  }
+  .plazart-mainnav .dropdown-menu .active > a,
+  .plazart-mainnav .dropdown-menu .active > a:hover{
+    background: none;
+    color: @tzBlueColor;
+  }
+  #off-canvas-nav .plazart-mainnav .nav-collapse .dropdown-menu .mega-nav > li a{
+    &:hover,&:focus{
+      color: @tzBlueColor;
+    }
+  }
+  #off-canvas-nav .plazart-mainnav .nav-collapse .dropdown-menu .mega-nav > li.active > a{
+    color: @tzBlueColor;
+  }
+}

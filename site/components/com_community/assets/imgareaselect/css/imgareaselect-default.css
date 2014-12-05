@@ -1,0 +1,86 @@
+/*
+ * imgAreaSelect default style
+ */
+
+#community-wrap .imgareaselect-border1,
+.imgareaselect-border1 {
+    /*background: url(border-v.gif) repeat-y left top;*/
+}
+
+#community-wrap .imgareaselect-border2,
+.imgareaselect-border2 {
+    /*background: url(border-h.gif) repeat-x left top;*/
+}
+
+#community-wrap .imgareaselect-border3,
+.imgareaselect-border3 {
+    /*background: url(border-v.gif) repeat-y right top;*/
+}
+
+#community-wrap .imgareaselect-border4,
+.imgareaselect-border4 {
+    /*background: url(border-h.gif) repeat-x left bottom;*/
+}
+
+#community-wrap .imgareaselect-border1, #community-wrap .imgareaselect-border2,
+#community-wrap .imgareaselect-border3, #community-wrap .imgareaselect-border4,
+.imgareaselect-border1, .imgareaselect-border2, .imgareaselect-border3, .imgareaselect-border4 {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+#community-wrap .imgareaselect-handle,
+.imgareaselect-handle {
+    display: none;
+    background-color: #fff;
+    border: solid 1px #000;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+#community-wrap .imgareaselect-outer,
+.imgareaselect-outer {
+    display: none !important;
+    background-color: #000;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+#community-wrap .imgareaselect-selection,
+.imgareaselect-selection {
+}
+
+#community-wrap #cGallery div.photoTags > div.photoTagActions{
+    border: 3px solid #FFFFFF;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.75), 0 0 4px rgba(0, 0, 0, 0.5)
+}
+
+#community-wrap #cGallery .photoTagActions {
+    border: none;
+}
+#community-wrap .imgareaselect-selection
+{
+    background: rgba(255,255,255,0.25);
+}
+#community-wrap .imgareaselect-selection,
+#community-wrap .imgareaselect-border1, 
+#community-wrap .imgareaselect-border2, 
+#community-wrap .imgareaselect-border3, 
+#community-wrap .imgareaselect-border4 {
+    border: 1px solid #888;
+    border: 2px solid rgba(0,0,0,0.2);
+}
+
+
+/* Autocomplete */
+div.autocomplete-w1 {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-bottom: 1px solid #000000;
+    border-left: 1px solid #000000;
+    border-right: 1px solid #000000;
+    margin-left: -5px;
+    margin-top: 0;
+    padding: 2px 6px 6px;
+    width: 188px;
+}

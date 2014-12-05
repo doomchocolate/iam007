@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="system">
+	<name>HikaShopCustom Price plugin</name>
+	<creationDate>{__DAY__} {__MONTH__} {__YEAR__}</creationDate>
+	<version>{__PLUGIN_VERSION__}</version>
+	<author>HikaShop</author>
+	<authorEmail>dev@hikashop.com</authorEmail>
+	<authorUrl>http://www.hikashop.com</authorUrl>
+	<copyright>(C) 2010-{__YEAR__} HIKARI SOFTWARE. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<description>HikaShop Custom Price plugin</description>
+	<files>
+		<filename plugin="custom_price">custom_price.php</filename>
+	</files>
+	<params addpath="/components/com_hikashop/params">
+		<param name="taxes" type="radio" default="0" label="Taxes handling" description="Should taxes be taken into account">
+			<option value="0">No taxes</option>
+			<option value="1">On top of the amount</option>
+			<option value="2">already included in the amount</option>
+		</param>
+	</params>
+	<config>
+		<fields name="params" addfieldpath="/components/com_hikashop/fields">
+			<fieldset name="basic">
+				<field name="taxes" type="radio" default="0" label="Taxes handling" description="Should taxes be taken into account">
+					<option value="0">No taxes</option>
+					<option value="1">On top of the amount</option>
+					<option value="2">already included in the amount</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

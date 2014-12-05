@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="2.5" method="upgrade" group="system">
+	<name>Hikashop Geolocation Plugin</name>
+	<creationDate>{__DAY__} {__MONTH__} {__YEAR__}</creationDate>
+	<version>{__PLUGIN_VERSION__}</version>
+	<author>Hikashop</author>
+	<authorEmail>dev@hikashop.com</authorEmail>
+	<authorUrl>http://www.hikashop.com</authorUrl>
+	<copyright>(C) 2010-{__YEAR__} HIKARI SOFTWARE. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<description>This plugin enables you to handle geolocation</description>
+	<files>
+		<filename plugin="hikashopgeolocation">hikashopgeolocation.php</filename>
+	</files>
+	<params addpath="/components/com_hikashop/params">
+		<param name="geoloc_timeout" type="text" size="10" default="10" label="Timeout" description="The timeout value after which the connexion to the geolocation server is considered failed (in sec)" />
+		<param name="geoloc_api_key" type="textarea" cols="30" default="" label="API key" description="Your geolocation service's API key that you can get on http://ipinfodb.com/register.php" />
+		<param name="order" type="radio" default="1" label="Orders geolocation" description="Activate geolocation for orders">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="user" type="radio" default="1" label="Customers geolocation" description="Activate geolocation for customers">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="set_default_currency" type="radio" default="0" label="Set currency" description="Select currency based on the geolocated zone of the user">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="blocked_zones" type="text" size="52" default="" label="Zones blocked" description="Block the people in these zones (provide a list of zone ids separated by commas)" />
+		<param name="authorized_zones" type="text" size="52" default="" label="Zones authorized" description="Authorize the people in these zones (provide a list of zone ids separated by commas). If filled, the blocked zones will be ignored" />
+		<param name="components" type="text" size="52" default="all" label="Components checked" description="Check zones access only for these components (provide a list of component folder names separated by commas)" />
+	</params>
+	<config>
+		<fields name="params" addfieldpath="/components/com_hikashop/fields">
+			<fieldset name="basic">
+				<field
+					name="geoloc_timeout"
+					type="text"
+					label="Timeout"
+					size="10"
+					default="10"
+					description="The timeout value after which the connexion to the geolocation server is considered failed (in sec)" />
+				<field name="geoloc_api_key" type="textarea" cols="30" default="" label="API key" description="Your geolocation service's API key that you can get on http://ipinfodb.com/register.php" />
+				<field
+					name="order"
+					type="radio"
+					label="Orders geolocation"
+					default="1"
+					description="Activate geolocation for orders" >
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field
+					name="user"
+					type="radio"
+					label="Customers geolocation"
+					default="1"
+					description="Activate geolocation for customers" >
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="set_default_currency" type="radio" default="0" label="Set currency" description="Select currency based on the geolocated zone of the user">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="blocked_zones" type="text" size="52" default="" label="Zones blocked" description="Block the people in these zones (provide a list of zone ids separated by commas)" />
+				<field name="authorized_zones" type="text" size="52" default="" label="Zones authorized" description="Authorize the people in these zones (provide a list of zone ids separated by commas). If filled, the blocked zones will be ignored" />
+				<field name="components" type="text" size="52" default="all" label="Components checked" description="Check zones access only for these components (provide a list of component folder names separated by commas)" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

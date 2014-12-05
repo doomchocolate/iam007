@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" client="site" method="upgrade">
+    <name>mod_tz_client</name>
+    <author>DuongTVTemplaza</author>
+    <creationDate>July 15th 2013</creationDate>
+    <authorEmail>support@templaza.com</authorEmail>
+    <authorUrl>www.templaza.com</authorUrl>
+    <description>MOD_TZ_CLIENT_XML_DESCRIPTION</description>
+    <files>
+        <filename module="mod_tz_client">mod_tz_client.php</filename>
+        <filename>helper.php</filename>
+        <filename>index.html</filename>
+        <folder>admin</folder>
+        <folder>css</folder>
+        <folder>js</folder>
+        <folder>images</folder>
+        <folder>tmpl</folder>
+    </files>
+    <languages folder="languages">
+        <language tag="en-GB">en-GB/en-GB.mod_tz_client.ini</language>
+        <language tag="en-GB">en-GB/en-GB.mod_tz_client.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic" addfieldpath="/modules/mod_tz_client/admin/formfields">
+                <field type="tzclient" name="client" label="MOD_TZ_CLIENT_INFORMATION_LABEL">
+                    <tzfield name="client_title" type="text"
+                             required="true"
+                             label="MOD_TZ_CLIENT_TITLE_LABEL"/>
+                    <tzfield name="client_link" type="text"
+                             default="#"
+                             required="true"
+                             label="MOD_TZ_CLIENT_LINK_LABEL"/>
+                    <tzfield name="client_image" type="media"
+                             label="MOD_TZ_CLIENT_IMAGE_LABEL"/>
+                </field>
+                <field name="target" type="list" default="3"
+                       label="MOD_TZ_CLIENT_TARGET_WINDOW_LABEL"
+                        description="MOD_TZ_CLIENT_TARGET_WINDOW_DESC">
+                    <option value="1">JBROWSERTARGET_NEW</option>
+                    <option value="2">JBROWSERTARGET_POPUP</option>
+                    <option value="3">JBROWSERTARGET_PARENT</option>
+                </field>
+                <field name="follow" type="list"
+                    default="nofollow"
+                    label="MOD_TZ_CLIENT_FOLLOW_LABEL"
+                    description="MOD_TZ_CLIENT_FOLLOW_DESC">
+                    <option value="follow">MOD_TZ_CLIENT_VALUE_FOLLOW</option>
+                    <option value="nofollow">MOD_TZ_CLIENT_VALUE_NOFOLLOW</option>
+                </field>
+                <field type="radio" name="show_title"
+                       class="btn-group" default="1"
+                       label="MOD_TZ_CLIENT_SHOW_TITLE_LABEL">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field name="show_description" type="radio"
+                       class="btn-group" default="1"
+                        label="MOD_TZ_CLIENT_SHOW_DESCRIPTION_LABEL">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field type="text" name="title" label="MOD_TZ_CLIENT_TITLE_LABEL"/>
+                <field name="description" buttons="readmore" type="editor" filter="raw"
+                       label="MOD_TZ_CLIENT_DESCRIPTION_LABEL"/>
+            </fieldset>
+
+            <fieldset name="advanced">
+
+                <field name="layout" type="modulelayout"
+                    label="JFIELD_ALT_LAYOUT_LABEL"
+                    description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+                <field name="moduleclass_sfx" type="textarea" rows="3"
+                    label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                    description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+                <field name="cache" type="list" default="1"
+                    label="COM_MODULES_FIELD_CACHING_LABEL"
+                    description="COM_MODULES_FIELD_CACHING_DESC">
+                    <option value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+
+                <field name="cache_time" type="text" default="900"
+                    label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+                    description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+                <field name="cachemode" type="hidden"
+                    default="static">
+                    <option value="static"></option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<params>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="readonly" type="radio" default="0" label="Read Only" description="Set yes if you wanna make this field readonly">
+			<option value="0" name='No'>No</option>
+			<option value="1" name='Yes'>Yes</option>
+		</param>
+		<param name="min_char" type="text" default="" label="Minimum Character" description="Set the minimum chars on the field" />
+		<param name="max_char" type="text" default="" label="Maximum Character" description="Set the maximum chars on the field" />
+		<param name="style" type="text" default="" label="Style Atrribute" description="Use the css code to style the field" />
+		<param name="allowed" type="text" default="" label="Allowed domains" description="Fill this for the only allowed domain" />
+		<param name="blacklist" type="text" default="" label="Blacklist domains" description="Fill this for the disalowed domain" />
+	</params>
+</config>

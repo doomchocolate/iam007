@@ -1,0 +1,100 @@
+.accordion-group{
+  border: none;
+  .border-radius(0);
+  border-bottom: 1px solid @tzMbordercolor;
+  position: relative;
+  &:hover,&:focus{
+    .one,.two{
+      color: @tzBlueColor;
+    }
+  }
+}
+.accordion-heading{
+  .accordion-toggle{
+    padding: 19px 0 20px;
+    > .collapse{
+      display: none;
+      padding-right: 18px;
+    }
+    > .collapsed{
+      padding-right: 18px;
+      display: inline-block;
+    }
+  }
+}
+.accordion-collapse{
+  .accordion-toggle > .collapse{
+    height: auto;
+    display: inline-block;
+  }
+  .accordion-toggle > .collapsed{
+    height: auto;
+    display: none;
+  }
+  .accordion-toggle{
+    color: @tzBlueColor;
+  }
+}
+.accordion-toggle{
+  color: @tzcolor;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: uppercase;
+  &:hover, &:focus{
+    color: @tzBlueColor;
+  }
+}
+.accordion-body{
+  .one{
+    display: none;
+  }
+  .two{
+    display: block;
+  }
+  .in{
+    .one{
+      display: block;
+    }
+    .two{
+      display: none;
+    }
+  }
+  .one,.two{
+    top: 0;
+    left: 0;
+    position: absolute;
+  }
+  &.collapse{
+    position: static;
+  }
+}
+.accordion-inner{
+  color: #414952;
+  line-height: 24px;
+  border-color: @tzMbordercolor;
+  padding: 23px 0 26px 47px;
+}
+.accordion-background{
+  .accordion-collapse{
+    background: #f4f4f4;
+    .accordion-toggle{
+      border-left: 1px solid @tzMbordercolor;
+    }
+  }
+  .accordion-inner{
+    border-top-color: @tzMbordercolor;
+  }
+  .accordion-heading{
+    position: relative;
+  }
+  .accordion-toggle{
+    margin-left: 70px;
+    padding: 25px 0 20px 17px;
+    > .collapse,> .collapsed{
+      left: 0;
+      padding: 3px 27px 0;
+      position: absolute;
+    }
+  }
+}

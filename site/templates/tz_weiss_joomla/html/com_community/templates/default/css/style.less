@@ -1,0 +1,133 @@
+/**
+* @copyright (C) 2013 iJoomla, Inc. - All rights reserved.
+* @license GNU General Public License, version 2 (http://www.gnu.org/licenses/gpl-2.0.html)
+* @author iJoomla.com <webmaster@ijoomla.com>
+* @url https://www.jomsocial.com/license-agreement
+* The PHP code portions are distributed under the GPL license. If not otherwise stated, all images, manuals, cascading style sheets, and included JavaScript *are NOT GPL, and are released under the IJOOMLA Proprietary Use License v1.0
+* More info at https://www.jomsocial.com/license-agreement
+*/
+@import "../../../assets/bootstrap/less/mixins.less";
+@import "../less/00-mixins.less";
+@import "../less/themes/light.less";
+@import "../less/33-fonticon.less";
+@import "../less/popup.less";
+@import "../less/cwindow.less";
+#community-wrap
+{
+
+	display: inline-block;
+	width: 100%;
+	text-align: left;
+	position: relative;
+	word-wrap: break-word;
+
+	@import "../../../assets/bootstrap/less/bootstrap.less";
+	@import "../../../assets/bootstrap/less/responsive.less";
+
+	@import "../less/01-reset.less";
+	@import "../less/01-layout.less";
+	@import "../less/02-toolbar.less";
+	@import "../less/03-submenu.less";
+	@import "../less/04-filter.less";
+	@import "../less/05-indexs.less";
+	@import "../less/06-form.less";
+	@import "../less/07-input.less";
+	@import "../less/07-input.privacy.less";
+	@import "../less/08-icons.less";
+	@import "../less/09-videos.less";
+	@import "../less/11-tinymce.less";
+	@import "../less/12-modules.less";
+	@import "../less/14-streams.less";
+	@import "../less/15-page.less";
+	@import "../less/16-media.less";
+	@import "../less/17-toolbox.less";
+	@import "../less/18-wall.less";
+	@import "../less/19-discussion.less";
+	@import "../less/20-file.less";
+	@import "../less/21-applications.less";
+	@import "../less/22-guest.less";
+	@import "../less/postbox.less";
+	@import "../less/25-map.less";
+	@import "../less/26-like.less";
+	@import "../less/27-search.less";
+	@import "../less/28-featured.less";
+	@import "../less/29-rsvp.less";
+	@import "../less/30-messaging.less";
+	@import "../less/31-search.less";
+	@import "../less/32-focus.less";
+
+	// import theme
+	@import "../less/jomsocial-theme/module/postbox.less";
+	@import "../less/jomsocial-theme/ui/select.less";
+}
+
+.joms-char-min {
+	color: red;
+}
+// put it outside of #community-wrap , so it will works on module
+@import "../less/emoticons.less";
+
+
+@import "../../../assets/bootstrap/less/alerts.less";
+@import "../less/jquery-ui.less";
+body #cWindow {
+
+	font-size: 12px;
+	font-family: Arial,sans-serif;
+	line-height: 1.35;
+	text-align: left;
+
+	position: absolute;
+	z-index: 999999 !important;
+	display: block;
+	width: 452px;
+	height: 170px;
+	top: 0;
+	margin-left: -25px;
+	padding-bottom:40px;
+
+	&.new { display: none; }
+
+ 	.label-filetype {max-width:100%;}
+
+
+	.pull-left { float:left !important;}
+	.pull-right { float:right !important;}
+
+	#joms-postbox-privacy-dropdown{
+		position: relative;
+	}
+
+
+	@import "../../../assets/bootstrap/less/grid.less";
+	@import "../../../assets/bootstrap/less/type.less";
+	@import "../../../assets/bootstrap/less/scaffolding.less";
+	@import "../../../assets/bootstrap/less/reset.less";
+	@import "../../../assets/bootstrap/less/forms.less";
+	@import "../../../assets/bootstrap/less/buttons.less";
+	@import "../../../assets/bootstrap/less/navs.less";
+	@import "../../../assets/bootstrap/less/responsive.less";
+	@import "../../../assets/bootstrap/less/alerts.less";
+	@import "../../../assets/bootstrap/less/dropdowns.less";
+
+	@import "../less/01-reset.less";
+	@import "../less/01-layout.less";
+	@import "../less/06-form.less";
+	@import "../less/07-input.less";
+	@import "../less/07-input.privacy.less";
+	@import "../less/23-window.less";
+	@import "../less/23-window.application.less";
+	@import "../less/23-window.bookmark.less";
+	@import "../less/23-window.stream.less";
+	@import "../less/23-window.album.less";
+	@import "../less/09-videos.less";
+}
+
+@import "../less/99-misc.less";
+@import "../../../assets/bootstrap/less/popovers.less";
+
+// Media Queries
+@import "../less/media-queries/large-desktop.less";
+@import "../less/media-queries/tablet-to-desktop.less";
+@import "../less/media-queries/landscape-phone.less";
+@import "../less/media-queries/portrait-phone.less";

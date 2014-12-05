@@ -1,0 +1,99 @@
+
+.tz_tab_image {
+    width: 25%;
+}
+
+.tz_tab_image img {
+    width: 100%;
+    float: left;
+    margin-top: 6px;
+    padding-right: 32px;
+}
+
+.mod_tz_news {
+    text-align: left;
+    float: none ! important;
+}
+
+.tz_description p {
+    margin-top: 0;
+    font-size: 13px;
+}
+
+.tz_date, .tz_hits, .tz_author, .tz_category {
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.tz_readmore a {
+    text-decoration: none;
+    display: inline-block;
+    color: #008aff;
+}
+
+ul.tabs {
+    border: none;
+    background: none;
+    overflow: visible;
+}
+
+ul.tabs .tab_li .tab_a {
+    background: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
+    position: relative;
+    top: 1px;
+}
+
+ul.tabs .tab_li:first-child .tab_a {
+    padding-left: 0;
+}
+
+ul.tabs .tab_li .tab_a .tab_span {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0;
+    float: none;
+}
+
+ul.tabs .tab_li {
+    background: none;
+    border: none;
+    float: none;
+    display: inline-block;
+}
+
+ul.tabs {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+ul.tabs .tab_li a.active {
+    border-bottom: 1px solid rgba(0, 0, 0, 1);
+    position: relative;
+    top: 1px;
+}
+
+.tz_tab_date, .tz_tab_hits, .tz_tab_author, .tz_tab_category {
+    font-style: italic;
+}
+
+.tz_tabs_introtext {
+    padding: 33px 0 0 0;
+}
+
+.tz_tabs_introtext > p {
+    margin: 0;
+}
+
+.tz_description {
+    display: block;
+}
+
+.dv1 {
+    display: block;
+}
+
+.dv2 {
+    clear: both;
+    display: block;
+    padding-top: 30px;
+}

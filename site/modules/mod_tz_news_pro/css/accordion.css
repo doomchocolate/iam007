@@ -1,0 +1,95 @@
+.accordion-close {
+    background: #ecf0f1;
+}
+
+.accordion-close .tz_accordion_title {
+    color: #2c3e50 !important;
+}
+
+.accordion-open {
+    background: #000;
+}
+
+.accordion-open .tz_accordion_title {
+    color: #ffffff !important;
+}
+
+.tz_accordion .tz_accordion_title {
+    font-size: 14px;
+    font-family: arial, helvetica, sans serif;
+    font-weight: normal;
+    padding: 7px 17px;
+    margin: 0 ! important;
+    line-height: 20px;
+}
+
+.tz_accordion_image {
+    width: 25%;
+}
+
+.tz_accordion_image img {
+    width: 100%;
+    float: left;
+    margin-top: 6px;
+    padding-right: 32px;
+}
+.tz_accordion_audio,
+.tz_accordion_quote,
+.tz_accordion_link,
+.tz_accordion_default {
+    margin: 30px 0;
+    padding: 0 13px;
+}
+
+.mod_tz_news {
+    text-align: left;
+    float: none ! important;
+}
+
+.tz_accordion_description p {
+    margin-top: 0;
+    font-size: 13px;
+}
+
+.tz_accordion {
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.accordion-open span {
+    background: url("../images/Arrow_down.png") no-repeat;
+}
+
+.accordion-close span {
+    background: url("../images/Arrow_up.png") no-repeat;
+}
+
+.tz_accordion_date, .tz_accordion_hits, .tz_accordion_author, .tz_accordion_category {
+    display: inline-block;
+}
+
+.tz_accordion > span {
+    display: block;
+    height: 20px;
+    position: absolute;
+    right: 3px;
+    top: 10px;
+    width: 20px;
+}
+
+.tz_accordion_readmore a {
+    text-decoration: none;
+    color: #008aff;
+}
+
+.dv1 {
+    display: block;
+}
+
+.dv2 {
+    clear: both;
+    display: block;
+    padding-top: 30px;
+}

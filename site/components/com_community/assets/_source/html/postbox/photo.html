@@ -1,0 +1,26 @@
+<div>
+  <div id="joms-postbox-photo-upload" style="position:absolute;top:0;left:0;width:1px;height:1px;overflow:hidden">
+    <button id="joms-postbox-photo-upload-btn">Upload</button>
+  </div>
+  <div class="joms-postbox-inner-panel" style="position:relative">
+    <div class="joms-postbox-photo-upload">
+      <i class="joms-icon-picture"></i> <%= data.language.photo.upload_button %>
+    </div>
+  </div>
+  <div class="joms-postbox-photo">
+    <div class="joms-postbox-preview"></div>
+    <div class="joms-postbox-inputbox"></div>
+    <nav class="joms-postbox-tab selected">
+      <ul class="unstyled">
+        <li data-tab="upload" data-bypass="1"><i class="joms-icon-picture"></i><span class="visible-desktop"><%= data.language.photo.upload_button_more %></span></li>
+      </ul>
+      <div class="joms-postbox-action">
+        <button class="joms-postbox-cancel"><%= data.language.postbox.cancel_button %></button>
+        <button class="joms-postbox-save"><%= data.language.postbox.post_button %></button>
+      </div>
+      <div class="joms-postbox-loading" style="display:none;">
+        <img src="<%= data.juri.root %>components/com_community/assets/ajax-loader.gif">
+      </div>
+    </nav>
+  </div>
+</div>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="2.5" method="upgrade" group="acymailing">
+	<name>AcyMailing Tag : HikaShop content</name>
+	<creationDate>{__DAY__} {__MONTH__} {__YEAR__}</creationDate>
+	<version>{__PLUGIN_VERSION__}</version>
+	<author>Hikari Software</author>
+	<authorEmail>dev@hikashop.com</authorEmail>
+	<authorUrl>http://www.hikashop.com</authorUrl>
+	<copyright>(C) 2010-{__YEAR__} HIKARI SOFTWARE. All rights reserved.</copyright>
+	<license>http://www.hikashop.com/commercial_license.php</license>
+	<description>This plugin enables you to insert HikaShop products, coupons inside any e-mail sent by AcyMailing</description>
+	<files>
+		<filename plugin="hikashop">hikashop.php</filename>
+	</files>
+	<params addpath="/components/com_acymailing/params">
+		<param name="vat" type="radio" default="1" label="Add the VAT to the price" description="Select yes or no depending if you want to add the vat to the displayed price or not">
+			<option value="0">No VAT</option>
+			<option value="1">Yes, include the VAT</option>
+		</param>
+		<param name="stock" type="radio" default="0" label="Only products in stock" description="Using the products insertion via the category selection, should AcyMailing only display products in stock?">
+			<option value="0">No, display all products</option>
+			<option value="1">Yes, only in stock</option>
+		</param>
+		<param name="itemid" size="10" type="text" default="" label="Default Itemid" description="ID of the menu attached to HikaShop" />
+	</params>
+	<config>
+		<fields name="params" addfieldpath="/components/com_acymailing/fields">
+			<fieldset name="basic">
+				<field
+					name="vat"
+					type="radio"
+					label="Add the VAT to the price"
+					default="1"
+					description="Select yes or no depending if you want to add the vat to the displayed price or not" >
+					<option value="0">No VAT</option>
+					<option value="1">Yes, include the VAT</option>
+				</field>
+				<field
+					name="stock"
+					type="radio"
+					label="Only products in stock"
+					default="0"
+					description="Using the products insertion via the category selection, should AcyMailing only display products in stock?" >
+					<option value="0">No, display all products</option>
+					<option value="1">Yes, only in stock</option>
+				</field>
+				<field name="itemid" size="10" type="text" default="" label="Default Itemid" description="ID of the menu attached to HikaShop" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

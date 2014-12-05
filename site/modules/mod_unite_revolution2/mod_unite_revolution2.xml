@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension	type="module" version="1.6.0" method="upgrade" client="site" >
+	<name>Unite Revolution Slider 2</name>
+	<author>Unite CMS</author>
+	<creationDate>October 2012</creationDate>
+	<copyright>Copyright (C) 2012 UniteCMS.net, All rights reserved.</copyright>
+	<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<authorEmail>support@unitecms.net</authorEmail>
+	<authorUrl>http://unitecms.net</authorUrl>
+	<version>4.2.2</version>
+	<description><![CDATA[
+			<div style="font-weight:normal;">
+			<p><strong>Unite Revolution Slider (new edition)</strong> module. Put the slider on any page. All the slider configuration located in Component.</p>
+			<p>
+				For support please turn to <a href="http://unitecms.net/joomla-extensions/unite-revolution-slider-responsive" target="_blank">Unite Revolution Slider Page</a>
+			</p>
+			<small style="float:right">ver. 4.2.2</small>
+			</div>
+     ]]>
+	 </description>
+	
+	<files>
+		<folder>fields</folder>	
+		<filename module="mod_unite_revolution2">mod_unite_revolution2.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_unite_revolution2.xml</filename>
+	</files>
+	<config>
+		<fields name="params" addfieldpath="/modules/mod_unite_revolution2/fields">
+			<fieldset name="general" label="General Settings">
+				 <field name="sliderid"
+					type="slider"
+					label="Slider"
+					description="Choose a slider from the component"
+				/>
+				
+			</fieldset>
+				
+			<fieldset name="advanced">
+				
+				<field name="include_jquery" 
+					   type="radio"
+					   default="true" 
+					   label="Include jQuery 1.8 js" 
+					   description="Add include of jquery js. If you have jquery include in other module, and you don't want to double include, choose 'No'">
+						  <option value="true">Yes</option>
+						  <option value="false">No</option>
+				</field>				
+
+				<field name="js_load_type" 
+					   type="radio"
+					   default="head" 
+					   label="Include item JS in" 
+					   description="The right way is to include the js to the head section, but on some cases when you have double jquery loading, you can make it work by changing into body">
+						  <option value="head">Head</option>
+						  <option value="body">Body</option>
+				</field>
+				
+				<field name="no_conflict_mode" 
+					   type="radio"
+					   default="false" 
+					   label="No Conflict Mode" 
+					   description="Run jQuery.noConflict() function. If you have some other js libraries that not working good, you can try this option.">
+						  <option value="true">Yes</option>
+						  <option value="false">No</option>
+				</field>
+					
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+					
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="itemid">
+					<option
+						value="itemid"></option>
+				</field>
+				
+			</fieldset>
+			
+		</fields>		
+	</config>
+</extension>

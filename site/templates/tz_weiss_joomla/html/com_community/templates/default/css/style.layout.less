@@ -1,0 +1,197 @@
+/**
+* @package JomSocial
+* @subpackage Template
+* @copyright (C) 2011 by Slashes & Dots Sdn Bhd - All rights reserved!
+* @license GNU/GPL, see LICENSE.php
+*
+*
+* style.layout.css - Contains layout-styles (global)
+*/
+
+/**
+* COMMUNITY :#community-wrap
+* main ID that hold core JomSocial all togather
+* this class is reusable across the JomSocial application
+*/
+
+/* display:inline-block + width:100% was
+used to cope with uncleared floats that
+often is present in various Joomla! templates.
+
+Without it,contents within #community-wrap
+may get pulled down to the line where the
+uncleared float element ends.
+
+The css property combination above inherits
+the width of the parent container IRRESPECTIVE
+of the padding value of the parent container.
+
+Therefore,if you are experiencing issues where
+#community-wrap appears wider than the width
+provided by its parent container,you may either:- Add margin-left & margin-right
+with the value taken from the
+padding value of the parent container.
+
+- Replace display:inline-block;with display:block;(If you are certain uncleared floats won't appear)
+
+- Set a fixed width (Usually parent width - parent padding)
+*/
+
+
+/* q-tip */
+body .qtip a,
+body .qtip a:link,
+body .qtip a:visited,
+body .qtip a:hover,
+body .qtip a:active {
+	color: #F3F3F3 !important;
+	text-decoration: none;
+	background: none;
+}
+
+
+/**
+* COMMUNITY :CONTENT TITLE
+* this class is reusable across the JomSocial application
+*/
+body #community-wrap div.ctitle {
+	font-weight: 700;
+	border-bottom: 2px solid #eee;
+	margin-bottom: 15px;
+}
+body #community-wrap div.ctitle h2 {
+	font-size: 16px;
+	padding: 3px 0;
+}
+
+
+
+
+/*
+* COMMUNITY :SYSTEM MESSAGE
+* this class is reusable across the JomSocial application
+*/
+body #community-wrap div.info,
+body #community-wrap div.error,
+body #community-wrap div.warning {
+	font-weight: 700;
+	margin: 0 0 10px;
+	padding: 10px
+}
+body #community-wrap div.error {
+	color: #C00;
+	background: #E6C0C0;
+	border-bottom: 3px solid #DE7A7B;
+	border-top: 3px solid #DE7A7B
+}
+body #community-wrap div.info {
+	background: #C3D2E5;
+	color: #05B;
+	background-color: #C3D2E5;
+	border-bottom: 3px solid #84A7DB;
+	border-top: 3px solid #84A7DB
+}
+body #community-wrap div.warning {
+	color: #C00;
+	background: #EFE7B8;
+	border-bottom: 3px solid #F0DC7E;
+	border-top: 3px solid #F0DC7E
+}
+
+
+
+/*
+* COMMUNITY : AUTOCOMPLETE CUSTOM STYLE
+*/
+
+body div.cInbox-ACResult,
+.ac_results li {
+	text-decoration: none !important;
+	line-height: 32px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+body div.cInbox-ACResult img {
+	width: 32px;
+	height: auto;
+	display: block;
+	float: left;
+	margin-right: 4px;
+}
+body .ac_results {
+	border-radius: 0px 0px 4px 4px;
+	box-shadow: 0px 2px 2px rgba(0,0,0,0.1);
+	color: #666;
+	z-index:9999;
+}
+
+body .ac_results strong {
+	text-decoration: underline;
+	font-weight: normal;
+}
+
+body .ac_over {
+	background-color: #404040;
+	color: #eee;
+	text-shadow: -1px -1px 0px rgba(0,0,0,0.5);
+}
+
+#community-wrap .cAutoComplete-Wrap {
+	background-color: #fff;
+	border: 1px solid #ddd;
+	padding: 2px;
+	margin-right: 6px;
+}
+#community-wrap .cAutoComplete-Item {
+	float: left;
+	margin: 2px;
+	padding: 4px 12px 4px 4px;
+	position: relative;
+	border: 1px solid #ddd;
+	.border-radius(4px);
+	text-shadow: 1px 1px 0px #fff;
+}
+#community-wrap .cAutoComplete-Input {
+	margin: 2px;
+	float: left;
+}
+#community-wrap .cAutoComplete-Input input {
+	padding: 4px;
+	line-height: 24px;
+	height: 24px;
+	display: block;
+	background-color: #fff;
+}
+#community-wrap .cAutoComplete-Input input:focus {
+	background-color: #fffeef;
+}
+
+#community-wrap .cAutoComplete-Avatar img {
+	width: 24px; height: auto; display: block;
+}
+#community-wrap .cAutoComplete-Avatar {
+	float: left;
+	margin-right: 6px;
+}
+#community-wrap .cAutoComplete-Name {
+	float: left;
+	line-height: 24px;
+}
+#community-wrap .cAutoComplete-Delete {
+	position: absolute;
+	right: 2px;
+	top: -2px;
+	color: #aaa;
+	font-size: 11px;
+}
+#community-wrap .cAutoComplete-Delete:hover,
+#community-wrap .cAutoComplete-Delete:focus,
+#community-wrap .cAutoComplete-Delete:active {
+	color: #f00;
+	background-color: transparent;
+}
+#community-wrap .cAutoComplete-Input input {
+	padding: 4px;
+	width: 180px;
+	border: 0px none !important;
+}

@@ -1,0 +1,16 @@
+.table{
+  margin-bottom: 20px;
+  th, td{
+    padding: 10px;
+    border-color: @tzMbordercolor;
+  }
+}
+.table-striped{
+  tbody > tr:nth-child(2n+1) > td,
+  tbody > tr:nth-child(2n+1) > th{
+    background: #f4f4f4;
+  }
+}
+.table-bordered{
+  .border-radius(0);
+}

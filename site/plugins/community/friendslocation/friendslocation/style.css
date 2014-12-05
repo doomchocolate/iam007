@@ -1,0 +1,16 @@
+div#application-flocations .nopost {
+	position: relative;
+	min-height: 16px;
+	padding: 0 0 5px;
+    }
+
+div#application-flocations .icon-nopost {
+	position: absolute;
+	top: 0;
+	left: 0;
+    }
+
+div#application-flocations .content-nopost {
+	display: block;
+	margin: 0 0 0 24px;
+}

@@ -1,0 +1,15 @@
+.TzServices .image{
+    padding-left: 46px;
+}
+.TzServices .title{
+    font-size: 22px;
+    color: #000;
+    font-weight: bold;
+}
+.TzServices .info{
+    background-repeat: no-repeat;
+    padding-left: 46px;
+}
+.TzServices .row-fluid{
+    padding-bottom: 20px;
+}

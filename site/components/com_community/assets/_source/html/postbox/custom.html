@@ -1,0 +1,43 @@
+<div>
+  <div class="joms-postbox-inner-panel">
+    <div class="joms-postbox-double-panel">
+      <ul class="unstyled clearfix">
+        <li class="joms-postbox-predefined-message"><i class="joms-icon-cog"></i> <%= data.language.custom.predefined_button %></li>
+        <li class="joms-postbox-custom-message"><i class="joms-icon-pencil"></i> <%= data.language.custom.custom_button %></li>
+      </ul>
+    </div>
+  </div>
+  <div class="joms-postbox-custom">
+    <div class="joms-postbox-custom-state-predefined">
+      <div class="joms-postbox-inner-panel">
+        <span><%= data.language.custom.predefined_label %></span><br>
+        <select name="predefined" style="width: 100%">
+          <% if ( data && data.messages && data.messages.length ) { %>
+          <% for ( var i = 0; i < data.messages.length; i++ ) { %>
+          <option value="<%= data.messages[i][0] %>"><%= data.messages[i][1] %></option>
+          <% } %>
+          <% } %>
+        </select>
+      </div>
+    </div>
+    <div class="joms-postbox-custom-state-custom">
+      <div class="joms-postbox-inner-panel">
+        <span><%= data.language.custom.custom_label %></span><br>
+        <textarea name="custom"></textarea>
+      </div>
+    </div>
+    <nav class="joms-postbox-tab selected">
+      <ul class="unstyled">
+        <li data-tab="privacy"><i></i><span class="visible-desktop"></span></li>
+      </ul>
+      <div class="joms-postbox-action">
+        <button class="joms-postbox-cancel"><%= data.language.postbox.cancel_button %></button>
+        <button class="joms-postbox-save"><%= data.language.postbox.post_button %></button>
+      </div>
+      <div class="joms-postbox-loading" style="display:none;">
+        <img src="<%= data.juri.root %>components/com_community/assets/ajax-loader.gif">
+      <div
+    </nav>
+    <div class="joms-postbox-dropdown privacy-dropdown"></div>
+  </div>
+</div>

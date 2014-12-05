@@ -1,0 +1,62 @@
+/*  
+ *  sliderkit-core.css
+ *	> Core CSS styles
+ *  
+ *  This file is part of Slider Kit jQuery plugin.
+ *  http://www.kyrielles.net/sliderkit/
+ *  
+ *  Copyright (c) 2010-2011 Alan Frog
+ *  Licensed under the GNU General Public License
+ *  See <license.txt> or <http://www.gnu.org/licenses/>
+ *
+ */
+
+/*
+ *  PLUGIN BASICS
+ *  ------------------------------------------------
+ */
+.cSlider{display:none;position:relative;overflow:hidden;text-align:left}
+.cSlider a,.cSlider a:hover{text-decoration:none}
+.cSlider a:focus{outline:1px dotted #000}
+.cSlider img{border:0}
+.cSlider .cSlider-nav{z-index:10;position:absolute;text-align:center}
+.cSlider .cSlider-nav-clip{position:relative;overflow:hidden;margin:0 auto}
+.cSlider .cSlider-nav-clip ul{position:relative;left:0;top:0;list-style:none;margin:0;padding:0}
+.cSlider .cSlider-nav-clip ul li{float:left}
+.cSlider .cSlider-nav-clip ul li a{display:block;overflow:hidden}
+.cSlider .cSlider-btn{z-index:10}
+.cSlider .cSlider-panel{z-index:1;position:absolute;overflow:hidden}
+.cSlider .cSlider-panel-active{z-index:5}
+.cSlider .cSlider-panel-old{z-index:4}
+.cSlider .cSlider-panel .cSlider-panel-textbox{position:absolute;z-index:1}
+.cSlider .cSlider-panel .cSlider-panel-text{position:absolute;z-index:3;top:0;left:0}
+.cSlider .cSlider-panel .cSlider-panel-overlay{position:absolute;z-index:2;top:0;left:0}
+.cSlider .cSlider-count{position:absolute;top:5px;right:5px;z-index:10;color:#fff;background:#000;padding:5px}
+.cSlider .cSlider-timer{position:absolute;top:0;left:0;z-index:10;height:3px;background:#ccc}
+
+
+/* This code can be reduced and pasted in any other CSS file :
+
+Here is a compact version :
+-------------------------------
+
+.cSlider{display:none;position:relative;overflow:hidden;text-align:left;}
+.cSlider a,
+.cSlider a:hover{text-decoration:none;}
+.cSlider a:focus{outline:1px dotted #000;}
+.cSlider img{border:0;}
+.cSlider .cSlider-nav{z-index:10;position:absolute;text-align:center;}
+.cSlider .cSlider-nav-clip{position:relative;overflow:hidden;margin:0 auto;}
+.cSlider .cSlider-nav-clip ul{position:relative;left:0;top:0;list-style:none;margin:0;padding:0;}
+.cSlider .cSlider-nav-clip ul li{float:left;}
+.cSlider .cSlider-nav-clip ul li a{display:block;overflow:hidden;}
+.cSlider .cSlider-btn{z-index:10;}
+.cSlider .cSlider-panel{z-index:1;position:absolute;overflow:hidden;}
+.cSlider .cSlider-panel-active{z-index:5;}
+.cSlider .cSlider-panel-old{z-index:4;}
+.cSlider .cSlider-panel .cSlider-panel-textbox{position:absolute;z-index:1;}
+.cSlider .cSlider-panel .cSlider-panel-text{position:absolute;z-index:3;top:0;left:0;}
+.cSlider .cSlider-panel .cSlider-panel-overlay{position:absolute;z-index:2;top:0;left:0;}
+.cSlider .cSlider-count{position:absolute;top:5px;right:5px;z-index:10;padding:5px;color:#fff;background:#000;}
+.cSlider .cSlider-timer{position:absolute;top:0;left:0;z-index:10;height:3px;background:#ccc;}
+*/

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+	<name>Community</name>
+	<creationDate>July 2011</creationDate>
+	<author>JomSocial Team</author>
+	<authorEmail>support@jomsocial.com</authorEmail>
+	<authorUrl>http://www.jomsocial.com</authorUrl>
+	<copyright>Copyright 2008 by Slashes &amp; Dots Sdn Bhd. All rights reserved</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<version>3.2_RC3</version>
+	<description>JomSocial is a social networking component for Joomla!</description>
+	<scriptfile>install.community3.0.php</scriptfile>
+	<files folder="site">
+		<filename>azrul.zip</filename>
+		<filename>frontend.zip</filename>
+		<filename>templates.zip</filename>
+		<filename>ai_plugin.zip</filename>
+		<filename>all_modules.zip</filename>
+		<filename>all_plugins.zip</filename>
+		<folder>libraries</folder>
+	</files>
+	<administration>
+		<menu view="community" img="components/com_community/assets/icons/community-favicon.png">COM_COMMUNITY</menu>
+		<files folder="admin">
+			<filename>box.jpg</filename>
+			<filename>backend.zip</filename>
+			<filename>community.php</filename>
+			<filename>installer.updater.php</filename>
+			<filename>defaultItems.php</filename>
+			<filename>installer.template.php</filename>
+			<filename>hash.ini</filename>
+			<folder>installer</folder>
+			<folder>controllers</folder>
+			<folder>models</folder>
+		</files>
+		<languages>
+			<language tag="en-GB">languages/admin/en-GB.com_community.ini</language>
+			<language tag="en-GB">languages/admin/en-GB.com_community.menu.ini</language>
+			<language tag="en-GB">languages/admin/en-GB.com_community.sys.ini</language>
+			<language tag="en-GB">languages/admin/en-GB.community.sys.ini</language>
+		</languages>
+	</administration>
+	<languages>
+		<language tag="en-GB">languages/site/en-GB.com_community.ini</language>
+		<language tag="en-GB">languages/site/en-GB.com_community.country.ini</language>
+	</languages>
+</extension>

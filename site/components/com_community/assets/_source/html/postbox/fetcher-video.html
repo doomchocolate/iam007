@@ -1,0 +1,20 @@
+<div class="joms-fetched-wrapper">
+  <% if ( data.image ) { %>
+  <div class="joms-fetched-images">
+    <img src="<%= data.image %>">
+  </div>
+  <% } %>
+  <div class="joms-fetched-field joms-fetched-title">
+    <span style="font-weight:bold"><%= data.title || data.titlePlaceholder %></span>
+    <input type="text" value="<%= data.title || '' %>" >
+  </div>
+  <div class="joms-fetched-field joms-fetched-description">
+    <span><%= data.description || data.descPlaceholder %></span>
+    <textarea ><%= data.description || '' %></textarea>
+  </div>
+  <div class="clearfix"></div>
+  <span class="joms-fetched-close" ><i class="joms-icon-remove"></i>cancel</span>
+  <div style="padding-top:10px">
+    <div class="joms-fetched-category joms-select"></div>
+  </div>
+</div>
